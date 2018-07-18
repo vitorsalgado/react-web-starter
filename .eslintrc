@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "standard",
+    "standard-react"
+  ],
+  "env": {
+    "jest": true,
+    "browser": true
+  },
+  "rules": {
+    "no-console": "error",
+    "global-require": "error"
+  }
+}
