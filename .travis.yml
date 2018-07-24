@@ -1,0 +1,19 @@
+language: node_js
+
+sudo: required
+services:
+  - docker
+
+cache:
+  yarn: true
+  directories:
+    - "node_modules"
+
+script:
+  - npm test
+  - npm run lint
+  - npm run sonar
+  - npm build
+  - docker-compose -f ./mock_tools/docker-compose.yml up --build -d
+  - sleep 30
+  - docker-compose rm --force --stop -v

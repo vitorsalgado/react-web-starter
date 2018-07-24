@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render correctly 1`] = `
+<div>
+  <h1>
+    Front-End ToolKit
+  </h1>
+</div>
+`;
