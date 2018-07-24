@@ -14,6 +14,7 @@ script:
   - npm run lint
   - npm run sonar
   - npm run build
+  - echo "WIREMOCK_PORT=3001" > ./mock_tools/.env
   - docker-compose -f ./mock_tools/docker-compose.yml up --build -d
   - sleep 30
   - docker-compose -f ./mock_tools/docker-compose.yml rm --force --stop -v

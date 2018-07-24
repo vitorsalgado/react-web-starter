@@ -9,7 +9,7 @@
     "test:update": "npm test -- --updateSnapshot",
     "lint": "eslint ./src --ext js,jsx",
     "lint:fix": "npm run lint -- --fix",
-    "lint:sonar": "node ./scripts/sonar.lint"
+    "lint:sonar": "node ./scripts/sonar.lint.js"
   },
   "repository": {
     "type": "git",
