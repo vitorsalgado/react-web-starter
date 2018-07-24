@@ -13,7 +13,7 @@ script:
   - npm test
   - npm run lint
   - npm run sonar
-  - npm build
+  - npm run build
   - docker-compose -f ./mock_tools/docker-compose.yml up --build -d
   - sleep 30
-  - docker-compose rm --force --stop -v
+  - docker-compose -f ./mock_tools/docker-compose.yml rm --force --stop -v
