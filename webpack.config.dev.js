@@ -3,7 +3,6 @@
 require('dotenv').config()
 
 const Path = require('path')
-const WebPack = require('webpack')
 const Base = require('./webpack.base')
 const Merge = require('webpack-merge')
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
@@ -18,10 +17,9 @@ module.exports = Merge(
   Base,
   {
     mode: 'development',
-    devtool: 'inline-source-map',
+    devtool: 'cheap-module-eval-source-map',
     devServer: {
       contentBase: paths.build,
-      hot: true,
       inline: true,
       open: true,
       clientLogLevel: 'none',
@@ -39,8 +37,7 @@ module.exports = Merge(
     plugins: Plugins([
       new HtmlWebPackPlugin({ inject: true, template: paths.indexHTML }),
       new InterpolateHtmlPlugin(process.env),
-      new CaseSensitivePathsPlugin(),
-      new WebPack.HotModuleReplacementPlugin()
+      new CaseSensitivePathsPlugin()
     ]),
     performance: {
       hints: 'warning'

@@ -9,9 +9,6 @@ const paths = Config.paths
 ThreadLoader.warmup({}, ['babel-loader'])
 
 module.exports = {
-  entry: {
-    app: paths.indexJS
-  },
   resolve: {
     extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx']
   },
@@ -29,7 +26,7 @@ module.exports = {
       {
         test: /\.(js|jsx|mjs)$/,
         include: paths.sources,
-        exclude: /node_modules/,
+        exclude: [/node_modules/, /__snaphots__/],
         use: [
           'thread-loader',
           {
@@ -48,7 +45,7 @@ module.exports = {
         ]
       },
       {
-        exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/],
+        exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/, /\.snap$/],
         loader: 'file-loader',
         options: { name: 'static/media/[name].[hash:8].[ext]' }
       }

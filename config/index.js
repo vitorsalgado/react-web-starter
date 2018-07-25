@@ -13,6 +13,7 @@ const resolvePath = relativePath => Path.resolve(appDirectory, relativePath)
 module.exports = {
   isProduction: EnvVars.NODE_ENV === 'production',
   isTest: EnvVars.NODE_ENV === 'test',
+  isDebugMode: EnvVars.DEBUG_MODE,
 
   publicURL: EnvVars.ASSET_PATH,
   useSourceMap: EnvVars.USE_SOURCE_MAP ? 'source-map' : false,
@@ -28,6 +29,10 @@ module.exports = {
     indexJS: resolvePath('./src/index.jsx'),
     packageJSON: resolvePath('package.json'),
     nodeModules: resolvePath('node_modules')
+  },
+
+  analyser: {
+    port: EnvVars.ANALYSER_PORT
   },
 
   envsAsString: {
