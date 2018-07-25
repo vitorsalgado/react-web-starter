@@ -25,5 +25,4 @@ script:
   - docker-compose -f ./mock_tools/docker-compose.yml rm --force --stop -v
 
 after_script:
-  - ./cc-test-reporter upload-coverage --id $TRAVIS_COMMIT --input ./reports/coverage/lcov.info
   - ./cc-test-reporter after-build -t lcov --exit-code $TRAVIS_TEST_RESULT
