@@ -5,9 +5,10 @@
   "scripts": {
     "start": "webpack-dev-server --display-error-details --hot --config webpack.config.dev.js",
     "build": "webpack --display-error-details --define process.env.NODE_ENV=\"'production'\" --config webpack.config.prod.js",
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
     "test:update": "npm test -- --updateSnapshot",
     "test:ci": "npm test -- --ci --coverage",
+    "test:e2e": "npm test -- --config=./__tests__/jest.config.js",
     "lint": "eslint ./src --ext js,jsx",
     "lint:fix": "npm run lint -- --fix",
     "lint:sonar": "node ./scripts/sonar.lint.js"
@@ -89,16 +90,10 @@
     "verbose": true,
     "errorOnDeprecated": true,
     "testEnvironment": "jsdom",
-    "setupTestFrameworkScriptFile": "./__tests__/enzyme.setup.js",
+    "setupTestFrameworkScriptFile": "./scritps/enzyme.setup.js",
     "coverageDirectory": "coverage",
-    "testMatch": [
-      "**/src/**spec.js(x)"
-    ],
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "moduleNameMapper": {
-      "\\.(css|scss)$": "identity-obj-proxy"
-    }
+    "testMatch": ["**/src/**spec.js(x)"],
+    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "moduleNameMapper": { "\\.(css|scss)$": "identity-obj-proxy" }
   }
 }

@@ -1,0 +1,38 @@
+version: '3'
+
+# Full development environment based on Docker
+# You may not need the mock server tools. If this is the case, remove the first two services in this file
+
+services:
+  wiremock:
+    build:
+      context: ./mock_tools/wiremock
+    container_name: react.wiremock
+    env_file:
+      - .env
+    volumes:
+      - ./mock_tools/wiremock/data:/wiremock/data
+    ports:
+      - ${WIREMOCK_PORT}:3001
+
+  wiremock_reloader:
+    build:
+      context: ./mock_tools/wiremock_reloader
+    container_name: react.wiremock_reloader
+    env_file:
+      - .env
+    volumes:
+      - ./mock_tools/wiremock/data:/wiremock/data
+    depends_on:
+      - wiremock
+
+  devserver:
+    build:
+        context: ./
+    container_name: react.devserver
+    env_file:
+    - .env
+    volumes:
+      - ./:/app
+    ports:
+      - ${DEV_SERVER_PORT}:3000

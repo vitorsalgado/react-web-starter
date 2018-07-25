@@ -51,6 +51,8 @@ module.exports = Merge(
     optimization: {
       splitChunks: { chunks: 'all', name: 'vendors' },
       runtimeChunk: true,
+      nodeEnv: 'production',
+      mangleWasmImports: true,
       minimizer: [
         new UglifyJsPlugin({
           uglifyOptions: {

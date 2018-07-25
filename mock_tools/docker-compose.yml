@@ -1,4 +1,7 @@
-version: '2'
+version: '3'
+
+# Docker Compose responsible to bring up a Mock Server environment based on WireMock
+# It starts a re-loader tool to make scenarios simulation easier
 
 services:
   wiremock:
@@ -10,7 +13,7 @@ services:
     volumes:
       - ./wiremock/data:/wiremock/data
     ports:
-      - 3001:3001
+      - ${WIREMOCK_PORT}:3001
 
   wiremock_reloader:
     build:

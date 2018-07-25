@@ -10,19 +10,34 @@ cache:
     - node_modules
 
 before_script:
+  # code climate tools
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 
 script:
+  # unit tests
   - npm run test:ci
+
+  # linters
   - npm run lint
   - npm run lint:sonar
+
+  # webpack build
   - npm run build
+
+  # e2e tests
+  - make prepare-for-e2e-tests
+  - sleep 10
+  - make e2e-tests
+  - make teardown-e2e-tests
+
+  # mock server
   - echo "WIREMOCK_PORT=3001" > ./mock_tools/.env
   - docker-compose -f ./mock_tools/docker-compose.yml up --build -d
-  - sleep 30
+  - sleep 10
   - docker-compose -f ./mock_tools/docker-compose.yml rm --force --stop -v
 
 after_script:
+  # submit coverage to code climate
   - ./cc-test-reporter after-build -t lcov --exit-code $TRAVIS_TEST_RESULT

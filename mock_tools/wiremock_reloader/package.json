@@ -1,11 +1,10 @@
 {
   "name": "wiremock-auto-reloader",
   "version": "0.0.1",
-  "description": "Tool to reload automatically reload Wiremock on file changes",
+  "description": "Tool to reload automatically reload WireMock on file changes",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon"
+    "start": "node index.js"
   },
   "dependencies": {
     "chokidar": "^2.0.4",
