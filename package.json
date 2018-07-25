@@ -90,7 +90,7 @@
     "verbose": true,
     "errorOnDeprecated": true,
     "testEnvironment": "jsdom",
-    "setupTestFrameworkScriptFile": "./scritps/enzyme.setup.js",
+    "setupTestFrameworkScriptFile": "./scripts/enzyme.setup.js",
     "coverageDirectory": "coverage",
     "testMatch": ["**/src/**spec.js(x)"],
     "snapshotSerializers": ["enzyme-to-json/serializer"],
