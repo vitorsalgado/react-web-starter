@@ -7,6 +7,7 @@
     "build": "webpack --display-error-details --define process.env.NODE_ENV=\"'production'\" --config webpack.config.prod.js",
     "test": "jest",
     "test:update": "npm test -- --updateSnapshot",
+    "test:ci": "npm test -- --ci --coverage",
     "lint": "eslint ./src --ext js,jsx",
     "lint:fix": "npm run lint -- --fix",
     "lint:sonar": "node ./scripts/sonar.lint.js"
@@ -89,6 +90,7 @@
     "errorOnDeprecated": true,
     "testEnvironment": "jsdom",
     "setupTestFrameworkScriptFile": "./__tests__/enzyme.setup.js",
+    "coverageDirectory": "reports/coverage",
     "testMatch": [
       "**/src/**spec.js(x)"
     ],

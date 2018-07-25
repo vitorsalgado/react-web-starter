@@ -7,4 +7,4 @@ FROM gcr.io/distroless/nodejs
 COPY --from=build-env /app /app
 WORKDIR /app
 COPY . .
-CMD ["webpack.plugins.js"]
+CMD ["index.js"]
