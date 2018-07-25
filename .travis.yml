@@ -33,7 +33,7 @@ script:
   - make teardown-e2e-tests
 
   # mock server
-  - echo "WIREMOCK_PORT=3001" > ./mock_tools/.env
+  - echo "WIREMOCK_PORT=3001" > ./.env
   - docker-compose -f ./mock_tools/docker-compose.yml up --build -d
   - sleep 10
   - docker-compose -f ./mock_tools/docker-compose.yml rm --force --stop -v
