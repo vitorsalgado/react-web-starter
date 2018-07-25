@@ -13,7 +13,7 @@ services:
     volumes:
       - ./wiremock/data:/wiremock/data
     ports:
-      - ${WIREMOCK_PORT}:3001
+    - ${WIREMOCK_PORT}:3001
 
   wiremock_reloader:
     build:
