@@ -26,7 +26,7 @@
     "test:ci": "npm test -- --ci --coverage",
     "test:update": "npm test -- --updateSnapshot",
     "test:e2e": "jest e2e --detectOpenHandles --runInBand",
-    "test:e2e:ci": "jest e2e --detectOpenHandles -- --ci"
+    "test:e2e:ci": "jest e2e --detectOpenHandles --runInBand --ci --maxWorkers=2"
   },
   "dependencies": {
     "react": "^16.4.1",
