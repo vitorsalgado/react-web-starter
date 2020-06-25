@@ -1,6 +1,6 @@
 'use strict'
 
-const Config = require('../Config')
+const Config = require('../config')
 const { devURL } = Config.devServer
 
 describe('/ (Home)', () => {

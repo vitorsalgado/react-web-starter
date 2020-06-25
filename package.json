@@ -23,7 +23,7 @@
     "start:mock": "node @mock_toolkit/index mock",
     "start:headless": "webpack-dev-server --config pkg/webpack.config.dev.js",
     "test": "jest src --detectOpenHandles",
-    "test:ci": "npm test -- --ci --coverage",
+    "test:ci": "npm test -- --ci --coverage --updateSnapshot",
     "test:update": "npm test -- --updateSnapshot",
     "test:e2e": "jest e2e --detectOpenHandles --runInBand",
     "test:e2e:ci": "jest e2e --detectOpenHandles --runInBand --ci"
