@@ -15,8 +15,6 @@ cache:
 
 env:
   global:
-    - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
-    - CHROMIUM=true
     - NODE_ENV=development
 
 addons:
