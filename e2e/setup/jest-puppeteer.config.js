@@ -2,6 +2,8 @@ const Config = require('../../config')
 
 module.exports = {
   launch: {
+    dumpio: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
     headless: Config.testing.headless
   },
   browserContext: Config.testing.incognito ? 'incognito' : 'default',
