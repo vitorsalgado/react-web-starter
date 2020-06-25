@@ -14,5 +14,5 @@ trim_trailing_whitespace = false
 [Makefile]
 indent_style = tab
 
-[*.{groovy}]
+[*.groovy]
 indent_style = tab

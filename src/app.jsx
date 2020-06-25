@@ -1,8 +1,17 @@
+import '../site/favicon.ico'
+import '../site/manifest.json'
+
 import React from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-const App = () =>
-  <div>
-    <h1>Front-End ToolKit</h1>
-  </div>
+import About from './about'
+import Home from './home'
 
-export default App
+export default () => (
+  <Router>
+    <Switch>
+      <Route exact path='/' component={Home}/>
+      <Route path='/about'><About/></Route>
+    </Switch>
+  </Router>
+)

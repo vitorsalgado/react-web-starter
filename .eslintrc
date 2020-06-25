@@ -1,14 +1,27 @@
 {
   "plugins": ["react"],
   "extends": [
-    "standard",
-    "standard-react",
     "plugin:react/recommended"
   ],
-  "parserOptions": { "ecmaVersion": 6, "sourceType": "module", "ecmaFeatures": { "jsx": true } },
+  "parserOptions": { "ecmaVersion": 2018, "sourceType": "module", "ecmaFeatures": { "jsx": true } },
   "env": { "es6": true, "jest": true, "browser": true },
+  "globals": {
+    "page": true,
+    "browser": true,
+    "context": true,
+    "jestPuppeteer": true
+  },
   "rules": {
     "no-console": "error",
-    "global-require": "error"
+    "global-require": "error",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
+    "react/display-name": "off"
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
   }
 }

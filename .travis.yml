@@ -1,13 +1,21 @@
 language: node_js
-
+dist: trusty
 sudo: required
-services:
-  - docker
 
 cache:
   yarn: true
   directories:
     - node_modules
+
+env:
+  global:
+    - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+
+addons:
+  chrome: stable
+
+before_install:
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 
 before_script:
   # code climate tools
@@ -17,26 +25,17 @@ before_script:
 
 script:
   # unit tests
-  - npm run test:ci
+  - yarn test:ci
 
   # linters
-  - npm run lint
-  - npm run lint:sonar
+  - yarn lint
+  - yarn lint:sonar
 
   # webpack build
-  - npm run build
+  - yarn build
 
   # e2e tests
-  - make prepare-for-e2e-tests
-  - sleep 10
-  - make e2e-tests
-  - make teardown-e2e-tests
-
-  # mock server
-  - echo WIREMOCK_PORT=3001 > ./mock_tools/.env
-  - docker-compose -f ./mock_tools/docker-compose.yml up --build -d
-  - sleep 10
-  - docker-compose -f ./mock_tools/docker-compose.yml rm --force --stop -v
+  - yarn test:e2e
 
 after_script:
   # submit coverage to code climate

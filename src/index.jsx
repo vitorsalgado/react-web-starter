@@ -1,15 +1,12 @@
 import React from 'react'
-import ReactDom from 'react-dom'
-import { createStore } from 'redux'
+import ReactDOM from 'react-dom'
+import App from './app'
+import ServiceWorker from './utils/serviceworker'
 
-import ServiceWorker from './serviceworker'
-import Reducers from './reducers'
-import Routes from './routes'
-
-const store = createStore(Reducers)
-
-ReactDom.render(
-  <Routes store={store} />,
+ReactDOM.render(
+  <React.StrictMode>
+    <App/>
+  </React.StrictMode>,
   document.getElementById('root')
 )
 
