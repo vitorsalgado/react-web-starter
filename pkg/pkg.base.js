@@ -8,12 +8,26 @@ ThreadLoader.warmup({}, ['babel-loader'])
 
 module.exports.Opts = {
   resolve: {
-    extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx']
+    extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx', `.ts`, `.tsx`]
   },
   module: {
     strictExportPresence: true,
     rules: [
       { parser: { requireEnsure: false } },
+      {
+        test: /\.ts(x?)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "ts-loader"
+          }
+        ]
+      },
+      {
+        enforce: "pre",
+        test: /\.js$/,
+        loader: "source-map-loader"
+      },
       {
         test: /\.(js|jsx|mjs)$/,
         enforce: 'pre',
@@ -59,6 +73,10 @@ module.exports.Opts = {
         type: 'javascript/auto'
       }
     ]
+  },
+  externals: {
+    "react": "React",
+    "react-dom": "ReactDOM"
   },
   node: {
     dgram: 'empty',
