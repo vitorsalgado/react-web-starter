@@ -25,25 +25,18 @@ before_install:
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 
 before_script:
-  # code climate tools
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 
 script:
-  # unit tests
-  - yarn test:ci
-
-  # linters
   - yarn lint
   - yarn lint:sonar
 
-  # webpack build
   - yarn build
 
-  # e2e tests
+  - yarn test:ci
   - yarn test:e2e:ci
 
 after_script:
-  # submit coverage to code climate
   - ./cc-test-reporter after-build -t lcov --exit-code $TRAVIS_TEST_RESULT

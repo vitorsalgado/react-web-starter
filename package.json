@@ -26,7 +26,7 @@
     "test:ci": "npm test -- --ci --coverage --updateSnapshot",
     "test:update": "npm test -- --updateSnapshot",
     "test:e2e": "jest e2e --detectOpenHandles --runInBand",
-    "test:e2e:ci": "jest e2e --detectOpenHandles --runInBand --ci"
+    "test:e2e:ci": "npm run test:e2e -- --ci"
   },
   "dependencies": {
     "react": "^16.4.1",
@@ -50,7 +50,7 @@
     "css-loader": "^3.6.0",
     "dotenv": "^8.2.0",
     "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.5.0",
     "eslint": "^7.3.0",
     "eslint-loader": "^4.0.2",
@@ -64,6 +64,8 @@
     "html-webpack-plugin": "^4.3.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.0.1",
+    "jest-environment-enzyme": "^7.1.2",
+    "jest-enzyme": "^7.1.2",
     "jest-puppeteer": "^4.4.0",
     "joi": "^14.3.1",
     "mini-css-extract-plugin": "^0.9.0",
