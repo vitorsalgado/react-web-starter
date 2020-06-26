@@ -19,14 +19,14 @@ module.exports.Opts = {
         exclude: /node_modules/,
         use: [
           {
-            loader: "ts-loader"
+            loader: 'ts-loader'
           }
         ]
       },
       {
-        enforce: "pre",
+        enforce: 'pre',
         test: /\.js$/,
-        loader: "source-map-loader"
+        loader: 'source-map-loader'
       },
       {
         test: /\.(js|jsx|mjs)$/,
@@ -73,10 +73,6 @@ module.exports.Opts = {
         type: 'javascript/auto'
       }
     ]
-  },
-  externals: {
-    "react": "React",
-    "react-dom": "ReactDOM"
   },
   node: {
     dgram: 'empty',
