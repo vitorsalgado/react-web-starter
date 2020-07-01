@@ -38,7 +38,7 @@ module.exports.Opts = {
       {
         test: /\.(js|jsx|mjs)$/,
         include: paths.sources,
-        exclude: [/node_modules/, /__snaphots__/],
+        exclude: [/node_modules/, /__snaphots__/, /jest.config.js/, /jest.config.ts/],
         use: [
           'thread-loader',
           {
