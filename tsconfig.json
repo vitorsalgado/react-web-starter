@@ -1,10 +1,29 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
+    "esModuleInterop": true,
     "sourceMap": true,
     "noImplicitAny": true,
     "module": "commonjs",
     "target": "es6",
-    "jsx": "react"
-  }
+    "jsx": "react",
+    "removeComments": true,
+    "allowSyntheticDefaultImports": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowJs": true,
+    "baseUrl": "./src",
+    "types": [
+      "puppeteer",
+      "jest-environment-puppeteer",
+      "expect-puppeteer"
+    ]
+  },
+  "include": ["declarations.d.ts", "src", "globals.d.ts"],
+  "exclude": [
+    "./src/**/*.spec.ts",
+    "./src/**/*.spec.tsx",
+    "src/jest.config.js",
+    "node_modules"
+  ]
 }

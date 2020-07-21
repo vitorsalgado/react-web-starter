@@ -1,20 +1,28 @@
 require('dotenv').config()
 
-process.env.JEST_PUPPETEER_CONFIG =
-  process.env.JEST_PUPPETEER_CONFIG || './e2e/setup/jest-puppeteer.config.js'
-
 module.exports = {
   displayName: 'tests',
-  verbose: true,
   notify: false,
+  verbose: true,
+  preset: 'ts-jest',
+  globals: {
+    'ts-jest': {
+      diagnostics: true
+    }
+  },
   coverageDirectory: '../coverage',
   errorOnDeprecated: true,
-  moduleNameMapper: { '\\.(css|scss|ico)$': 'identity-obj-proxy' },
   testEnvironment: 'enzyme',
   testEnvironmentOptions: {
     enzymeAdapter: 'react16'
   },
+  moduleNameMapper: { '\\.(css|scss|ico)$': 'identity-obj-proxy' },
+  moduleFileExtensions: ['ts', 'tsx', 'js'],
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': '../node_modules/ts-jest'
+  },
+  transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$', '^.+\\.module\\.(css|sass|scss)$'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
-  setupFilesAfterEnv: ['../config/testing/enzyme.setup.js'],
-  testMatch: ['**/src/**spec.js(x)']
+  setupFilesAfterEnv: ['./jest.enzyme.setup.js'],
+  testMatch: ['<rootDir>/**/*.spec.{js,jsx,ts,tsx}']
 }

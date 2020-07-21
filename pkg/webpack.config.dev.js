@@ -1,12 +1,11 @@
 require('dotenv').config()
 
 const Path = require('path')
-const Common = require('./pkg.base')
+const Common = require('./base')
 const Merge = require('webpack-merge')
-const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const Config = require('../config')
-const Plugins = require('./webpack.plugins')
+const Plugins = require('./plugins')
 
 const { paths } = Config
 
@@ -34,8 +33,7 @@ module.exports = Merge(
     },
     plugins: Plugins([
       new HtmlWebPackPlugin(
-        { inject: true, template: paths.indexHTML, templateParameters: Common.templateParameters }),
-      new CaseSensitivePathsPlugin()
+        { inject: true, template: paths.indexHTML, templateParameters: Common.templateParameters })
     ]),
     performance: {
       hints: 'warning'

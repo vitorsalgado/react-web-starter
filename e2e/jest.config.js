@@ -7,6 +7,6 @@ module.exports = {
   displayName: 'e2e',
   verbose: true,
   notify: false,
-  preset: 'jest-puppeteer',
+  preset: './setup/preset.js',
   setupFilesAfterEnv: ['expect-puppeteer']
 }

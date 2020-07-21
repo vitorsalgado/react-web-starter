@@ -12,13 +12,12 @@ notifications:
   email: false
 
 cache:
-  yarn: true
   directories:
     - node_modules
 
 env:
   global:
-    - NODE_ENV=development
+    - NODE_ENV=production
 
 addons:
   chrome: stable
@@ -33,13 +32,10 @@ before_script:
   - ./cc-test-reporter before-build
 
 script:
-  - yarn lint
-  - yarn lint:sonar
-
-  - yarn build
-
-  - yarn test:ci
-  - yarn test:e2e:ci
+  - npm run lint
+  - npm run test:ci
+  - npm run test:e2e:ci
+  - npm run build
 
 after_script:
   - ./cc-test-reporter after-build -t lcov --exit-code $TRAVIS_TEST_RESULT

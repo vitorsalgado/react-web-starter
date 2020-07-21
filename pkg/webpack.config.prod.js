@@ -1,15 +1,15 @@
 require('dotenv').config()
 
 const Path = require('path')
-const Webpack = require('webpack')
+const WebPack = require('webpack')
 const Merge = require('webpack-merge')
-const Common = require('./pkg.base')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const Common = require('./base')
+const TerserPlugin = require('terser-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const Config = require('../config')
-const Plugins = require('./webpack.plugins')
+const Plugins = require('./plugins')
 
 const { paths } = Config
 
@@ -52,15 +52,38 @@ module.exports = Merge(
           .replace(/\\/g, '/')
     },
     optimization: {
-      splitChunks: { chunks: 'all', name: 'vendors' },
-      runtimeChunk: true,
+      moduleIds: 'hashed',
+      splitChunks: {
+        chunks: 'all',
+        name: 'vendors',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all'
+          }
+        }
+      },
+      runtimeChunk: 'single',
       nodeEnv: 'production',
       mangleWasmImports: true,
       minimizer: [
-        new UglifyJsPlugin({
-          uglifyOptions: {
-            compress: { unused: false },
-            output: { comments: false }
+        new TerserPlugin({
+          terserOptions: {
+            parse: {
+              ecma: 8
+            },
+            compress: {
+              ecma: 5,
+              warnings: false,
+              comparisons: false,
+              inline: 2
+            },
+            output: {
+              ecma: 5,
+              comments: false,
+              ascii_only: true
+            }
           },
           parallel: true,
           cache: true,
@@ -83,9 +106,7 @@ module.exports = Merge(
     plugins: Plugins(
       [
         new HtmlPlugin(HTMLOptions),
-        new Webpack.DefinePlugin({
-          'process.env.PUBLIC_URL': JSON.stringify(Config.publicPath)
-        }),
+        new WebPack.DefinePlugin(Config.envsAsString),
         new MiniCssExtractPlugin({
           filename: 'static/css/[name].[contenthash:8].css',
           chunkFilename: 'static/css/[name].[contenthash:8].chunk.css'
@@ -93,6 +114,6 @@ module.exports = Merge(
       ]
     ),
     performance: {
-      hints: 'error'
+      hints: 'warning'
     }
   })
