@@ -1,12 +1,10 @@
-import { logError } from '../logger'
+/* eslint-disable no-console */
 
-export const handleErr = (description: string) => logError(description)
+export const handleErr = (description: string) => console.error(description)
 
-export const handleException = (message: string, fatal = false) =>
-  (err: Error) => logError(message, err)
+export const handleException = (message: string, fatal = false) => (err: Error) => console.error(message, err)
 
-export const handleExceptionAndContinue = (message: string, fatal = false) =>
-  (err: Error) => {
-    logError(message, err)
-    throw err
-  }
+export const handleExceptionAndContinue = (message: string, fatal = false) => (err: Error) => {
+  console.error(message, err)
+  throw err
+}

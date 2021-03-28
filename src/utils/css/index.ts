@@ -1,3 +1,1 @@
-export const concatCSS = (...classes: string[]) =>
-  classes
-    .join(' ')
+export const concatCSS = (...classes: string[]) => classes.join(' ')

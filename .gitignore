@@ -72,6 +72,14 @@ typings/
 # production
 /dist
 
+# yarn
+**/.yarn/*
+!**/.yarn/releases
+!**/.yarn/plugins
+!**/.yarn/sdks
+!**/.yarn/versions
+**/.pnp.*
+
 # misc
 .DS_Store
 .env.local

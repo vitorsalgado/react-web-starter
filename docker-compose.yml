@@ -28,11 +28,11 @@ services:
 
   devserver:
     build:
-        context: ./
-        dockerfile: Dockerfile.test
+      context: ./
+      dockerfile: Dockerfile.test
     container_name: react.devserver
     env_file:
-    - .env
+      - .env
     volumes:
       - ./:/app
     ports:

@@ -1,25 +1,41 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "commonjs",
-    "target": "es6",
+    "outDir": "dist",
+    "baseUrl": ".",
+
+    "lib": ["esnext.asynciterable", "es2018.promise", "dom"],
+    "module": "CommonJS",
+    "target": "ES5",
+    "moduleResolution": "node",
     "jsx": "react",
-    "removeComments": true,
-    "allowSyntheticDefaultImports": false,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "declaration": true,
     "allowJs": true,
-    "baseUrl": "./src",
+
+    "removeComments": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "composite": true,
+    "skipLibCheck": true,
+
     "types": [
-      "puppeteer",
-      "jest-environment-puppeteer",
-      "expect-puppeteer"
+      "node_modules/@types/puppeteer/index.d.ts"
     ]
   },
-  "include": ["declarations.d.ts", "src", "globals.d.ts"],
+  "include": ["declarations.d.ts", "src"],
   "exclude": [
     "./src/**/*.spec.ts",
     "./src/**/*.spec.tsx",
