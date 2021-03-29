@@ -6,7 +6,7 @@ const Path = require('path')
 const Common = require('./base')
 const Merge = require('webpack-merge').merge
 const HtmlWebPackPlugin = require('html-webpack-plugin')
-const Config = require('./config')
+const Config = require('../configs')
 const Plugins = require('./plugins')
 
 const { paths } = Config

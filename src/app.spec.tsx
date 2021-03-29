@@ -1,10 +1,12 @@
-import { shallow } from 'enzyme'
+import '@testing-library/jest-dom/extend-expect'
 import * as React from 'react'
+import { render, screen } from '@testing-library/react'
 import App from './app'
 
 describe('App', () => {
   it('should render correctly', () => {
-    const app = shallow(<App />)
-    expect(app).toMatchSnapshot()
+    render(<App />)
+
+    expect(screen.getByRole('heading')).toHaveTextContent('Home!')
   })
 })

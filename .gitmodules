@@ -1,3 +1,0 @@
-[submodule "@mock_toolkit"]
-	path = @mock_toolkit
-	url = git@github.com:vitorsalgado/wiremock-toolkit.git

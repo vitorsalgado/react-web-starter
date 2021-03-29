@@ -8,7 +8,7 @@ const TerserPlugin = require('terser-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const Config = require('./config')
+const Config = require('../configs')
 const Plugins = require('./plugins')
 
 const { paths } = Config

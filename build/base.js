@@ -1,7 +1,7 @@
 'use strict'
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const Config = require('./config')
+const Config = require('../configs')
 
 module.exports.Opts = {
   resolve: {

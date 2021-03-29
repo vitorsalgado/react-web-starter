@@ -6,8 +6,8 @@ const CleanPlugin = require('clean-webpack-plugin').CleanWebpackPlugin
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const WorkboxPlugin = require('workbox-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const Config = require('./config')
-const { resolvePath } = require('./config/utils')
+const Config = require('../configs')
+const { resolvePath } = require('../configs/utils')
 
 const additionalPlugins = []
 

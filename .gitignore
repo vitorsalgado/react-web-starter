@@ -69,8 +69,8 @@ typings/
 # testing
 /coverage
 
-# production
-/dist
+# osx
+.DS_Store
 
 # yarn
 **/.yarn/*
@@ -80,11 +80,11 @@ typings/
 !**/.yarn/versions
 **/.pnp.*
 
-# misc
-.DS_Store
+# project
+/dist
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
-
 reports/
+@mock_toolkit
