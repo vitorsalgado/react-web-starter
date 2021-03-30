@@ -3,7 +3,8 @@
 require('dotenv').config()
 
 const Path = require('path')
-const Common = require('./base')
+const Base = require('./base')
+const Webpack = require('webpack')
 const Merge = require('webpack-merge').merge
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const Config = require('../configs')
@@ -11,9 +12,10 @@ const Plugins = require('./plugins')
 
 const { paths } = Config
 
-module.exports = Merge(Common.Opts, {
+module.exports = Merge(Base, {
   mode: 'development',
   devtool: 'source-map',
+
   devServer: {
     contentBase: paths.build,
     hot: true,
@@ -23,6 +25,7 @@ module.exports = Merge(Common.Opts, {
     port: Config.devServer.port,
     historyApiFallback: true
   },
+
   output: {
     path: Path.join(process.cwd(), 'dist'),
     pathinfo: false,
@@ -31,10 +34,13 @@ module.exports = Merge(Common.Opts, {
     publicPath: '/',
     devtoolModuleFilenameTemplate: info => Path.resolve(info.absoluteResourcePath).replace(/\\/g, '/')
   },
+
   plugins: Plugins([
-    new HtmlWebPackPlugin({ inject: true, template: paths.indexHTML, templateParameters: Common.templateParameters })
-  ]),
-  performance: {
-    hints: 'warning'
-  }
+    new Webpack.HotModuleReplacementPlugin(),
+    new HtmlWebPackPlugin({
+      inject: true,
+      template: paths.indexHTML,
+      templateParameters: () => Config.vars
+    })
+  ])
 })

@@ -1,9 +1,11 @@
 'use strict'
 
+require('dotenv').config()
+
 const Path = require('path')
 const WebPack = require('webpack')
-const Merge = require('webpack-merge')
-const Common = require('./base')
+const Merge = require('webpack-merge').merge
+const Base = require('./base')
 const TerserPlugin = require('terser-webpack-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
@@ -28,28 +30,29 @@ const HTMLOptions = {
     minifyCSS: true,
     minifyURLs: true
   },
-  templateParameters: Common.templateParameters
+  templateParameters: () => Config.vars
 }
 
-module.exports = Merge(Common.Opts, {
+module.exports = Merge(Base, {
   mode: 'production',
-  bail: true,
-  devtool: 'nosources-source-map',
+
   context: paths.sources,
   entry: {
     app: paths.indexJS
   },
+
   output: {
     path: paths.build,
-    filename: 'static/js/[name].[chunkhash:8].js',
+    filename: '[name].[chunkhash:8].js',
     publicPath: Config.publicPath,
-    chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
+    chunkFilename: '[name].[chunkhash:8].chunk.js',
     devtoolModuleFilenameTemplate: info => Path.relative('./src', info.absoluteResourcePath).replace(/\\/g, '/')
   },
+
   optimization: {
     splitChunks: {
       chunks: 'all',
-      name: 'vendors',
+      maxInitialRequests: 10,
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
@@ -79,33 +82,18 @@ module.exports = Merge(Common.Opts, {
             ascii_only: true
           }
         },
-        parallel: true,
-        cache: true,
-        sourceMap: true
+        parallel: true
       }),
       new OptimizeCSSAssetsPlugin()
     ]
   },
-  module: {
-    strictExportPresence: true,
-    rules: [
-      { parser: { requireEnsure: false } },
-      {
-        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-        loader: 'url-loader',
-        options: { limit: 10000, name: 'static/media/[name].[contenthash:8].[ext]' }
-      }
-    ]
-  },
+
   plugins: Plugins([
     new HtmlPlugin(HTMLOptions),
     new WebPack.DefinePlugin(Config.envsAsString),
     new MiniCssExtractPlugin({
-      filename: 'static/css/[name].[contenthash:8].css',
-      chunkFilename: 'static/css/[name].[contenthash:8].chunk.css'
+      filename: '[name].[contenthash:8].css',
+      chunkFilename: '[name].[contenthash:8].chunk.css'
     })
-  ]),
-  performance: {
-    hints: 'warning'
-  }
+  ])
 })

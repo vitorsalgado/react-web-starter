@@ -14,6 +14,8 @@ module.exports = {
   collectCoverage: false,
   restoreMocks: true,
   transform: { '^.+\\.tsx?$': 'ts-jest' },
+  reporters: ['default'],
+  watchPathIgnorePatterns: ['coverage'],
   rootDir: __dirname,
   globals: {
     'ts-jest': {

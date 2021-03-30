@@ -3,7 +3,7 @@ require('dotenv').config()
 process.env.JEST_PUPPETEER_CONFIG = process.env.JEST_PUPPETEER_CONFIG || './test/setup/jest-puppeteer.config.js'
 
 module.exports = {
-  displayName: 'e2e',
+  displayName: 'End-to-End Tests',
   verbose: true,
   notify: false,
   preset: './setup/preset.js',

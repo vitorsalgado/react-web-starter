@@ -6,16 +6,18 @@ const { resolvePath } = require('./utils')
 
 const EnvVars = Joi.attempt(process.env, EnvSchema)
 
+if (!EnvVars.PUBLIC_URL || EnvVars.PUBLIC_URL === '/') {
+  EnvVars.SECURITY_PUBLIC_URL = `http://0.0.0.0:${EnvVars.DEV_SERVER_PORT} ws://0.0.0.0:${EnvVars.DEV_SERVER_PORT}`
+}
+
 module.exports = {
   isProduction: EnvVars.NODE_ENV === 'production',
   isTest: EnvVars.NODE_ENV === 'test',
-  isDebugMode: EnvVars.DEBUG_MODE,
 
-  publicPath: EnvVars.ASSET_PATH,
-  useSourceMap: EnvVars.USE_SOURCE_MAP ? 'source-map' : false,
+  publicPath: EnvVars.PUBLIC_URL || `http://0.0.0.0:${EnvVars.DEV_SERVER_PORT}/`,
 
   devServer: {
-    devURL: EnvVars.DEV_SERVER || `http://0.0.0.0:${EnvVars.DEV_SERVER_PORT}`,
+    devURL: EnvVars.DEV_SERVER || `http://0.0.0.0:${EnvVars.DEV_SERVER_PORT}/`,
     port: EnvVars.DEV_SERVER_PORT
   },
 
@@ -28,7 +30,7 @@ module.exports = {
   paths: {
     sources: resolvePath('src'),
     build: resolvePath('dist'),
-    indexHTML: resolvePath('./site/index.html'),
+    indexHTML: resolvePath('./src/index.html'),
     indexJS: resolvePath('./src/index.tsx'),
     packageJSON: resolvePath('package.json'),
     nodeModules: resolvePath('node_modules')

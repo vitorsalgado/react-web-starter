@@ -1,38 +1,29 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import App from './app'
-import { handleErr, handleExceptionAndContinue } from './utils/errorhandler'
+import { handleErrorEvent, handleExceptionAndContinue } from './utils/errors'
+
+const mountContainer = document.getElementById('root')
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  mountContainer
 )
 
-if ('serviceWorker' in navigator)
+if ('serviceWorker' in navigator) {
   window.addEventListener('load', () =>
     navigator.serviceWorker.register('/sw.js').catch(handleExceptionAndContinue('SW registration failed'))
   )
+}
 
-window.addEventListener('unhandledrejection', event => handleErr(event.reason))
+window.addEventListener('unhandledrejection', event => handleErrorEvent(event.reason))
+window.addEventListener('error', event => handleErrorEvent(event))
 
-window.addEventListener('error', event =>
-  handleErr(
-    'An error occurred. Reason: ' +
-      event.message +
-      +'\n' +
-      'Line: ' +
-      event.lineno +
-      '\n' +
-      'Col: ' +
-      event.colno +
-      '\n' +
-      'Source: ' +
-      event.filename +
-      '\n' +
-      'Error:' +
-      '\n' +
-      event.error
-  )
-)
+if ((module as any).hot) {
+  ;(module as any).hot.accept('./app', function () {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    ReactDOM.unmountComponentAtNode(mountContainer!)
+  })
+}

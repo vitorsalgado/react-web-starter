@@ -3,10 +3,22 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const Config = require('../configs')
 
-module.exports.Opts = {
+module.exports = {
+  bail: true,
+
+  stats: {
+    errorDetails: true,
+    children: true
+  },
+
+  performance: {
+    hints: 'warning'
+  },
+
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
   },
+
   module: {
     strictExportPresence: true,
     rules: [
@@ -43,7 +55,6 @@ module.exports.Opts = {
           {
             loader: 'css-loader',
             options: {
-              localsConvention: 'camelCase',
               modules: {
                 localIdentName: '[name]-[local]--[contenthash:base64:5]'
               }
@@ -65,15 +76,20 @@ module.exports.Opts = {
         type: 'asset/inline'
       },
       {
+        test: /\.ico/,
+        type: 'asset/resource',
+        generator: {
+          filename: '[name].[ext]'
+        }
+      },
+      {
         test: /\.(jpg|png|gif)$/,
         exclude: /\.(js|jsx|mjs|ts|tsx|html|json|xml|csv|snap|(sa|sc|c)ss)$/,
         type: 'asset/resource',
         generator: {
-          filename: 'static/media/[hash][ext][query]'
+          filename: '[hash][ext][query]'
         }
       }
     ]
   }
 }
-
-module.exports.templateParameters = (compilation, assets, options) => Config.vars

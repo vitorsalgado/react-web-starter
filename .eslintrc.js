@@ -1,7 +1,13 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint/eslint-plugin', 'eslint-plugin-tsdoc', 'react'],
-  extends: ['plugin:react/recommended', 'plugin:@typescript-eslint/recommended', 'standard', 'prettier'],
+  plugins: ['@typescript-eslint/eslint-plugin', 'eslint-plugin-tsdoc', 'jsx-a11y', 'react'],
+  extends: [
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'standard',
+    'prettier',
+    'plugin:jsx-a11y/recommended'
+  ],
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -11,7 +17,9 @@ module.exports = {
   },
   env: {
     jest: true,
-    browser: true
+    browser: true,
+    node: true,
+    es6: true
   },
   globals: {
     page: true,

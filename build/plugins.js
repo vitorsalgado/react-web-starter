@@ -1,21 +1,13 @@
 'use strict'
 
 const WebPack = require('webpack')
-const ManifestPlugin = require('webpack-manifest-plugin').WebpackManifestPlugin
 const CleanPlugin = require('clean-webpack-plugin').CleanWebpackPlugin
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const WorkboxPlugin = require('workbox-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const Config = require('../configs')
-const { resolvePath } = require('../configs/utils')
+const resolvePath = require('../configs/utils').resolvePath
 
 const additionalPlugins = []
-
-if (Config.isDebugMode) {
-  additionalPlugins.push(
-    new BundleAnalyzerPlugin({ analyzerPort: Config.analyser.port, reportFilename: './reports/analyser.html' })
-  )
-}
 
 module.exports = plugins =>
   [
@@ -23,7 +15,6 @@ module.exports = plugins =>
     new WebPack.DefinePlugin(Config.envsAsString),
     ...plugins,
     ...additionalPlugins,
-    new ManifestPlugin({ fileName: 'asset-manifest.json', publicPath: Config.publicPath }),
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -37,17 +28,6 @@ module.exports = plugins =>
               })
             )
           }
-        },
-        {
-          force: true,
-          from: resolvePath('site/favicon.ico'),
-          to: resolvePath('dist')
-        },
-        {
-          force: true,
-          from: resolvePath('site/static/images'),
-          to: resolvePath('dist/static/media'),
-          noErrorOnMissing: true
         }
       ]
     }),

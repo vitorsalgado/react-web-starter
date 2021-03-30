@@ -1,8 +1,5 @@
 version: '3'
 
-# Full development environment based on Docker
-# You may not need the mock server tools. If this is the case, remove the first two services in this file
-
 services:
   wiremock:
     build:
@@ -17,7 +14,7 @@ services:
 
   wiremock_reloader:
     build:
-      context: ./@mock_toolkit/wiremock_reloader
+      context: ./@mock_toolkit/wiremock-auto-reloader
     container_name: react.wiremock_reloader
     env_file:
       - .env
@@ -29,7 +26,7 @@ services:
   devserver:
     build:
       context: ./
-      dockerfile: Dockerfile.test
+      dockerfile: Dockerfile.dev
     container_name: react.devserver
     env_file:
       - .env
