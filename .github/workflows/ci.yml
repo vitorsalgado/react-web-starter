@@ -50,20 +50,17 @@ jobs:
 
       - name: Lint
         run: |
-          yarn lint
           yarn prettier:ci
+          yarn lint
+          yarn lint:css
 
       - name: Build
         run: |
           yarn build
 
-      - name: Local Tests
+      - name: Tests
         run: |
           yarn test:ci
-
-      - name: End-to-End Tests
-        run: |
-          yarn test:e2e:ci
 
       - name: Upload Coverage
         run: |

@@ -1,7 +1,6 @@
 'use strict'
 
 const WebPack = require('webpack')
-const CleanPlugin = require('clean-webpack-plugin').CleanWebpackPlugin
 const WorkboxPlugin = require('workbox-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const Config = require('../configs')
@@ -11,7 +10,6 @@ const additionalPlugins = []
 
 module.exports = plugins =>
   [
-    new CleanPlugin(),
     new WebPack.DefinePlugin(Config.envsAsString),
     ...plugins,
     ...additionalPlugins,

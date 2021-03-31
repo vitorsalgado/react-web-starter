@@ -46,7 +46,8 @@ module.exports = Merge(Base, {
     filename: '[name].[chunkhash:8].js',
     publicPath: Config.publicPath,
     chunkFilename: '[name].[chunkhash:8].chunk.js',
-    devtoolModuleFilenameTemplate: info => Path.relative('./src', info.absoluteResourcePath).replace(/\\/g, '/')
+    devtoolModuleFilenameTemplate: info => Path.relative('./src', info.absoluteResourcePath).replace(/\\/g, '/'),
+    clean: true
   },
 
   optimization: {

@@ -4,3 +4,4 @@ dist/
 site/
 pkg/
 tools/
+build/

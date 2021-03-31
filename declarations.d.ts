@@ -10,7 +10,3 @@ declare module "*.gif";
 declare module "*.svg";
 
 declare module "react-router-dom";
-
-interface module {
-  hot: boolean
-}

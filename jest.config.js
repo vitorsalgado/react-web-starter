@@ -24,8 +24,8 @@ module.exports = {
   },
 
   moduleNameMapper: {
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+    '\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/test/mocks/files/index.js',
-    '\\.(css|less)$': '<rootDir>/test/mocks/styles/index.js'
+    '\\.(css|less|scss)$': '<rootDir>/test/mocks/styles/index.js'
   }
 }
