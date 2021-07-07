@@ -4,7 +4,7 @@ import logo from './logo.png'
 
 export default () => (
   <div>
-    <h1>Home!</h1>
+    <h1>Home! Hello World!</h1>
     <img src={logo} />
     <Link to="/about">Link to About</Link>
   </div>

@@ -2,22 +2,17 @@
 
 require('dotenv').config()
 
-const Path = require('path')
 const WebPack = require('webpack')
 const Merge = require('webpack-merge').merge
-const Base = require('./base')
 const TerserPlugin = require('terser-webpack-plugin')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const Config = require('../configs')
+const Base = require('./base')
+const Config = require('./configurations')
 const Plugins = require('./plugins')
-
-const { paths } = Config
 
 const HTMLOptions = {
   inject: true,
-  template: paths.indexHTML,
+  template: Config.paths.indexHTML,
   minify: {
     removeComments: true,
     collapseWhitespace: true,
@@ -35,18 +30,13 @@ const HTMLOptions = {
 
 module.exports = Merge(Base, {
   mode: 'production',
-
-  context: paths.sources,
-  entry: {
-    app: paths.indexJS
-  },
+  bail: true,
 
   output: {
-    path: paths.build,
+    path: Config.paths.build,
     filename: '[name].[chunkhash:8].js',
     publicPath: Config.publicPath,
     chunkFilename: '[name].[chunkhash:8].chunk.js',
-    devtoolModuleFilenameTemplate: info => Path.relative('./src', info.absoluteResourcePath).replace(/\\/g, '/'),
     clean: true
   },
 
@@ -84,17 +74,9 @@ module.exports = Merge(Base, {
           }
         },
         parallel: true
-      }),
-      new OptimizeCSSAssetsPlugin()
+      })
     ]
   },
 
-  plugins: Plugins([
-    new HtmlPlugin(HTMLOptions),
-    new WebPack.DefinePlugin(Config.envsAsString),
-    new MiniCssExtractPlugin({
-      filename: '[name].[contenthash:8].css',
-      chunkFilename: '[name].[contenthash:8].chunk.css'
-    })
-  ])
+  plugins: Plugins([new HtmlPlugin(HTMLOptions), new WebPack.DefinePlugin(Config.envsAsString)])
 })

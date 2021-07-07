@@ -1,16 +1,23 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 import App from './app'
 import { handleErrorEvent, handleExceptionAndContinue } from './utils/errors'
+import configureStore from './store'
 
-const mountContainer = document.getElementById('root')
+const container = document.getElementById('root')
+const store = configureStore()
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  mountContainer
-)
+const render = (): void => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </React.StrictMode>,
+    container
+  )
+}
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () =>
@@ -24,6 +31,9 @@ window.addEventListener('error', event => handleErrorEvent(event))
 if ((module as any).hot) {
   ;(module as any).hot.accept('./app', function () {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    ReactDOM.unmountComponentAtNode(mountContainer!)
+    ReactDOM.unmountComponentAtNode(container!)
+    render()
   })
 }
+
+render()

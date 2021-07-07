@@ -3,23 +3,23 @@ version: '3.8'
 services:
   wiremock:
     build:
-      context: ./@mock_toolkit/wiremock
+      context: ../../@mock_toolkit/wiremock
     container_name: react.wiremock
     env_file:
       - .env
     volumes:
-      - ./@mock_toolkit/wiremock/data:/wiremock/data
+      - ../../@mock_toolkit/wiremock/data:/wiremock/data
     ports:
       - ${WIREMOCK_PORT}:3001
 
   wiremock_reloader:
     build:
-      context: ./@mock_toolkit/wiremock-auto-reloader
+      context: ../../@mock_toolkit/wiremock-auto-reloader
     container_name: react.wiremock_reloader
     env_file:
       - .env
     volumes:
-      - ./@mock_toolkit/wiremock/data:/wiremock/data
+      - ../../@mock_toolkit/wiremock/data:/wiremock/data
     depends_on:
       - wiremock
 
@@ -31,6 +31,6 @@ services:
     env_file:
       - .env
     volumes:
-      - ./:/app
+      - ../../:/app
     ports:
       - ${DEV_SERVER_PORT}:3000

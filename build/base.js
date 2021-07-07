@@ -1,10 +1,13 @@
 'use strict'
 
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const Config = require('../configs')
+const Config = require('./configurations')
 
 module.exports = {
-  bail: true,
+  context: Config.paths.sources,
+
+  entry: {
+    app: Config.paths.entrypoint
+  },
 
   stats: {
     errorDetails: true,
@@ -46,7 +49,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.(sa|sc)ss$/,
@@ -79,7 +82,7 @@ module.exports = {
         test: /\.ico/,
         type: 'asset/resource',
         generator: {
-          filename: '[name].[ext]'
+          filename: '[name][ext]'
         }
       },
       {

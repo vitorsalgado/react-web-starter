@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Css from './LinkButton.module.scss'
+import Css from './styles.scss'
 
 interface Props {
   href: string
@@ -8,7 +8,7 @@ interface Props {
 
 export default function LinkButton({ href, label }: Props) {
   return (
-    <a href={href} className={Css.teste}>
+    <a href={href} className={Css.btn}>
       {label}
     </a>
   )

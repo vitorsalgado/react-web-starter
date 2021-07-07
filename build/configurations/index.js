@@ -31,7 +31,7 @@ module.exports = {
     sources: resolvePath('src'),
     build: resolvePath('dist'),
     indexHTML: resolvePath('./src/index.html'),
-    indexJS: resolvePath('./src/index.tsx'),
+    entrypoint: resolvePath('./src/index.tsx'),
     packageJSON: resolvePath('package.json'),
     nodeModules: resolvePath('node_modules')
   },

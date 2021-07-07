@@ -5,3 +5,5 @@ site/
 pkg/
 tools/
 build/
+
+*.config.js

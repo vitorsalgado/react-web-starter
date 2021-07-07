@@ -31,4 +31,4 @@ ExpressApp.get('*', (req, res) => {
 })
 
 // eslint-disable-next-line no-console
-ExpressApp.listen(3000, () => console.log('Static server connected'))
+ExpressApp.listen(3001, () => console.log('Static server connected'))
