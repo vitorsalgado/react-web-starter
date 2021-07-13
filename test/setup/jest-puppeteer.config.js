@@ -1,4 +1,4 @@
-const Config = require('../../build/configurations')
+const Config = require('../../build/config')
 
 module.exports = {
   launch: {

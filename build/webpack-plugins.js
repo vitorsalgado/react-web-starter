@@ -3,8 +3,8 @@
 const WebPack = require('webpack')
 const WorkboxPlugin = require('workbox-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const Config = require('./configurations')
-const resolvePath = require('./configurations/utils').resolvePath
+const Config = require('./config')
+const resolvePath = require('./config/utils').resolvePath
 
 const additionalPlugins = []
 

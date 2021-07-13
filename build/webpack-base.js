@@ -1,6 +1,6 @@
 'use strict'
 
-const Config = require('./configurations')
+const Config = require('./config')
 
 module.exports = {
   context: Config.paths.sources,
@@ -44,7 +44,7 @@ module.exports = {
       {
         test: /\.(js|jsx|mjs)$/,
         include: Config.paths.sources,
-        exclude: [/node_modules/, /__snaphots__/, /jest.config.js/],
+        exclude: [/node_modules/, /node_modules/, /jest.config.js/],
         use: { loader: 'babel-loader', options: { cacheDirectory: true, highlightCode: true } }
       },
       {

@@ -1,3 +1,5 @@
+'use strict'
+
 module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint/eslint-plugin', 'eslint-plugin-tsdoc', 'jsx-a11y', 'react'],
@@ -9,7 +11,7 @@ module.exports = {
     'plugin:jsx-a11y/recommended'
   ],
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 6,
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true

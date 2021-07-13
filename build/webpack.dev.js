@@ -3,13 +3,13 @@
 require('dotenv').config()
 
 const Path = require('path')
-const Base = require('./base')
+const Base = require('./webpack-base')
 const Webpack = require('webpack')
 const WebpackManifestPlugin = require('webpack-manifest-plugin').WebpackManifestPlugin
 const Merge = require('webpack-merge').merge
 const HtmlWebPackPlugin = require('html-webpack-plugin')
-const Config = require('./configurations')
-const Plugins = require('./plugins')
+const Config = require('./config')
+const Plugins = require('./webpack-plugins')
 
 const { paths } = Config
 

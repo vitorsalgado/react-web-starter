@@ -15,7 +15,7 @@ This repository should be used as a template for future React Web projects.
 ## Environment and Build Configurations
 
 System environment configurations mechanism with schema validation for variables.  
-Check [configs](build/configurations) folder.
+Check [configs](build/config) folder.
 
 ## Test
 

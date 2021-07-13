@@ -6,9 +6,9 @@ const WebPack = require('webpack')
 const Merge = require('webpack-merge').merge
 const TerserPlugin = require('terser-webpack-plugin')
 const HtmlPlugin = require('html-webpack-plugin')
-const Base = require('./base')
-const Config = require('./configurations')
-const Plugins = require('./plugins')
+const Base = require('./webpack-base')
+const Config = require('./config')
+const Plugins = require('./webpack-plugins')
 
 const HTMLOptions = {
   inject: true,

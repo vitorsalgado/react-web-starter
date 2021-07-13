@@ -1,5 +1,5 @@
 import 'expect-puppeteer'
-import * as Config from '../build/configurations'
+import * as Config from '../build/config'
 
 const { devURL } = Config.devServer
 

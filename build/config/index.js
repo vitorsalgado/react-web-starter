@@ -1,7 +1,7 @@
 'use strict'
 
 const Joi = require('joi')
-const EnvSchema = require('./envs')
+const EnvSchema = require('./env-vars-schema')
 const { resolvePath } = require('./utils')
 
 const EnvVars = Joi.attempt(process.env, EnvSchema)
