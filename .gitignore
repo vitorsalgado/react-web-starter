@@ -80,9 +80,8 @@ typings/
 !**/.yarn/versions
 **/.pnp.*
 
-# project
+# Project
 .env.sample
-
 dist/
 reports/
 @mock_toolkit/
