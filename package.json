@@ -16,13 +16,13 @@
     "lint:fix": "npm run lint -- --fix",
     "lint:css": "stylelint \"**/*.{css,scss,sass}\" --allow-empty-input",
     "lint:css:fix": "npm run lint:css -- --fix",
-    "lint:ci": "yarn lint && yarn prettier:ci",
+    "lint:ci": "yarn lint && yarn lint:css && yarn prettier:ci",
     "prettier": "prettier 'build/**' 'src/**' 'tools/**' --write --ignore-unknown",
     "prettier:ci": "prettier --check 'build/**' 'src/**' 'tools/**' --ignore-unknown",
     "prepare": "husky install",
     "postinstall": "husky install",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook:build": "build-storybook"
   },
   "homepage": "https://github.com/vitorsalgado/react-web-starter/blob/master/README.md",
   "bugs": "https://github.com/vitorsalgado/react-web-starter/issues",

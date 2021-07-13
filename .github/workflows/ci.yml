@@ -1,4 +1,4 @@
-name: CI
+name: ci
 
 on:
   push:
@@ -14,9 +14,6 @@ on:
     paths-ignore:
       - 'docs/**'
       - '*.md'
-
-env:
-  CI: true
 
 jobs:
   build:
@@ -50,9 +47,7 @@ jobs:
 
       - name: Lint
         run: |
-          yarn prettier:ci
-          yarn lint
-          yarn lint:css
+          yarn lint:ci
 
       - name: Build
         run: |
@@ -67,3 +62,13 @@ jobs:
           yarn coverage:upload
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+  automerge:
+    runs-on: ubuntu-latest
+    needs:
+      - build
+
+    steps:
+      - uses: fastify/github-action-merge-dependabot@v2.2.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
