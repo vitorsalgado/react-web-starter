@@ -1,33 +1,67 @@
-# React Web Starter &middot; ![ci](https://github.com/vitorsalgado/react-web-starter/workflows/CI/badge.svg) [![codecov](https://codecov.io/gh/vitorsalgado/react-web-starter/branch/master/graph/badge.svg?token=BB87R38Z87)](https://codecov.io/gh/vitorsalgado/react-web-starter)
+<h1 align="center">React Web Starter</h1>
 
-Basic React.js starter project with all boring stuff already set.  
-This repository should be used as a template for future React Web projects.
+<p align="center">
+    <img src="docs/assets/logo.png" alt="Logo" />
+    <br/>
+    <i>React foundation project based on TypeScript with all boring stuff already set.</i>
+</p>
+
+<p align="center">
+  <a href="CONTRIBUTING.md">Contributing Guidelines</a>
+  ·
+  <a href="https://github.com/vitorsalgado/react-web-starter/issues">Submit an Issue</a>
+  <br>
+  <br>
+</p>
+
+<p align="center">
+  <a href="https://github.com/vitorsalgado/react-web-starter/actions/workflows/ci.yml">
+    <img src="https://github.com/vitorsalgado/react-web-starter/actions/workflows/ci.yml/badge.svg">
+  </a>&nbsp
+  <a href="https://codecov.io/gh/vitorsalgado/react-web-starter">
+    <img src="https://codecov.io/gh/vitorsalgado/react-web-starter/branch/master/graph/badge.svg?token=BB87R38Z87"/>
+  </a>&nbsp
+  <a href="https://github.com/prettier/prettier">
+    <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square"/>
+  </a>&nbsp
+</p>
 
 ## Overview
 
-* React
-* TypeScript
-* Yarn 2
-* Docker
-* WebPack
-* GitHub Actions
+This is a template to serve as a template for new React projects with TypeScript.  
+This project is also intended to serve as a learning experience for React and its ecosystem and to explore modern
+frontend tools and practices.  
+Some features contained in this project are:
 
-## Environment and Build Configurations
+- React
+- Redux
+- i18n
+- TypeScript
+- Jest
+- End-to-End Tests with Puppeteer
+- Yarn 2
+- WebPack
+- ESLint + Prettier + Stylelint + Commit Lint + Husky + Lint Staged (Linters)
+- GitHub Actions (CI)
+- Docker
 
-System environment configurations mechanism with schema validation for variables.  
-Check [configs](build/config) folder.
+## Contents
+
+## Configurations
+
+**WebPack** is used for build and bundling.  
+Mostly build configurations are based on Environment Variables that can also be set using **DotEnv**.  
+Check [Env Vars Joi Schema](configs/envvars/index.js).
 
 ## Test
 
-- Jest
-- React Testing Library
-- Puppeteer
+**Jest** is the testing framework of this project.  
+It comes with a setup for unit, integration and e2e tests with **React Testing Library** and **Puppeteer**.  
+Check the [jest.config.ts](jest.config.ts).
 
-## Linting and Code Style &middot; [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+## Linting and Code Style
 
-This project uses a mix of tools to ensure code quality. It also contains to ensure that all committed files follow
-project standards: **Husky, Lint Staged and Commitlint**.  
-Check below all tools used for linting and code style;
+Mix of tools used to ensure code and commit style and best practices:
 
 - ESLint
 - Prettier
@@ -36,7 +70,7 @@ Check below all tools used for linting and code style;
 - Lint Staged
 - Husky
 
-## Continuous Integration &middot; [![Codacy Badge](https://api.codacy.com/project/badge/Grade/96e11aea37d24f3fb3106c6ba213fb39)](https://www.codacy.com/app/vitorsalgado/frontend-toolkit?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vitorsalgado/frontend-toolkit&amp;utm_campaign=Badge_Grade) [![Maintainability](https://api.codeclimate.com/v1/badges/dec583a41ea4f383ca26/maintainability)](https://codeclimate.com/github/vitorsalgado/frontend-toolkit/maintainability)
+## CI &middot; [![Codacy Badge](https://api.codacy.com/project/badge/Grade/96e11aea37d24f3fb3106c6ba213fb39)](https://www.codacy.com/app/vitorsalgado/frontend-toolkit?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vitorsalgado/frontend-toolkit&amp;utm_campaign=Badge_Grade) [![Maintainability](https://api.codeclimate.com/v1/badges/dec583a41ea4f383ca26/maintainability)](https://codeclimate.com/github/vitorsalgado/frontend-toolkit/maintainability)
 
 - **Github Actions** for continuous integration
 - **Codecov** for test coverage reports
@@ -44,6 +78,9 @@ Check below all tools used for linting and code style;
 
 ## Additional Tools
 
-- **Storybook** Configured
-- Mock Toolkit to mock HTTP calls using Wiremock
-- Simple static server to serve **dist** content
+Check the [Makefile](Makefile) for some useful commands.  
+Execute `make` to show the _help_.
+
+## License
+
+This project is [Apache](LICENSE) licensed.

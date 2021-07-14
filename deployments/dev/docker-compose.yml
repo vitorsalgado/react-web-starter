@@ -1,36 +1,27 @@
 version: '3.8'
 
 services:
-  wiremock:
-    build:
-      context: ../../@mock_toolkit/wiremock
-    container_name: react.wiremock
-    env_file:
-      - .env
-    volumes:
-      - ../../@mock_toolkit/wiremock/data:/wiremock/data
-    ports:
-      - ${WIREMOCK_PORT}:3001
-
-  wiremock_reloader:
-    build:
-      context: ../../@mock_toolkit/wiremock-auto-reloader
-    container_name: react.wiremock_reloader
-    env_file:
-      - .env
-    volumes:
-      - ../../@mock_toolkit/wiremock/data:/wiremock/data
-    depends_on:
-      - wiremock
-
-  devserver:
+  dev-app:
     build:
       context: ./
-      dockerfile: Dockerfile.dev
-    container_name: react.devserver
+      dockerfile: ../../build/docker/Dockerfile.dev
+    container_name: react.dev-app
     env_file:
       - .env
     volumes:
       - ../../:/app
     ports:
       - ${DEV_SERVER_PORT}:3000
+
+  dev-storybook:
+    build:
+      context: ./
+      dockerfile: ../../build/docker/Dockerfile.dev
+    container_name: react.dev-storybook
+    env_file:
+      - .env
+    volumes:
+      - ../../:/app
+    ports:
+      - ${STORYBOOK_PORT}:9009
+    command: yarn start-storybook -p ${STORYBOOK_PORT}

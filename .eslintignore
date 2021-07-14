@@ -1,9 +1,7 @@
-@mock_toolkit/
-config/
+configs/
 dist/
-site/
-pkg/
 tools/
 build/
+docs/
 
 *.config.js

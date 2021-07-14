@@ -23,12 +23,6 @@ module.exports = {
     node: true,
     es6: true
   },
-  globals: {
-    page: true,
-    browser: true,
-    context: true,
-    jestPuppeteer: true
-  },
   rules: {
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error']
@@ -38,5 +32,13 @@ module.exports = {
       pragma: 'React',
       version: 'detect'
     }
-  }
+  },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        'no-undef': 'off'
+      }
+    }
+  ]
 }

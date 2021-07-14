@@ -1,8 +1,5 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "baseUrl": "./",
-
     "lib": ["esnext", "dom", "dom.iterable"],
     "module": "ESNext",
     "target": "ES5",
@@ -16,6 +13,7 @@
     "sourceMap": true,
     "declaration": false,
     "allowJs": true,
+    "checkJs": false,
     "esModuleInterop": true,
     "removeComments": true,
     "noImplicitAny": true,
@@ -31,21 +29,26 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
 
+    "outDir": "dist",
+    "baseUrl": ".",
+    "rootDirs": ["src", "test"],
+
+    "typeRoots": [
+      "node_modules/@types",
+      "declarations.d.ts"
+    ],
     "types": [
       "react",
       "puppeteer",
-      "jest",
+      "jest-environment-puppeteer",
+      "expect-puppeteer",
       "testing-library__jest-dom"
     ],
-    "typeRoots": [
-      "node_modules/@types"
-    ]
+
+    "paths": {
+      "@app/*": ["./src/*"],
+      "@testing/*": ["./test/*"]
+    }
   },
-  "include": ["src/**/*", "declarations.d.ts"],
-  "exclude": [
-    "/jest.config.js/",
-    "node_modules",
-    "dist",
-    ".storybook"
-  ]
+  "include": ["src/**/*", "declarations.d.ts"]
 }

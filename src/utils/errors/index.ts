@@ -1,7 +1,7 @@
-/* eslint-disable no-console */
+import Logger from '@app/utils/log'
 
 export function handleErrorEvent(event: ErrorEvent): void {
-  console.error(
+  Logger.error(
     'An error occurred. Reason: ' +
       event.message +
       +'\n' +
@@ -20,7 +20,8 @@ export function handleErrorEvent(event: ErrorEvent): void {
   )
 }
 
-export const handleExceptionAndContinue = (message: string) => (err: Error) => {
-  console.error(message, err)
-  throw err
-}
+export const handleExceptionAndContinue =
+  (message: string) =>
+  (err: Error): void => {
+    Logger.error(message, err)
+  }
