@@ -1,0 +1,7 @@
+.storybook
+build
+coverage
+configs
+deployments
+docs
+test

@@ -7,22 +7,20 @@
 </p>
 
 <p align="center">
-  <a href="CONTRIBUTING.md">Contributing Guidelines</a>
-  ·
-  <a href="https://github.com/vitorsalgado/react-web-starter/issues">Submit an Issue</a>
-  <br>
-  <br>
-</p>
-
-<p align="center">
   <a href="https://github.com/vitorsalgado/react-web-starter/actions/workflows/ci.yml">
     <img src="https://github.com/vitorsalgado/react-web-starter/actions/workflows/ci.yml/badge.svg">
   </a>&nbsp
   <a href="https://codecov.io/gh/vitorsalgado/react-web-starter">
     <img src="https://codecov.io/gh/vitorsalgado/react-web-starter/branch/master/graph/badge.svg?token=BB87R38Z87"/>
   </a>&nbsp
+  <a href="https://codeclimate.com/github/vitorsalgado/react-web-starter/maintainability">
+    <img src="https://api.codeclimate.com/v1/badges/126ad2708eb60164e6de/maintainability" />
+  </a>&nbsp
   <a href="https://github.com/prettier/prettier">
     <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square"/>
+  </a>&nbsp
+  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fvitorsalgado%2Freact-web-starter?ref=badge_shield" alt="FOSSA Status">
+    <img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvitorsalgado%2Freact-web-starter.svg?type=shield"/>
   </a>&nbsp
 </p>
 
@@ -45,7 +43,50 @@ Some features contained in this project are:
 - GitHub Actions (CI)
 - Docker
 
-## Contents
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Configurations](#configurations)
+- [Test](#test)
+- [Linters and Code Style](#linters-and-code-style)
+- [CI](#ci)
+- [Additional Tools](#additional-tools)
+- [License](#license)
+
+## Getting Started
+
+### Dependencies
+
+This project uses **Yarn 2** as a package manager.  
+Run:
+
+```
+yarn
+```
+
+### Running
+
+```
+yarn start
+```
+
+### Running With Docker Compose
+
+```
+make up
+```
+
+### Building
+
+```
+yarn build
+```
+
+### Serving Dist Content with Nginx
+
+```
+make dist
+```
 
 ## Configurations
 
@@ -59,7 +100,7 @@ Check [Env Vars Joi Schema](configs/envvars/index.js).
 It comes with a setup for unit, integration and e2e tests with **React Testing Library** and **Puppeteer**.  
 Check the [jest.config.ts](jest.config.ts).
 
-## Linting and Code Style
+## Linters and Code Style
 
 Mix of tools used to ensure code and commit style and best practices:
 
@@ -70,7 +111,7 @@ Mix of tools used to ensure code and commit style and best practices:
 - Lint Staged
 - Husky
 
-## CI &middot; [![Codacy Badge](https://api.codacy.com/project/badge/Grade/96e11aea37d24f3fb3106c6ba213fb39)](https://www.codacy.com/app/vitorsalgado/frontend-toolkit?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vitorsalgado/frontend-toolkit&amp;utm_campaign=Badge_Grade) [![Maintainability](https://api.codeclimate.com/v1/badges/dec583a41ea4f383ca26/maintainability)](https://codeclimate.com/github/vitorsalgado/frontend-toolkit/maintainability)
+## CI
 
 - **Github Actions** for continuous integration
 - **Codecov** for test coverage reports
@@ -81,6 +122,13 @@ Mix of tools used to ensure code and commit style and best practices:
 Check the [Makefile](Makefile) for some useful commands.  
 Execute `make` to show the _help_.
 
+## To Do
+
+- [ ] Basic functional workflow with React and Redux
+- [ ] StyleLint seems to be not working properly
+
 ## License
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvitorsalgado%2Freact-web-starter.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fvitorsalgado%2Freact-web-starter?ref=badge_large)
 
 This project is [Apache](LICENSE) licensed.

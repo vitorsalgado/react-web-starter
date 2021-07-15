@@ -3,5 +3,6 @@ dist/
 tools/
 build/
 docs/
+coverage/
 
 *.config.js
