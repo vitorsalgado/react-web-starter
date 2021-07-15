@@ -71,6 +71,7 @@ Mix of tools used to ensure code and commit style and best practices:
 - Husky
 
 ## CI &middot; [![Codacy Badge](https://api.codacy.com/project/badge/Grade/96e11aea37d24f3fb3106c6ba213fb39)](https://www.codacy.com/app/vitorsalgado/frontend-toolkit?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vitorsalgado/frontend-toolkit&amp;utm_campaign=Badge_Grade) [![Maintainability](https://api.codeclimate.com/v1/badges/dec583a41ea4f383ca26/maintainability)](https://codeclimate.com/github/vitorsalgado/frontend-toolkit/maintainability)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvitorsalgado%2Freact-web-starter.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fvitorsalgado%2Freact-web-starter?ref=badge_shield)
 
 - **Github Actions** for continuous integration
 - **Codecov** for test coverage reports
@@ -84,3 +85,6 @@ Execute `make` to show the _help_.
 ## License
 
 This project is [Apache](LICENSE) licensed.
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvitorsalgado%2Freact-web-starter.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fvitorsalgado%2Freact-web-starter?ref=badge_large)
