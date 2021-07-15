@@ -5,7 +5,6 @@ SHELL := /bin/bash
 PROJECT := react-web-starter
 DOCKER_NAME := PROJECT
 NGINX_PORT := 3000
-STORYBOOK_PORT := 9009
 CONTEXT := $$(pwd)
 
 # Help
@@ -15,6 +14,8 @@ CONTEXT := $$(pwd)
 help:
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
+start: ## Start Dev Server with Hot Reload
+	@yarn start
 
 up: ## Run a development environment with Docker Compose.
 	@docker-compose -f ./deployments/dev/docker-compose.yml up
@@ -38,10 +39,6 @@ docker-build: ## Builds production Docker.
 
 docker-run: ## Run production Docker.
 	@docker run --rm -p $(NGINX_PORT):80 --name $(DOCKER_NAME) $(DOCKER_NAME)
-
-.PHONY: storybook
-storybook: ## Run Storybook. Use -e STORYBOOK_PORT=<PORT> to change Storybook port. Defaults to 9009.
-	@yarn start-storybook -p $(STORYBOOK_PORT)
 
 
 # Dev Environment Utilities

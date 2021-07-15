@@ -18,9 +18,7 @@
     "prettier": "prettier 'build/**' 'configs/**' 'src/**' 'test/**' --write --ignore-unknown",
     "prettier:ci": "yarn prettier --check",
     "prepare": "husky install",
-    "postinstall": "husky install",
-    "storybook": "start-storybook -p 9009",
-    "storybook:build": "build-storybook"
+    "postinstall": "husky install"
   },
   "homepage": "https://github.com/vitorsalgado/react-web-starter/blob/master/README.md",
   "bugs": "https://github.com/vitorsalgado/react-web-starter/issues",
@@ -43,13 +41,7 @@
     "@babel/preset-react": "^7.14.5",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
-    "@mdx-js/react": "^1.6.22",
     "@reduxjs/toolkit": "^1.6.0",
-    "@storybook/addon-actions": "^6.3.4",
-    "@storybook/addon-docs": "^6.3.4",
-    "@storybook/addon-essentials": "^6.3.4",
-    "@storybook/addon-links": "^6.3.4",
-    "@storybook/react": "^6.3.4",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@types/expect-puppeteer": "^4.4.6",
@@ -75,7 +67,7 @@
     "codecov": "^3.8.2",
     "copy-webpack-plugin": "^9.0.1",
     "cross-env": "^7.0.3",
-    "css-loader": "^5.2.7",
+    "css-loader": "^6.0.0",
     "dotenv": "^10.0.0",
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
@@ -90,8 +82,6 @@
     "eslint-plugin-tsdoc": "^0.2.14",
     "expect-puppeteer": "^5.0.4",
     "express": "^4.17.1",
-    "fastify": "^3.19.1",
-    "fastify-static": "^4.2.2",
     "html-webpack-plugin": "^5.3.2",
     "husky": "^7.0.1",
     "i18next": "^20.3.3",
@@ -108,7 +98,6 @@
     "react": "^17.0.2",
     "react-app-polyfill": "^2.0.0",
     "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
     "react-helmet-async": "^1.0.9",
     "react-hot-loader": "^4.13.0",
     "react-i18next": "^11.11.2",
@@ -135,7 +124,6 @@
     "webpack-dev-server": "^3.11.2",
     "webpack-manifest-plugin": "^3.1.1",
     "webpack-merge": "^5.8.0",
-    "webpack-nano": "^1.1.1",
     "workbox-webpack-plugin": "^6.1.5"
   }
 }

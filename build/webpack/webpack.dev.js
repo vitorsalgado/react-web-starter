@@ -29,7 +29,7 @@ module.exports = Merge(Base, {
   },
 
   watchOptions: {
-    ignored: ['.github', '.storybook', '.yarn', 'deployments', 'dist', 'docs', 'test', 'tools', '**/node_modules']
+    ignored: ['.github', '.yarn', 'deployments', 'dist', 'docs', 'test', 'tools', '**/node_modules']
   },
 
   output: {

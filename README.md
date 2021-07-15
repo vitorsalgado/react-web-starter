@@ -3,7 +3,7 @@
 <p align="center">
     <img src="docs/assets/logo.png" alt="Logo" />
     <br/>
-    <i>React foundation project based on TypeScript with all boring stuff already set.</i>
+    <i>React starter project based on <strong>TypeScript</strong> with all boring stuff already set.</i>
 </p>
 
 <p align="center">
@@ -23,10 +23,10 @@
 
 ## Overview
 
-This is a template to serve as a template for new React projects with TypeScript.  
-This project is also intended to serve as a learning experience for React and its ecosystem and to explore modern
+This is a starter project for **React** with **TypeScript**.  
+This project is also intended to serve as a **learning** experience for React and its ecosystem and to explore modern
 frontend tools and practices.  
-Some features contained in this project are:
+Some features contained in this project:
 
 - React
 - Redux
@@ -53,14 +53,14 @@ Some features contained in this project are:
 
 ### Dependencies
 
-This project uses **Yarn 2** as a package manager.  
-Run:
+**Yarn 2** is the project package manager.  
+Run the following command to install dependencies and prepare the environment with Git hooks:
 
 ```
 yarn
 ```
 
-### Running
+### Running the Dev Server
 
 ```
 yarn start
@@ -86,14 +86,16 @@ make dist
 
 ## Configurations
 
-**WebPack** is used for build and bundling.  
-Mostly build configurations are based on Environment Variables that can also be set using **DotEnv**.  
-Check [Env Vars Joi Schema](configs/envvars/index.js).
+**WebPack** is the module bundler used here.  
+Some build configurations can be changed using **environment variables**. These variable can also be set using **
+DotEnv**. Just place a **.env** on project and modify the values you want.     
+Check [this Joi schema](configs/envvars/index.js) to see all variables, and their respect default and allowed values.
 
 ## Test
 
 **Jest** is the testing framework of this project.  
-It comes with a setup for unit, integration and e2e tests with **React Testing Library** and **Puppeteer**.  
+This project comes with a setup for unit, integration and e2e tests mainly based on **React Testing Library** and **
+Puppeteer**.  
 Check the [jest.config.ts](jest.config.ts).
 
 ## Linters and Code Style
@@ -120,5 +122,5 @@ Execute `make` to show the _help_.
 
 ## To Do
 
-- [ ] Basic functional workflow with React and Redux
+- [ ] Basic workflow with React and Redux
 - [ ] StyleLint seems to be not working properly

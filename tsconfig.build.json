@@ -2,7 +2,6 @@
   "extends": "./tsconfig.json",
   "exclude": [
     "/jest.config.ts/",
-    ".storybook",
     "dist",
     "node_modules",
     "test",
