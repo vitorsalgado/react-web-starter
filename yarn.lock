@@ -7354,6 +7354,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"argv@npm:0.0.2":
+  version: 0.0.2
+  resolution: "argv@npm:0.0.2"
+  checksum: 09d26b0dc74bfdbc70feb354294d029e2e14cf274b404749b0369b917c0c993219f2b48285eb56b15441df1317b912a3ed09a82ae4f46bee640b68b769f01223
+  languageName: node
+  linkType: hard
+
 "aria-query@npm:^4.2.2":
   version: 4.2.2
   resolution: "aria-query@npm:4.2.2"
@@ -9029,6 +9036,21 @@ __metadata:
   version: 1.1.0
   resolution: "code-point-at@npm:1.1.0"
   checksum: 7d9837296e0f1c00239c88542f5a3e0bad11e45d3d0e8d9d097901fe54722dd5d2c006969077a287be8648a202c43f74e096f17552cbd897568308fba7b87ac0
+  languageName: node
+  linkType: hard
+
+"codecov@npm:^3.8.2":
+  version: 3.8.2
+  resolution: "codecov@npm:3.8.2"
+  dependencies:
+    argv: 0.0.2
+    ignore-walk: 3.0.3
+    js-yaml: 3.14.1
+    teeny-request: 7.0.1
+    urlgrey: 0.4.4
+  bin:
+    codecov: bin/codecov
+  checksum: 1b592a40b0c9c373aeef031d9f8bbfb1b2815f51394d055068dce89f014a6ac851504987ceff6f76292b165b1d2964726eb7dc2517bf911afbdd5a57dff74d6e
   languageName: node
   linkType: hard
 
@@ -13209,7 +13231,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"http-proxy-agent@npm:^4.0.1":
+"http-proxy-agent@npm:^4.0.0, http-proxy-agent@npm:^4.0.1":
   version: 4.0.1
   resolution: "http-proxy-agent@npm:4.0.1"
   dependencies:
@@ -13365,6 +13387,15 @@ fsevents@^1.2.7:
   version: 0.1.5
   resolution: "iferr@npm:0.1.5"
   checksum: 9d366dcc6356bfc0156ba7b86c7ef1a8ede7533fc7b100b4700de618774f1b48aa60185a2193f8260870b9168daa38aee5b11d38c92f5100af8ccdf22b5c2717
+  languageName: node
+  linkType: hard
+
+"ignore-walk@npm:3.0.3":
+  version: 3.0.3
+  resolution: "ignore-walk@npm:3.0.3"
+  dependencies:
+    minimatch: ^3.0.4
+  checksum: 08394ce8c47dc086d44ef65a1e1d30352ff3d6605bdec90f59e985b710cc660aafa7975cb30312891d21d826d10b3a8b3210c5d68251678e2dcd366362865170
   languageName: node
   linkType: hard
 
@@ -15028,7 +15059,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"js-yaml@npm:^3.13.1":
+"js-yaml@npm:3.14.1, js-yaml@npm:^3.13.1":
   version: 3.14.1
   resolution: "js-yaml@npm:3.14.1"
   dependencies:
@@ -18774,6 +18805,7 @@ fsevents@^1.2.7:
     babel-loader: ^8.2.2
     babel-plugin-styled-components: ^1.13.2
     babel-preset-react-app: ^10.0.0
+    codecov: ^3.8.2
     copy-webpack-plugin: ^9.0.1
     cross-env: ^7.0.3
     css-loader: ^5.2.7
@@ -20572,6 +20604,15 @@ resolve@~1.19.0:
   languageName: node
   linkType: hard
 
+"stream-events@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "stream-events@npm:1.0.5"
+  dependencies:
+    stubs: ^3.0.0
+  checksum: faa9a327e3f8ac366ec7365e6cded01c5de44b834b429d2c8eea8039839269f437c0dd8afb996353b4eed016803292bf490fda78b87fdd8ae1437cff6649bd00
+  languageName: node
+  linkType: hard
+
 "stream-http@npm:^2.7.2":
   version: 2.8.3
   resolution: "stream-http@npm:2.8.3"
@@ -20845,6 +20886,13 @@ resolve@~1.19.0:
   version: 3.1.1
   resolution: "strip-json-comments@npm:3.1.1"
   checksum: f16719ce25abc58a55ef82b1c27f541dcfa5d544f17158f62d10be21ff9bd22fde45a53c592b29d80ad3c97ccb67b7451c4833913fdaeadb508a40f5e0a9c206
+  languageName: node
+  linkType: hard
+
+"stubs@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "stubs@npm:3.0.0"
+  checksum: 5d58c7b76aa6ac62149166ae43a1fc257cc093fffc2b584cbc09a49c5feb951f4ba05c6832453fad392a3c7665bbe62167c116a17edc8520637d0d65706bef0d
   languageName: node
   linkType: hard
 
@@ -21178,6 +21226,19 @@ resolve@~1.19.0:
     mkdirp: ^1.0.3
     yallist: ^4.0.0
   checksum: d1d988eceb1ad2ecfaaf6fc5ecfe0c46fa005d04fe4c283355ccc52d3ffb4b6bf459a62f9ac7e36fd35251ab020399bdf527ab48b968120e06b4f61906a87d62
+  languageName: node
+  linkType: hard
+
+"teeny-request@npm:7.0.1":
+  version: 7.0.1
+  resolution: "teeny-request@npm:7.0.1"
+  dependencies:
+    http-proxy-agent: ^4.0.0
+    https-proxy-agent: ^5.0.0
+    node-fetch: ^2.6.1
+    stream-events: ^1.0.5
+    uuid: ^8.0.0
+  checksum: d62a642f1b72b898e7479acf95e9e40252c6808ed259c6e2537d85dd444b8beb461fcd08a6d8c37482ea58906014a9dc4d89c3ac673d1ef0de0f20ee8ee0c8ae
   languageName: node
   linkType: hard
 
@@ -22250,6 +22311,13 @@ typescript@^4.3.5:
   languageName: node
   linkType: hard
 
+"urlgrey@npm:0.4.4":
+  version: 0.4.4
+  resolution: "urlgrey@npm:0.4.4"
+  checksum: 9c124ff8c1d705e2606e665c9a5307d85b233f887429bd3398d9dc171d14679f469e274ab8632e976c6faf05c678c39209f3a328932839dfec1837b47bd29d55
+  languageName: node
+  linkType: hard
+
 "use-composed-ref@npm:^1.0.0":
   version: 1.1.0
   resolution: "use-composed-ref@npm:1.1.0"
@@ -22356,6 +22424,15 @@ typescript@^4.3.5:
   bin:
     uuid: ./bin/uuid
   checksum: 1ce3f37e214d6d0dc94a6a9663a0365013ace66bc3fd5b203e6f5d2eeb978aaee1192367222386345d30b4c6a447928c501121aa84c637724bf105ef57284949
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^8.0.0":
+  version: 8.3.2
+  resolution: "uuid@npm:8.3.2"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: aed2bcef341f95635f308fea8831fb9038b18c485fe7e71feb89d2e05602dfecad0cb6f2246fae096d4da425cca6e8a71056f28abd97ad98cf770a2018853248
   languageName: node
   linkType: hard
 
