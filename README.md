@@ -19,9 +19,6 @@
   <a href="https://github.com/prettier/prettier">
     <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square"/>
   </a>&nbsp
-  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fvitorsalgado%2Freact-web-starter?ref=badge_shield" alt="FOSSA Status">
-    <img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvitorsalgado%2Freact-web-starter.svg?type=shield"/>
-  </a>&nbsp
 </p>
 
 ## Overview
@@ -51,7 +48,6 @@ Some features contained in this project are:
 - [Linters and Code Style](#linters-and-code-style)
 - [CI](#ci)
 - [Additional Tools](#additional-tools)
-- [License](#license)
 
 ## Getting Started
 
@@ -126,9 +122,3 @@ Execute `make` to show the _help_.
 
 - [ ] Basic functional workflow with React and Redux
 - [ ] StyleLint seems to be not working properly
-
-## License
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fvitorsalgado%2Freact-web-starter.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fvitorsalgado%2Freact-web-starter?ref=badge_large)
-
-This project is [Apache](LICENSE) licensed.
