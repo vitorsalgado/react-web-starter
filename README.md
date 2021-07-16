@@ -94,8 +94,8 @@ Check [this Joi schema](configs/envvars/index.js) to see all variables, and thei
 ## Test
 
 **Jest** is the testing framework of this project.  
-This project comes with a setup for unit, integration and e2e tests mainly based on **React Testing Library** and **
-Puppeteer**.  
+This project comes with a setup for unit, integration and e2e tests mainly based on
+**React Testing Library** and **Puppeteer**.  
 Check the [jest.config.ts](jest.config.ts).
 
 ## Linters and Code Style
