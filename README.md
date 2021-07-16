@@ -2,8 +2,18 @@
 
 <p align="center">
     <img src="docs/assets/logo.png" alt="Logo" />
-    <br/>
-    <i>React starter project based on <strong>TypeScript</strong> with all boring stuff already set.</i>
+    <br>
+    <i>Starter Project for <strong>React</strong> using <strong>TypeScript</strong> with all boring stuff already set. <br><strong>npm init react-ts-web-starter</strong></i>
+</p>
+<p align="center">
+  This project is also intended to serve as a <strong>learning</strong> experience for React and its ecosystem and to explore modern
+  frontend tools and practices.
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/create-react-ts-web-starter"><strong>www.npmjs.com/package/create-react-ts-web-starter</strong></a>
+  <br>
+  <br>
 </p>
 
 <p align="center">
@@ -19,35 +29,39 @@
   <a href="https://github.com/prettier/prettier">
     <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square"/>
   </a>&nbsp
+  <a href="https://www.npmjs.com/package/create-react-ts-web-starter">
+    <img alt="npm" src="https://img.shields.io/npm/v/create-react-ts-web-starter">
+  </a>&nbsp
 </p>
-
-## Overview
-
-This is a starter project for **React** with **TypeScript**.  
-This project is also intended to serve as a **learning** experience for React and its ecosystem and to explore modern
-frontend tools and practices.  
-Some features contained in this project:
-
-- React
-- Redux
-- i18n
-- TypeScript
-- Jest
-- End-to-End Tests with Puppeteer
-- Yarn 2
-- WebPack
-- ESLint + Prettier + Stylelint + Commit Lint + Husky + Lint Staged (Linters)
-- GitHub Actions (CI)
-- Docker
 
 ## Table of Contents
 
+- [Quick Overview](#npm-init)
 - [Getting Started](#getting-started)
 - [Configurations](#configurations)
 - [Test](#test)
 - [Linters and Code Style](#linters-and-code-style)
 - [CI](#ci)
 - [Additional Tools](#additional-tools)
+
+# Quick Overview
+
+A new React project can be bootstrapped using this repository as a template using the following command:
+
+```
+npm init react-ts-web-starter
+```
+
+Without parameters, the project will be created on a folder **my-app** in the same directory where you executed the
+command.  
+All parameters available:
+
+```
+--destination=<FOLDER_DESTINATION> Defaults to the current directory
+--app=<APP_NAME> Defaults to my-app
+```
+
+The final folder will the parameter `destination` concatenated with parameter `app`.
 
 ## Getting Started
 
