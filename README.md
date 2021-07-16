@@ -52,8 +52,7 @@ A new React project can be bootstrapped using this repository as a template usin
 npm init react-ts-web-starter
 ```
 
-Without parameters, the project will be created on a folder **my-app** in the same directory where you executed the
-command.  
+Without parameters, the project will be created on a folder **my-app** in the same directory where you executed the command.  
 All parameters available:
 
 ```
@@ -101,8 +100,8 @@ make dist
 ## Configurations
 
 **WebPack** is the module bundler used here.  
-Some build configurations can be changed using **environment variables**. These variable can also be set using **
-DotEnv**. Just place a **.env** on project and modify the values you want.     
+Some build configurations can be changed using **environment variables**. These variable can also be set using **DotEnv**. Just place a **.env** on project and modify the values
+you want.     
 Check [this Joi schema](configs/envvars/index.js) to see all variables, and their respect default and allowed values.
 
 ## Test
