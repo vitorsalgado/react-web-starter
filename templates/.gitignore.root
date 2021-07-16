@@ -81,6 +81,9 @@ typings/
 **/.pnp.*
 
 # Project
+.env.sample
 dist/
+reports/
+@mock_toolkit/
 .stylelintcache/
 tools/dev/
