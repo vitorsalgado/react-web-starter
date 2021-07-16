@@ -36,7 +36,7 @@
 
 ## Table of Contents
 
-- [Quick Overview](#npm-init)
+- [Quick Overview](#quick-overview)
 - [Getting Started](#getting-started)
 - [Configurations](#configurations)
 - [Test](#test)
