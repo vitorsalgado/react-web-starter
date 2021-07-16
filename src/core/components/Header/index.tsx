@@ -7,7 +7,7 @@ export default function Header(): JSX.Element {
       <nav>
         <div>
           <a href="/">Home</a>
-          <LinkButton href={'/'} label="Entrar" />
+          <LinkButton href={'/login'} label="Login" />
         </div>
       </nav>
     </header>

@@ -1,31 +1,30 @@
 import * as React from 'react'
-import { Link } from 'react-router-dom'
 import { connect, useSelector } from 'react-redux'
+import { State } from '@app/store'
 
 const action1 = () => ({ type: 'ACTION_ONE' })
-const action2 = () => ({ type: 'ACTION_ONE', error: { code: '666', message: 'Total Failure' } })
+const action2 = () => ({ type: 'ACTION_ONE', error: { code: '100', message: 'Total Failure' } })
 
 function About(props: any): JSX.Element {
-  const test = useSelector((state: any) => state?.TheReducer?.test)
+  const message = useSelector((state: State) => state.demo.message)
 
   return (
     <div>
-      <h1>About Not Here Bro!</h1>
-      <Link to="/">Link to Home</Link>
-      <h2>Selector Value -- {test}</h2>
-      <h2>Prop Value -- {props.test}</h2>
-      <button onClick={props.test1}>Test 01</button>
+      <h1>About</h1>
+      <h2>Selector Value -- {message}</h2>
+      <h2>Prop Value -- {props.message}</h2>
+      <button onClick={props.triggerOne}>Test 01</button>
       <br />
-      <button onClick={props.test2}>Test 02</button>
+      <button onClick={props.triggerTwo}>Test 02</button>
     </div>
   )
 }
 
 const mapDispatchToProps = (dispatch: any) => ({
-  test1: () => dispatch(action1()),
-  test2: () => dispatch(action2())
+  triggerOne: () => dispatch(action1()),
+  triggerTwo: () => dispatch(action2())
 })
 
-const mapStateToProps = (state: any) => ({ test: state?.TheReducer?.test })
+const mapStateToProps = (state: State) => ({ message: state.demo.message })
 
 export default connect(mapStateToProps, mapDispatchToProps)(About)

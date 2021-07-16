@@ -1,6 +1,6 @@
 import { combineReducers } from '@reduxjs/toolkit'
-import { TheReducer } from '@app/core/features/About/reducer'
+import { demo } from '@app/core/features/About/reducer'
 
-const rootReducer = combineReducers({ TheReducer })
+const rootReducer = combineReducers({ demo })
 
 export default rootReducer

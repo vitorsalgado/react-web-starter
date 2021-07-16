@@ -1,9 +1,9 @@
-import { Action } from '@app/store/types'
+import { Action } from '@app/store'
 
 export const reducerForWhen =
-  <T, S>(predicate: (action: Action<T>) => boolean, defaultState: S = {} as S) =>
-  (reducer: (state: S, action: Action<T>) => S) =>
-  (state: S, action: Action<T>): S => {
+  (predicate: (action: Action<never>) => boolean, defaultState: any = {}) =>
+  (reducer: (state: any, action: Action<never>) => any) =>
+  (state: any = {}, action: Action<never>): any => {
     if (typeof state === 'undefined') {
       return defaultState
     }
@@ -16,6 +16,6 @@ export const reducerForWhen =
   }
 
 export const actionTypeIs =
-  <T>(type: string) =>
-  (action: Action<T>): boolean =>
+  (type: string) =>
+  (action: Action<never>): boolean =>
     type === action.type

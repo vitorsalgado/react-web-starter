@@ -1,4 +1,4 @@
-import { actionTypeIs, reducerForWhen } from '@app/utils/redux/index'
+import { actionTypeIs, reducerForWhen } from '@app/utils/redux'
 import { combineReducers, createStore } from 'redux'
 
 describe('Redux Utils', function () {

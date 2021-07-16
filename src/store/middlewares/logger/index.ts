@@ -1,5 +1,5 @@
 import { Middleware } from '@reduxjs/toolkit'
-import { State } from '@app/store/types'
+import { State } from '@app/store'
 
 const Styles = {
   LightGray: 'color: gray; font-weight: lighter',
