@@ -80,10 +80,6 @@ typings/
 !**/.yarn/versions
 **/.pnp.*
 
-# Project
-.env.sample
+# project
 dist/
-reports/
-@mock_toolkit/
 .stylelintcache/
-tools/dev/

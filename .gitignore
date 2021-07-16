@@ -80,7 +80,7 @@ typings/
 !**/.yarn/versions
 **/.pnp.*
 
-# Project
+# project
 dist/
 .stylelintcache/
 tools/dev/
