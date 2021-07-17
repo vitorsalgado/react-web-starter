@@ -20,7 +20,9 @@ export const logger: Middleware<Record<string, unknown>, State> = store => next 
   console.log('%cPrevious State', ...[Styles.LightGray], store.getState())
   console.log('%cAction', ...[Styles.Blue], action)
 
-  if (hasError) console.log('%cError', ...[Styles.Red], action.error)
+  if (hasError) {
+    console.log('%cError', ...[Styles.Red], action.error)
+  }
 
   const result = next(action)
 

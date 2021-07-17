@@ -3,7 +3,7 @@ import { connect, useSelector } from 'react-redux'
 import { State } from '@app/store'
 
 const action1 = () => ({ type: 'ACTION_ONE' })
-const action2 = () => ({ type: 'ACTION_ONE', error: { code: '100', message: 'Total Failure' } })
+const action2 = () => ({ type: 'ACTION_TWO', error: { code: '100', message: 'Total Failure' } })
 
 function About(props: any): JSX.Element {
   const message = useSelector((state: State) => state.demo.message)

@@ -1,4 +1,4 @@
-import { actionTypeIs, reducerForWhen } from '@app/utils/redux'
+import { actionIs, onlyWhen } from '@app/utils/redux'
 import { combineReducers, createStore } from 'redux'
 
 describe('Redux Utils', function () {
@@ -17,9 +17,9 @@ describe('Redux Utils', function () {
 
   const store = createStore(
     combineReducers({
-      reducer1: reducerForWhen(actionTypeIs(Actions.Test01))(reducer1),
-      reducer2: reducerForWhen(actionTypeIs(Actions.Test02))(reducer2),
-      reducer3: reducerForWhen(actionTypeIs(Actions.Test03))(reducer3)
+      reducer1: onlyWhen(actionIs(Actions.Test01))(reducer1),
+      reducer2: onlyWhen(actionIs(Actions.Test02))(reducer2),
+      reducer3: onlyWhen(actionIs(Actions.Test03))(reducer3)
     })
   )
 
@@ -33,7 +33,7 @@ describe('Redux Utils', function () {
 
   it('should not fail with undefined state', function () {
     const dummyReducer = (state: any, action: any) => ({ ...state, msg: action.msg })
-    const root = reducerForWhen(actionTypeIs('test'))(dummyReducer)
+    const root = onlyWhen(actionIs('test'))(dummyReducer)
 
     expect(() => root(undefined, { type: 'test' } as any)).not.toThrow()
   })

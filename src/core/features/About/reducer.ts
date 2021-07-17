@@ -1,4 +1,4 @@
-import { actionTypeIs, reducerForWhen } from '@app/utils/redux'
+import { actionIs, applyReducers, onlyWhen } from '@app/utils/redux'
 import { Action } from '@app/store'
 
 const ActionTypes = {
@@ -10,16 +10,15 @@ export interface DemoState {
   message: string
 }
 
-const demonstrationReducer = (state: DemoState, action: Action<string>): DemoState => {
-  if (action.type === ActionTypes.One) {
-    return { ...state, message: 'ACTION ONE TRIGGERED' }
-  }
-
-  if (action.type === ActionTypes.Two) {
-    return { ...state, message: 'ACTION TWO TRIGGERED' }
-  }
-
-  return state
+const reducerOne = (state: DemoState, _action: Action<string>): DemoState => {
+  return { ...state, message: 'ACTION ONE TRIGGERED' }
 }
 
-export const demo = reducerForWhen(actionTypeIs(ActionTypes.One))(demonstrationReducer)
+const reducerTwo = (state: DemoState, _action: Action<string>): DemoState => {
+  return { ...state, message: 'ACTION TWO TRIGGERED' }
+}
+
+export const demo = applyReducers(
+  onlyWhen(actionIs(ActionTypes.One))(reducerOne),
+  onlyWhen(actionIs(ActionTypes.Two))(reducerTwo)
+)
