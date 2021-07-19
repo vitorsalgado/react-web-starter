@@ -1,20 +1,27 @@
 import { Action } from '@app/store'
 
 export const applyReducers =
-  <T>(...reducers: Array<(state: T, action: Action<never>) => T>) =>
-  (state: T, action: Action<never>): T =>
-    reducers.reduce((a: any, b: any) => a(b(state, action), action)) as any
+  <T>(...reducers: Array<(state: T, action: Action<any>) => T>) =>
+  (state: T, action: Action<any>): T => {
+    let st = state
+
+    for (const reducer of reducers) {
+      st = reducer(st, action)
+    }
+
+    return st
+  }
 
 export const actionIs =
   (type: string) =>
-  (action: Action<never>): boolean =>
+  (action: Action<any>): boolean =>
     type === action?.type
 
 export const onlyWhen =
-  (predicate: (action: Action<never>) => boolean, defaultState: any = {}) =>
-  (reducer: (state: any, action: Action<never>) => any) =>
-  (state: any = {}, action: Action<never>): any => {
-    if (typeof state === 'undefined') {
+  (predicate: (action: Action<any>) => boolean, defaultState: any = {}) =>
+  (reducer: (state: any, action: Action<any>) => any) =>
+  (state: any, action: Action<any>): any => {
+    if (state === null || typeof state === 'undefined') {
       return defaultState
     }
 
