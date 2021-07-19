@@ -63,7 +63,8 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: {
-                localIdentName: '[name]-[local]--[contenthash:base64:5]'
+                localIdentName: '[name]-[local]--[contenthash:base64:5]',
+                exportLocalsConvention: 'camelCase'
               }
             }
           },
@@ -87,7 +88,7 @@ module.exports = {
         type: 'asset/resource'
       },
       {
-        test: /\.(jpg|png|gif)$/,
+        test: /\.(jpg|png|gif|pdf|txt)$/,
         exclude: /\.(js|jsx|mjs|ts|tsx|html|json|xml|csv|snap|(sa|sc|c)ss)$/,
         type: 'asset/resource',
         generator: {

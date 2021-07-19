@@ -18,7 +18,7 @@ module.exports = ({ start = [], end = [] }) =>
         {
           force: true,
           from: resolvePath('src/manifest.json'),
-          to: resolvePath('dist'),
+          to: Config.paths.buildDestination,
           transform: function (content, path) {
             return Buffer.from(
               JSON.stringify({
