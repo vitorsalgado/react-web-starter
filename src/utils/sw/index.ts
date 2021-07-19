@@ -1,4 +1,4 @@
-import Config from '@app/config'
+import Config from '@app/utils/config'
 import { handleExceptionAndContinue } from '@app/utils/errors'
 
 export default function registerServiceWorker(): void {

@@ -1,4 +1,4 @@
-import { ConvertedToObjectType, TranslationJsonType } from './types'
+import { ConvertedToObjectType, TranslationJsonType } from 'src/utils/locales/types'
 
 export const Translations: ConvertedToObjectType<TranslationJsonType> = {} as any
 

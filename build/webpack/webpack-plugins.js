@@ -26,6 +26,11 @@ module.exports = ({ start = [], end = [] }) =>
               })
             )
           }
+        },
+        {
+          force: true,
+          from: resolvePath('src/favicon.ico'),
+          to: Config.paths.buildDestination
         }
       ]
     }),

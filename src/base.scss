@@ -1,0 +1,80 @@
+/**
+  Variables
+ */
+
+:root {
+  --color-primary: #20133a;
+  --color-highlight: #0360df;
+  --color-accent: #573eb7;
+
+  --text-primary: #fff;
+
+  --border: 1px solid #ededf0;
+  --border-accent: 1px solid var(--color-accent);
+  --border-radius: 5px;
+  --box-shadow: 0 0 0 2px #ededf0;
+}
+
+/**
+  Reset
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+
+html,
+body {
+  line-height: 22px;
+  background: #f3f2f2;
+  color: #232323;
+  margin: 0;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+button {
+  outline: none;
+  border: 0 none;
+}
+
+/**
+  Default Styles
+ */
+
+.icon {
+  font-family: 'Material Icons', serif;
+  vertical-align: middle;
+}

@@ -1,5 +1,5 @@
-import { Translations } from '@app/locales/translations'
-import { i18n } from '@app/locales/i18n'
+import { Translations } from '@app/utils/locales/translations'
+import { i18n } from '@app/utils/locales/i18n'
 
 describe('i18n', () => {
   it('should initiate i18n', async () => {

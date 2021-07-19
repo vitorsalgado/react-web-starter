@@ -1,6 +1,3 @@
-import 'react-app-polyfill/stable'
-import '@app/locales/i18n'
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
@@ -37,7 +34,7 @@ if ((module as any).hot) {
     ReactDOM.unmountComponentAtNode(ROOT_CONTAINER)
     render()
   })
-  ;(module as any).hot.accept(['./locales/i18n'], () => {
+  ;(module as any).hot.accept(['./utils/locales/i18n'], () => {
     // ...
   })
 }

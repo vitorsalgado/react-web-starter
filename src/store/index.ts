@@ -1,3 +1,3 @@
-export * from './configure-store'
-export * from './action'
+export * from './store'
+export * from './base'
 export * from './state'

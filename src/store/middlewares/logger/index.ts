@@ -1,5 +1,5 @@
 import { Middleware } from '@reduxjs/toolkit'
-import { State } from '@app/store'
+import { AppState } from '@app/store'
 
 const Styles = {
   LightGray: 'color: gray; font-weight: lighter',
@@ -9,7 +9,7 @@ const Styles = {
   Red: 'color: #F20404'
 }
 
-export const logger: Middleware<Record<string, unknown>, State> = store => next => action => {
+export const logger: Middleware<Record<string, unknown>, AppState> = store => next => action => {
   const hasError = !!action.error
   const title = `Dispatched %c${action.type} %c@ ${new Date().toLocaleTimeString()}${hasError ? ' %c!' : ''}`
   console.groupCollapsed(

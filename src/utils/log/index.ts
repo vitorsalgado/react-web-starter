@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-import Config from '@app/config'
+import Config from '@app/utils/config'
 
 const error = (message?: any, ...optionalParams: any[]): void => {
   if (!Config.isLogEnabled()) return

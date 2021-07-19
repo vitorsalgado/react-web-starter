@@ -132,8 +132,3 @@ Mix of tools used to ensure code and commit style and best practices:
 
 Check the [Makefile](Makefile) for some useful commands.  
 Execute `make` to show the _help_.
-
-## To Do
-
-- [ ] Basic workflow with React and Redux
-- [ ] StyleLint seems to be not working properly

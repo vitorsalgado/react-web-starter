@@ -1,14 +1,8 @@
 import { configureStore, EnhancedStore, getDefaultMiddleware, Middleware } from '@reduxjs/toolkit'
-import rootReducer from '@app/store/root-reducer'
-import { logger } from '@app/store/middlewares/logger'
-import Config from '@app/config'
-import { State } from '@app/store/state'
-
-export const InitialState: State = {
-  demo: {
-    message: 'start'
-  }
-}
+import Config from '@app/utils/config'
+import rootReducer from './store-reducer'
+import { logger } from './middlewares/logger'
+import { InitialState } from './state'
 
 const middlewares: Middleware[] = []
 
