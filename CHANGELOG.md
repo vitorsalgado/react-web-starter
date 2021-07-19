@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2-alpha.1](https://github.com/vitorsalgado/react-web-starter/compare/v0.0.2-alpha.0...v0.0.2-alpha.1) (2021-07-19)
+
+
+### Bug Fixes
+
+* redux utils ([b7aec2c](https://github.com/vitorsalgado/react-web-starter/commit/b7aec2cf3bdc7484780ef27774c5e202a56b0bbc))
+
 ### 0.0.2-alpha.0 (2021-07-16)
 
 
