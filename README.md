@@ -34,17 +34,7 @@
   </a>&nbsp
 </p>
 
-## Table of Contents
-
-- [Quick Overview](#quick-overview)
-- [Getting Started](#getting-started)
-- [Configurations](#configurations)
-- [Test](#test)
-- [Linters and Code Style](#linters-and-code-style)
-- [CI](#ci)
-- [Additional Tools](#additional-tools)
-
-# Quick Overview
+## Quick Overview
 
 A new React project can be bootstrapped using this repository as a template using the following command:
 
