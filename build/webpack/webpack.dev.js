@@ -4,7 +4,6 @@ require('dotenv').config()
 
 const Base = require('./webpack-base')
 const Webpack = require('webpack')
-const HotModuleReplacementPlugin = Webpack.HotModuleReplacementPlugin
 const WebpackManifestPlugin = require('webpack-manifest-plugin').WebpackManifestPlugin
 const Merge = require('webpack-merge').merge
 const HtmlWebPackPlugin = require('html-webpack-plugin')
@@ -19,10 +18,7 @@ module.exports = Merge(Base, {
   bail: false,
 
   devServer: {
-    contentBase: paths.buildDestination,
     hot: true,
-    inline: true,
-    clientLogLevel: 'none',
     host: Config.devServer.host,
     port: Config.devServer.port,
     historyApiFallback: true
@@ -43,7 +39,6 @@ module.exports = Merge(Base, {
 
   plugins: Plugins({
     start: [
-      new HotModuleReplacementPlugin(),
       new HtmlWebPackPlugin({
         inject: true,
         template: paths.indexHTML,
