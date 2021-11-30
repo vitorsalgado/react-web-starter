@@ -1,7 +1,9 @@
 const ENV_PRODUCTION = 'production'
 const ENV_TEST = 'test'
 
-const Env = process.env
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+const Env = process ? process.env : { env: {} }
 const NodeEnv = Env.NODE_ENV
 
 const isProd = (): boolean => NodeEnv === ENV_PRODUCTION

@@ -1,4 +1,4 @@
-import { handleErrorEvent, handleExceptionAndContinue } from '@app/utils/errors/index'
+import { handleErrorEvent, handleExceptionAndContinue } from '@app/utils/errors'
 import Logger from '@app/utils/log'
 
 describe('Errors', function () {
