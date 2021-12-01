@@ -33,3 +33,5 @@ export const onlyWhen =
 
     return state
   }
+
+export const forAction = (action: string) => onlyWhen(actionIs(action))

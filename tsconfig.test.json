@@ -3,7 +3,6 @@
   "compilerOptions": {
     "noUnusedParameters": false,
     "noUnusedLocals": false,
-    "allowUnusedLabels": true,
-    "outDir": "dist"
+    "allowUnusedLabels": true
   }
 }

@@ -1,7 +1,7 @@
 'use strict'
 
 const WebPack = require('webpack')
-const DefinePlugin = WebPack.DefinePlugin
+const EnvironmentPlugin = WebPack.EnvironmentPlugin
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const Config = require('../../configs')
 const resolvePath = require('../../configs/utils').resolvePath
@@ -10,7 +10,10 @@ const additionalPlugins = []
 
 module.exports = ({ start = [], end = [] }) =>
   [
-    new DefinePlugin(Config.envsAsString),
+    new EnvironmentPlugin({
+      NODE_ENV: Config.env,
+      PUBLIC_URL: Config.publicPath
+    }),
     ...start,
     ...additionalPlugins,
     new CopyWebpackPlugin({

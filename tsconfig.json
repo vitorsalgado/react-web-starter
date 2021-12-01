@@ -31,7 +31,7 @@
 
     "outDir": "dist",
     "baseUrl": ".",
-    "rootDirs": ["src", "test"],
+    "rootDirs": ["src", "e2e"],
 
     "typeRoots": [
       "node_modules/@types",
@@ -39,15 +39,12 @@
     ],
     "types": [
       "react",
-      "puppeteer",
-      "jest-environment-puppeteer",
-      "expect-puppeteer",
+      "node",
       "testing-library__jest-dom"
     ],
 
     "paths": {
-      "@app/*": ["./src/*"],
-      "@testing/*": ["./test/*"]
+      "@app/*": ["./src/*"]
     }
   },
   "include": ["src/**/*", "declarations.d.ts"]

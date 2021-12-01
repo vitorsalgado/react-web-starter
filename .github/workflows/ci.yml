@@ -27,7 +27,7 @@ jobs:
         id: setup-node
         uses: actions/setup-node@v2
         with:
-          node-version: 14.x
+          node-version: 16.x
 
       - name: Get Yarn Cache
         id: yarn-cache
@@ -56,6 +56,8 @@ jobs:
       - name: Tests
         run: |
           yarn test:ci
+          yarn test:e2e:prepare
+          yarn test:e2e
 
       - name: Upload Coverage
         run: |

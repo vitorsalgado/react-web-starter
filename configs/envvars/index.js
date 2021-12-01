@@ -16,6 +16,7 @@ const Joi = require('joi')
 module.exports = Joi.object({
   // Runtime
   NODE_ENV: Joi.string().allow('', 'test', 'production').default(''),
+  CI: Joi.boolean().default(false),
 
   // Application
   PUBLIC_URL: Joi.string().allow('').default(''),
