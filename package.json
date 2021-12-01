@@ -10,7 +10,7 @@
     "start:headless": "cross-env NODE_ENV=production webpack serve --config build/webpack/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack build --config build/webpack/webpack.production.js",
     "test": "jest --detectOpenHandles",
-    "test:e2e:prepare": "npx playwright install-deps",
+    "test:e2e:prepare": "npx playwright install-deps && npx playwright install",
     "test:e2e": "playwright test",
     "test:ci": "yarn test --runInBand --coverage --ci",
     "coverage:upload": "codecov -f coverage/*.json",
