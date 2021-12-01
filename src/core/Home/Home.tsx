@@ -1,5 +1,6 @@
-import * as React from 'react'
+import React from 'react'
 import styled from 'styled-components'
+import CounterView from '../Counter/CounterView'
 
 const Container = styled.div`
   margin: 50px;
@@ -12,6 +13,7 @@ export default function Home(): JSX.Element {
     <Container>
       <h1>React Web Starter Demo</h1>
       <h2>This is just a demonstration project.</h2>
+      <CounterView />
     </Container>
   )
 }

@@ -1,5 +1,6 @@
+import { AppState } from '@app/store/AppState'
 import { configureStore, EnhancedStore, Middleware } from '@reduxjs/toolkit'
-import Config from '@app/utils/config'
+import Config from '@app/config'
 import rootReducer from './rootReducer'
 import { logger } from './middlewares/logger'
 import { AppInitialState } from './AppInitialState'
@@ -11,12 +12,12 @@ if (Config.isLogEnabled()) {
 }
 
 const store = configureStore({
-  reducer: rootReducer as any,
+  reducer: rootReducer,
   preloadedState: AppInitialState,
   middleware: getDefaultMiddleware => getDefaultMiddleware().concat(middlewares),
   devTools: !Config.isProd()
 })
 
-export function configureAppStore(): EnhancedStore {
+export function configureAppStore(): EnhancedStore<AppState> {
   return store
 }

@@ -9,8 +9,9 @@ const shared: JestConfig.InitialOptions = {
 
   transform: { '^.+\\.tsx?$': 'ts-jest' },
   globals: {
+    VARS: {},
     'ts-jest': {
-      tsconfig: Path.join(process.cwd(), 'tsconfig.test.json')
+      tsconfig: 'tsconfig.test.json'
     }
   }
 }

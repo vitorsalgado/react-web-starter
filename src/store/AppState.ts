@@ -1,5 +1,5 @@
+import { Counter } from '@app/core/Counter/Counter'
+
 export interface AppState {
-  demo: {
-    message: string
-  }
+  counter: Counter
 }

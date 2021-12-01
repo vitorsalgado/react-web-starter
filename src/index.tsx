@@ -29,12 +29,9 @@ registerWindowErrorEvents()
 registerServiceWorker()
 initWebVitals()
 
-if ((module as any).hot) {
-  ;(module as any).hot.accept('./app', () => {
+if (module.hot) {
+  module.hot.accept(['./app', './shared/locales/i18n'], () => {
     ReactDOM.unmountComponentAtNode(RootContainer)
     render()
-  })
-  ;(module as any).hot.accept(['./utils/locales/i18n'], () => {
-    // ...
   })
 }

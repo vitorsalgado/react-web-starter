@@ -26,6 +26,12 @@ down: ## Stop Docker Compose development environment.
 dev-clean: ## Clean Docker Compose development environment.
 	@docker-compose -f ./deployments/dev/docker-compose.yml down --remove-orphans --volumes
 
+.PHONY: check
+check:
+	@yarn lint:ci
+	@yarn test:ci
+	@yarn test:e2e
+
 .PHONY: dist
 dist: ## Server dist/ with a nginx docker. Use -e NGINX_PORT parameter to change Nginx port. Defaults to 3000.
 	@docker run -it --rm \

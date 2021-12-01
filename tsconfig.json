@@ -39,6 +39,7 @@
     ],
     "types": [
       "react",
+      "node",
       "testing-library__jest-dom"
     ],
 

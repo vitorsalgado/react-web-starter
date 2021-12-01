@@ -7,6 +7,7 @@ const { resolvePath } = require('./utils')
 const EnvVars = Joi.attempt(process.env, EnvSchema)
 
 module.exports = {
+  env: EnvVars.NODE_ENV,
   isProduction: EnvVars.NODE_ENV === 'production',
   isTest: EnvVars.NODE_ENV === 'test',
   isCI: EnvVars.CI,
@@ -29,13 +30,6 @@ module.exports = {
     buildDestination: resolvePath('dist'),
     indexHTML: resolvePath('./src/index.html'),
     applicationEntrypoint: resolvePath('./src/index.tsx')
-  },
-
-  envsAsString: {
-    'process.env': Object.keys(EnvVars).reduce((env, key) => {
-      env[key] = JSON.stringify(EnvVars[key])
-      return env
-    }, {})
   },
 
   vars: EnvVars
