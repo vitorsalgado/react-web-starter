@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/vitorsalgado/react-web-starter/compare/v0.0.2-alpha.1...v0.0.2) (2021-12-01)
+
+
+### Refactor
+
+* update deps + upgrade example structure to use a clean approach ([#67](https://github.com/vitorsalgado/react-web-starter/issues/67)) ([e2321bd](https://github.com/vitorsalgado/react-web-starter/commit/e2321bd989c585a40ff7c9559ed4cc5cfff0ef14))
+
+
+### Chore
+
+* **deps:** update node docker tag to v17 ([#69](https://github.com/vitorsalgado/react-web-starter/issues/69)) ([b285e72](https://github.com/vitorsalgado/react-web-starter/commit/b285e72eefbcb726ab40bbbc80bdfc0038393120))
+
+
+### Build
+
+* change commit types for standard-version ([a463b4d](https://github.com/vitorsalgado/react-web-starter/commit/a463b4da960291ec6511e5bbe20d81a5b3bdb6cc))
+
 ### [0.0.2-alpha.1](https://github.com/vitorsalgado/react-web-starter/compare/v0.0.2-alpha.0...v0.0.2-alpha.1) (2021-07-19)
 
 
