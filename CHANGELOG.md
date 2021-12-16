@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/vitorsalgado/react-web-starter/compare/v0.0.2...v0.0.3) (2021-12-16)
+
+
+### Chore
+
+* add more keywords ([d43e6b4](https://github.com/vitorsalgado/react-web-starter/commit/d43e6b4c0c63928505b2e4341c34d41c33d8b30e))
+* **deps:** lock file maintenance ([#73](https://github.com/vitorsalgado/react-web-starter/issues/73)) ([b7dc881](https://github.com/vitorsalgado/react-web-starter/commit/b7dc8810531f266e4a149770fe4a3dfcfde7c119))
+* **deps:** update dependency @types/node to v17 ([08e28e5](https://github.com/vitorsalgado/react-web-starter/commit/08e28e5a13576fc9b730732755e773a9a8276175))
+* **deps:** update dependency node-sass to v7 ([439d401](https://github.com/vitorsalgado/react-web-starter/commit/439d4012d42906b5335e880781150ad3bbb98cce))
+* **deps:** update dependency react-app-polyfill to v3 ([9aaccdf](https://github.com/vitorsalgado/react-web-starter/commit/9aaccdfa2dc5d7d5021591804818e3f0838a6982))
+* **deps:** update node docker tag to v17.2.0 ([150f37d](https://github.com/vitorsalgado/react-web-starter/commit/150f37d5bb0510c7e59a0276e5977557ea5d4423))
+* **deps:** update node.js to v16.13.1 ([d9b23ee](https://github.com/vitorsalgado/react-web-starter/commit/d9b23ee8a75b29103f7b03f11a5c1b13671ec263))
+* **deps:** update yarn to v3.2.0-rc.7 ([a2055b4](https://github.com/vitorsalgado/react-web-starter/commit/a2055b4f5a0caa34e36f98c19dcee4582dba71dc))
+* **deps:** update yarn to v3.2.0-rc.8 ([32bc533](https://github.com/vitorsalgado/react-web-starter/commit/32bc533b6b8f2aed45c4734a9f3ea1b804c897a3))
+
 ### [0.0.2](https://github.com/vitorsalgado/react-web-starter/compare/v0.0.2-alpha.1...v0.0.2) (2021-12-01)
 
 
