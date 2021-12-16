@@ -33,7 +33,10 @@
     "template",
     "boilerplate",
     "typescript",
-    "front-end"
+    "front-end",
+    "clean-architecture",
+    "cli",
+    "starter"
   ],
   "homepage": "https://github.com/vitorsalgado/react-web-starter/blob/master/README.md",
   "bugs": "https://github.com/vitorsalgado/react-web-starter/issues",
