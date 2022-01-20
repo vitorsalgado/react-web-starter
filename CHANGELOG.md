@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/vitorsalgado/react-web-starter/compare/v0.0.3...v1.0.0) (2022-01-20)
+
+
+### Chore
+
+* **deps:** lock file maintenance ([37c7da5](https://github.com/vitorsalgado/react-web-starter/commit/37c7da52b02a0a7604f51d0ad7c8568eae1d2d99))
+* **deps:** update dependency eslint-plugin-promise to v6 ([a591fee](https://github.com/vitorsalgado/react-web-starter/commit/a591fee571fe8235527cd2cbaab96561b267b4f6))
+* **deps:** update node docker tag to v17.3.0 ([46ba101](https://github.com/vitorsalgado/react-web-starter/commit/46ba101e58a7b3f78df51fb36a1584382a505cd6))
+* **deps:** update node docker tag to v17.4.0 ([#83](https://github.com/vitorsalgado/react-web-starter/issues/83)) ([f71d286](https://github.com/vitorsalgado/react-web-starter/commit/f71d2866c31aa5821fa14b7a4b49072e789419c0))
+* **deps:** update node.js to v16.13.2 ([#81](https://github.com/vitorsalgado/react-web-starter/issues/81)) ([147e96e](https://github.com/vitorsalgado/react-web-starter/commit/147e96e57c411efee2a01135e7037c8b61fd99e4))
+* upgrade deps + add more utility commands to makefile ([4e4b12e](https://github.com/vitorsalgado/react-web-starter/commit/4e4b12e7cd3d7a67d30a5ba8762ccd783b014bf7))
+* upgrade yarn to latest + fix package.json bin entry ([438a3ba](https://github.com/vitorsalgado/react-web-starter/commit/438a3bae0a0895675b77bb04296b479efe08266c))
+
 ### [0.0.3](https://github.com/vitorsalgado/react-web-starter/compare/v0.0.2...v0.0.3) (2021-12-16)
 
 
