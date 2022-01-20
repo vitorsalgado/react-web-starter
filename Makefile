@@ -32,6 +32,14 @@ check:
 	@yarn test:ci
 	@yarn test:e2e
 
+.PHONY: fmt
+fmt: # Format code
+	@yarn prettier
+
+.PHONY: lint
+lint: # Lint code
+	@yarn lint
+
 .PHONY: dist
 dist: ## Server dist/ with a nginx docker. Use -e NGINX_PORT parameter to change Nginx port. Defaults to 3000.
 	@docker run -it --rm \
