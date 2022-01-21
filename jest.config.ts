@@ -1,6 +1,6 @@
 import 'dotenv/config'
+import * as Path from 'path'
 import type { Config as JestConfig } from '@jest/types'
-import Path from 'path'
 
 const shared: JestConfig.InitialOptions = {
   verbose: true,

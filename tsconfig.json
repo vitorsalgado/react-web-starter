@@ -25,27 +25,18 @@
     "noImplicitReturns": true,
     "strict": true,
     "noFallthroughCasesInSwitch": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
+    "emitDecoratorMetadata": false,
+    "experimentalDecorators": false,
     "skipLibCheck": true,
 
     "outDir": "dist",
     "baseUrl": ".",
-    "rootDirs": ["src", "e2e"],
-
-    "typeRoots": [
-      "node_modules/@types",
-      "declarations.d.ts"
-    ],
+    "rootDirs": ["src", "e2e", "configs"],
     "types": [
       "react",
       "node",
       "testing-library__jest-dom"
     ],
-
-    "paths": {
-      "@app/*": ["./src/*"]
-    }
   },
-  "include": ["src/**/*", "declarations.d.ts"]
+  "include": ["src", "e2e", "configs", "src/declarations.d.ts"]
 }

@@ -1,5 +1,5 @@
-import { CounterActionTypes } from '@app/core/Counter/CounterActionTypes'
-import { Action } from '@app/store'
+import { Action } from '../../store'
+import { CounterActionTypes } from './CounterActionTypes'
 
 export function incrementAction(): Action {
   return { type: CounterActionTypes.INCREMENT, payload: undefined }

@@ -1,4 +1,5 @@
-import { CountType, CountUseCase } from '@app/core/Counter/CountUseCase'
+import { CountType } from './CountUseCase'
+import { CountUseCase } from './CountUseCase'
 
 export const CounterViewModel = (countUseCase: CountUseCase = new CountUseCase()) => ({
   increment(): void {

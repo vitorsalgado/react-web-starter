@@ -1,5 +1,5 @@
-import { Translations } from '@app/shared/locales/translations'
-import { i18n } from '@app/shared/locales/i18n'
+import { i18n } from './i18n'
+import { Translations } from './translations'
 
 describe('i18n', () => {
   it('should initiate i18n', async () => {

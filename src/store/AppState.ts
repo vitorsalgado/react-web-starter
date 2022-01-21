@@ -1,4 +1,4 @@
-import { Counter } from '@app/core/Counter/Counter'
+import { Counter } from '../core/Counter'
 
 export interface AppState {
   counter: Counter

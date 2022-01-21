@@ -1,9 +1,9 @@
 import i18next from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import BrowserLanguageDetector from 'i18next-browser-languagedetector'
-import En from '@app/shared/locales/en/translations.en.json'
-import { convertLanguageJsonToObject } from '@app/shared/locales/translations'
-import Config from '@app/config'
+import Config from '../../config'
+import En from './en/translations.en.json'
+import { convertLanguageJsonToObject } from './translations'
 
 export const TranslationsJSON = {
   en: {

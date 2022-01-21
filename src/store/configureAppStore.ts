@@ -1,6 +1,6 @@
-import { AppState } from '@app/store/AppState'
 import { configureStore, EnhancedStore, Middleware } from '@reduxjs/toolkit'
-import Config from '@app/config'
+import Config from '../config'
+import { AppState } from './AppState'
 import rootReducer from './rootReducer'
 import { logger } from './middlewares/logger'
 import { AppInitialState } from './AppInitialState'

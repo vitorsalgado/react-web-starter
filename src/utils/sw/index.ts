@@ -1,5 +1,5 @@
-import Config from '@app/config'
-import { handleExceptionAndContinue } from '@app/utils/errors'
+import Config from '../../config'
+import { handleExceptionAndContinue } from '../errors'
 
 export default function registerServiceWorker(): void {
   if ('serviceWorker' in navigator && Config.isProd) {

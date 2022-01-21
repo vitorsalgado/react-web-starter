@@ -1,5 +1,6 @@
-import { handleErrorEvent, handleExceptionAndContinue } from '@app/utils/errors'
-import Logger from '@app/utils/log'
+import Logger from '../log'
+import { handleExceptionAndContinue } from '.'
+import { handleErrorEvent } from '.'
 
 describe('Errors', function () {
   it('should handle error event logging the information', function () {

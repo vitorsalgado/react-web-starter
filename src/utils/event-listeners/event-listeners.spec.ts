@@ -1,4 +1,4 @@
-import registerWindowErrorEvents from '@app/utils/event-listeners'
+import registerWindowErrorEvents from '.'
 
 describe('Event Listeners', function () {
   it('should register to window error events', function () {

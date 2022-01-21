@@ -1,8 +1,8 @@
-import { configureAppStore } from '@app/store'
 import * as React from 'react'
 import { render, screen } from '@testing-library/react'
-import App from '@app/app'
 import { Provider } from 'react-redux'
+import App from './app'
+import { configureAppStore } from './store'
 
 describe('App', () => {
   it('should render correctly', () => {

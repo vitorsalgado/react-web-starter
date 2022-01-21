@@ -1,4 +1,4 @@
-import { Action } from '@app/store'
+import { Action } from '../../store'
 
 export const applyReducers =
   <T>(...reducers: Array<(state: T, action: Action<any>) => T>) =>

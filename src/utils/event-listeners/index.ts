@@ -1,4 +1,4 @@
-import { handleErrorEvent } from '@app/utils/errors'
+import { handleErrorEvent } from '../errors'
 
 export default function registerWindowErrorEvents(): void {
   window.addEventListener('unhandledrejection', event => handleErrorEvent(event.reason))

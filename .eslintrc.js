@@ -2,14 +2,12 @@
 
 module.exports = {
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint/eslint-plugin', 'eslint-plugin-tsdoc', 'jsx-a11y', 'react'],
+  plugins: ['@typescript-eslint/eslint-plugin', 'import', 'eslint-plugin-tsdoc', 'jsx-a11y', 'react'],
   extends: [
-    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
-    'standard',
     'prettier',
-    'plugin:jsx-a11y/recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:jsx-a11y/recommended'
   ],
   parserOptions: {
     ecmaVersion: 6,
@@ -25,10 +23,37 @@ module.exports = {
     es6: true
   },
   rules: {
-    'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error'],
-    'no-useless-constructor': 'off',
-    '@typescript-eslint/no-useless-constructor': ['error']
+    'no-console': 'error',
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-dupe-class-members': ['error'],
+    '@typescript-eslint/no-useless-constructor': ['error'],
+    '@typescript-eslint/no-inferrable-types': ['off'],
+
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object']
+      }
+    ],
+    'import/no-named-as-default': ['off'],
+    'import/no-duplicates': ['off'],
+    'import/no-mutable-exports': ['error'],
+    'import/no-useless-path-segments': [
+      'error',
+      {
+        noUselessIndex: true
+      }
+    ],
+    'import/no-self-import': ['error'],
+    'import/export': ['error'],
+    'import/no-deprecated': ['error'],
+    'import/extensions': [
+      'error',
+      'never',
+      {
+        json: 'always'
+      }
+    ]
   },
   settings: {
     react: {

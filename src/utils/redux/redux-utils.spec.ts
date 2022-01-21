@@ -1,5 +1,6 @@
-import { actionIs, onlyWhen } from '@app/utils/redux'
 import { combineReducers, createStore } from 'redux'
+import { actionIs } from '.'
+import { onlyWhen } from '.'
 
 describe('Redux Utils', function () {
   const Actions = {

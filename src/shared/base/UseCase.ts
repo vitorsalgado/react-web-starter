@@ -1,6 +1,6 @@
-import { AppState } from '@app/store'
 import { Dispatch } from '@reduxjs/toolkit'
 import { useDispatch, useSelector } from 'react-redux'
+import { AppState } from '../../store'
 
 export abstract class UseCase<S, A = void, R = void> {
   protected readonly dispatch: Dispatch

@@ -2,11 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { HelmetProvider } from 'react-helmet-async'
-import App from '@app/app'
-import initWebVitals from '@app/utils/metrics/web-vitals'
-import registerServiceWorker from '@app/utils/sw'
-import registerWindowErrorEvents from '@app/utils/event-listeners'
-import { configureAppStore } from '@app/store'
+import App from './app'
+import { configureAppStore } from './store'
+import registerWindowErrorEvents from './utils/event-listeners'
+import initWebVitals from './utils/metrics/web-vitals'
+import registerServiceWorker from './utils/sw'
 
 const Store = configureAppStore()
 const RootContainer = document.getElementById('root') as HTMLElement

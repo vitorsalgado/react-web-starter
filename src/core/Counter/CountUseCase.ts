@@ -1,7 +1,8 @@
-import { Counter } from '@app/core/Counter/Counter'
-import { decrementAction, incrementAction } from '@app/core/Counter/counterActions'
-import { UseCase } from '@app/shared/base/UseCase'
-import { AppState } from '@app/store'
+import { UseCase } from '../../shared/base/UseCase'
+import { AppState } from '../../store'
+import { Counter } from './Counter'
+import { incrementAction } from './counterActions'
+import { decrementAction } from './counterActions'
 
 export enum CountType {
   INC,

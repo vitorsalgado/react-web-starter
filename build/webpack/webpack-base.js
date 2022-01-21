@@ -18,10 +18,7 @@ module.exports = {
 
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
-    modules: ['node_modules', 'src'],
-    alias: {
-      '@app': Config.paths.sourcesRoot
-    }
+    modules: ['node_modules', 'src']
   },
 
   ignoreWarnings: [/Failed to parse source map/],

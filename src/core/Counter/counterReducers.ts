@@ -1,6 +1,7 @@
-import { Counter } from '@app/core/Counter/Counter'
-import { CounterActionTypes } from '@app/core/Counter/CounterActionTypes'
-import { applyReducers, forAction } from '@app/utils/redux'
+import { forAction } from '../../utils/redux'
+import { applyReducers } from '../../utils/redux'
+import { Counter } from './Counter'
+import { CounterActionTypes } from './CounterActionTypes'
 
 function incrementReducer(state: Counter): Counter {
   return {

@@ -1,6 +1,6 @@
-import { CounterViewModel } from '@app/core/Counter/CounterViewModel'
 import * as React from 'react'
 import styled from 'styled-components'
+import { CounterViewModel } from './CounterViewModel'
 
 const Container = styled.div`
   margin: 50px 0;

@@ -1,5 +1,7 @@
+/* eslint-disable no-console */
+
 import { Middleware } from '@reduxjs/toolkit'
-import { AppState } from '@app/store'
+import { AppState } from '../../AppState'
 
 const Styles = {
   LightGray: 'color: gray; font-weight: lighter',
