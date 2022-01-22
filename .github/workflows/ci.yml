@@ -1,4 +1,4 @@
-name: ci
+name: CI
 
 on:
   push:
@@ -59,11 +59,16 @@ jobs:
           yarn test:e2e:prepare
           yarn test:e2e
 
-      - name: Upload Coverage
-        run: |
-          yarn coverage:upload
+      - name: Coverage
+        uses: codecov/codecov-action@v2
+        timeout-minutes: 5
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          verbose: true
+          files: ./coverage/coverage-final.json
+          fail_ci_if_error: false
 
   release:
     runs-on: ubuntu-latest
