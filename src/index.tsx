@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './app'
 import { configureAppStore } from './infrastructure/store'
-import { registerWindowErrorEvents } from './utils/event_listeners'
+import { registerWindowErrorEvents } from './utils/window'
 import { initWebVitals } from './utils/metrics/web-vitals'
 import { registerServiceWorker } from './utils/sw'
 
@@ -30,7 +30,7 @@ registerServiceWorker()
 initWebVitals()
 
 if (module.hot) {
-  module.hot.accept(['./app', './shared/locales/i18n'], () => {
+  module.hot.accept(['./app', './infrastructure/locales/i18n'], () => {
     ReactDOM.unmountComponentAtNode(RootContainer)
     render()
   })

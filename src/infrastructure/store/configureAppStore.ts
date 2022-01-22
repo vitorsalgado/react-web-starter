@@ -2,13 +2,13 @@ import { configureStore, EnhancedStore, Middleware } from '@reduxjs/toolkit'
 import Config from '../config'
 import { AppState } from './AppState'
 import rootReducer from './rootReducer'
-import { logger } from './middlewares/logger'
+import { LoggerMiddleware } from './middlewares/LoggerMiddleware'
 import { AppInitialState } from './AppInitialState'
 
 const middlewares: Middleware[] = []
 
 if (Config.isLogEnabled()) {
-  middlewares.push(logger)
+  middlewares.push(LoggerMiddleware)
 }
 
 const store = configureStore({

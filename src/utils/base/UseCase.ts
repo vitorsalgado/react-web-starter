@@ -3,17 +3,17 @@ import { useDispatch, useSelector } from 'react-redux'
 import { AppState } from '../../infrastructure/store'
 
 export abstract class UseCase<S, A = void, R = void> {
-  protected readonly dispatch: Dispatch
+  protected readonly _dispatch: Dispatch
 
   protected constructor() {
-    this.dispatch = useDispatch()
+    this._dispatch = useDispatch()
   }
 
   state(): S {
-    return useSelector(this.stateSelector())
+    return useSelector(this.getState())
   }
 
   abstract execute(args: A): R
 
-  protected abstract stateSelector(): (state: AppState) => S
+  protected abstract getState(): (state: AppState) => S
 }

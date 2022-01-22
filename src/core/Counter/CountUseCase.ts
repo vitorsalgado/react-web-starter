@@ -14,7 +14,7 @@ export class CountUseCase extends UseCase<Counter, CountType> {
     super()
   }
 
-  protected stateSelector(): (state: AppState) => Counter {
+  protected getState(): (state: AppState) => Counter {
     return function (state: AppState) {
       return state.counter
     }
@@ -22,9 +22,9 @@ export class CountUseCase extends UseCase<Counter, CountType> {
 
   execute(args: CountType): void {
     if (args === CountType.INC) {
-      this.dispatch(incrementAction())
+      this._dispatch(incrementAction())
     } else {
-      this.dispatch(decrementAction())
+      this._dispatch(decrementAction())
     }
   }
 }
