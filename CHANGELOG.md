@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/vitorsalgado/react-web-starter/compare/v1.0.0...v2.0.0) (2022-01-22)
+
+
+### Features
+
+* add docker to published lib version ([d8e8a0d](https://github.com/vitorsalgado/react-web-starter/commit/d8e8a0d8c7753b0d818e9a97b657e0c8073187eb))
+
+
+### Chore
+
+* upgrade deps ([cf660cc](https://github.com/vitorsalgado/react-web-starter/commit/cf660ccec90a9c875cbfda5eeeb528b07f3646ac))
+
+
+### Docs
+
+* fix prettier badge ([3d5d9b0](https://github.com/vitorsalgado/react-web-starter/commit/3d5d9b0ff1f8928588c85358c30c4a9230fcfc83))
+
+
+### Refactor
+
+* improve logger test ([d074565](https://github.com/vitorsalgado/react-web-starter/commit/d07456565a38010dd330c625d0c0e921ce955204))
+* remove [@app](https://github.com/app) mappings ([bb84818](https://github.com/vitorsalgado/react-web-starter/commit/bb848185bf687f89dd094ada6cd90327afe44e55))
+* remove unnecessary default exports + reorganize some modules ([ae0d451](https://github.com/vitorsalgado/react-web-starter/commit/ae0d451c285fc08532876fa79813caab6aa633b8))
+* rename _test-setup.config.ts ([75fd916](https://github.com/vitorsalgado/react-web-starter/commit/75fd916fd0e15e87f6ee405f8037e049689bd243))
+* rename some components ([152af5f](https://github.com/vitorsalgado/react-web-starter/commit/152af5fc99ab9739d195068bef15cdc0189a8e7c))
+* simplify folder structure ([6adf096](https://github.com/vitorsalgado/react-web-starter/commit/6adf09678635ca9d0a84eacf1c52efa17389abb0))
+* use typescript for configs + adjust typings + remove any ([4a95870](https://github.com/vitorsalgado/react-web-starter/commit/4a95870f96c95b028cc5321f4e37e5155a75aaf9))
+
+
+### Build
+
+* remove codecov dep + add codecov GitHub action step ([53b17af](https://github.com/vitorsalgado/react-web-starter/commit/53b17afd1befefc9818e7bef43e930ecd43035e9))
+* simplify code formatter command ([7bbb51e](https://github.com/vitorsalgado/react-web-starter/commit/7bbb51ec86a7bf859aa1ce4c6fd4492c2b0cadd2))
+
 ## [1.0.0](https://github.com/vitorsalgado/react-web-starter/compare/v0.0.3...v1.0.0) (2022-01-20)
 
 
