@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/vitorsalgado/react-web-starter/compare/v2.0.1...v2.0.2) (2022-01-22)
+
+
+### Refactor
+
+* remove unnecessary eslint deps ([b810190](https://github.com/vitorsalgado/react-web-starter/commit/b81019048eaf66e15759174d77a7ded1d20e02d4))
+* yarn.lock adjust ([bdd8f20](https://github.com/vitorsalgado/react-web-starter/commit/bdd8f20e9c2b0a3153bb9833e82eb5cdc5cb2946))
+
 ### [2.0.1](https://github.com/vitorsalgado/react-web-starter/compare/v2.0.0...v2.0.1) (2022-01-22)
 
 
