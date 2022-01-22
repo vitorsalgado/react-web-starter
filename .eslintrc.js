@@ -3,12 +3,7 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint/eslint-plugin', 'import', 'eslint-plugin-tsdoc', 'jsx-a11y', 'react'],
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
-    'prettier',
-    'plugin:jsx-a11y/recommended'
-  ],
+  extends: ['plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'plugin:jsx-a11y/recommended'],
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module',

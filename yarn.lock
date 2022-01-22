@@ -6085,11 +6085,8 @@ __metadata:
     css-loader: ^6.5.1
     dotenv: ^14.2.0
     eslint: ^8.7.0
-    eslint-config-prettier: ^8.3.0
-    eslint-loader: ^4.0.2
     eslint-plugin-import: ^2.25.4
     eslint-plugin-jsx-a11y: ^6.5.1
-    eslint-plugin-prettier: ^4.0.0
     eslint-plugin-react: ^7.28.0
     eslint-plugin-tsdoc: ^0.2.14
     fs-extra: ^10.0.0
@@ -6927,17 +6924,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^8.3.0":
-  version: 8.3.0
-  resolution: "eslint-config-prettier@npm:8.3.0"
-  peerDependencies:
-    eslint: ">=7.0.0"
-  bin:
-    eslint-config-prettier: bin/cli.js
-  checksum: df4cea3032671995bb5ab07e016169072f7fa59f44a53251664d9ca60951b66cdc872683b5c6a3729c91497c11490ca44a79654b395dd6756beb0c3903a37196
-  languageName: node
-  linkType: hard
-
 "eslint-import-resolver-node@npm:^0.3.6":
   version: 0.3.6
   resolution: "eslint-import-resolver-node@npm:0.3.6"
@@ -6945,22 +6931,6 @@ __metadata:
     debug: ^3.2.7
     resolve: ^1.20.0
   checksum: 6266733af1e112970e855a5bcc2d2058fb5ae16ad2a6d400705a86b29552b36131ffc5581b744c23d550de844206fb55e9193691619ee4dbf225c4bde526b1c8
-  languageName: node
-  linkType: hard
-
-"eslint-loader@npm:^4.0.2":
-  version: 4.0.2
-  resolution: "eslint-loader@npm:4.0.2"
-  dependencies:
-    find-cache-dir: ^3.3.1
-    fs-extra: ^8.1.0
-    loader-utils: ^2.0.0
-    object-hash: ^2.0.3
-    schema-utils: ^2.6.5
-  peerDependencies:
-    eslint: ^6.0.0 || ^7.0.0
-    webpack: ^4.0.0 || ^5.0.0
-  checksum: f090c9adf5c80cf0383bbea83a1f1cece5749f6b0fea8122f442f72436a70b3f40350f9d087e6db6cf4f5412a2050ccac40d27ba86c1c003553812b65a3d31c2
   languageName: node
   linkType: hard
 
@@ -7016,21 +6986,6 @@ __metadata:
   peerDependencies:
     eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
   checksum: 311ab993ed982d0cc7cb0ba02fbc4b36c4a94e9434f31e97f13c4d67e8ecb8aec36baecfd759ff70498846e7e11d7a197eb04c39ad64934baf3354712fd0bc9d
-  languageName: node
-  linkType: hard
-
-"eslint-plugin-prettier@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "eslint-plugin-prettier@npm:4.0.0"
-  dependencies:
-    prettier-linter-helpers: ^1.0.0
-  peerDependencies:
-    eslint: ">=7.28.0"
-    prettier: ">=2.0.0"
-  peerDependenciesMeta:
-    eslint-config-prettier:
-      optional: true
-  checksum: 03d69177a3c21fa2229c7e427ce604429f0b20ab7f411e2e824912f572a207c7f5a41fd1f0a95b9b8afe121e291c1b1f1dc1d44c7aad4b0837487f9c19f5210d
   languageName: node
   linkType: hard
 
@@ -7406,13 +7361,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-diff@npm:^1.1.2":
-  version: 1.2.0
-  resolution: "fast-diff@npm:1.2.0"
-  checksum: 1b5306eaa9e826564d9e5ffcd6ebd881eb5f770b3f977fcbf38f05c824e42172b53c79920e8429c54eb742ce15a0caf268b0fdd5b38f6de52234c4a8368131ae
-  languageName: node
-  linkType: hard
-
 "fast-glob@npm:^3.1.1, fast-glob@npm:^3.2.7":
   version: 3.2.7
   resolution: "fast-glob@npm:3.2.7"
@@ -7687,17 +7635,6 @@ __metadata:
     jsonfile: ^6.0.1
     universalify: ^2.0.0
   checksum: 5285a3d8f34b917cf2b66af8c231a40c1623626e9d701a20051d3337be16c6d7cac94441c8b3732d47a92a2a027886ca93c69b6a4ae6aee3c89650d2a8880c0a
-  languageName: node
-  linkType: hard
-
-"fs-extra@npm:^8.1.0":
-  version: 8.1.0
-  resolution: "fs-extra@npm:8.1.0"
-  dependencies:
-    graceful-fs: ^4.2.0
-    jsonfile: ^4.0.0
-    universalify: ^0.1.0
-  checksum: bf44f0e6cea59d5ce071bba4c43ca76d216f89e402dc6285c128abc0902e9b8525135aa808adad72c9d5d218e9f4bcc63962815529ff2f684ad532172a284880
   languageName: node
   linkType: hard
 
@@ -9885,18 +9822,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsonfile@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "jsonfile@npm:4.0.0"
-  dependencies:
-    graceful-fs: ^4.1.6
-  dependenciesMeta:
-    graceful-fs:
-      optional: true
-  checksum: 6447d6224f0d31623eef9b51185af03ac328a7553efcee30fa423d98a9e276ca08db87d71e17f2310b0263fd3ffa6c2a90a6308367f661dc21580f9469897c9e
-  languageName: node
-  linkType: hard
-
 "jsonfile@npm:^6.0.1":
   version: 6.1.0
   resolution: "jsonfile@npm:6.1.0"
@@ -10102,17 +10027,6 @@ __metadata:
     emojis-list: ^3.0.0
     json5: ^1.0.1
   checksum: d150b15e7a42ac47d935c8b484b79e44ff6ab4c75df7cc4cb9093350cf014ec0b17bdb60c5d6f91a37b8b218bd63b973e263c65944f58ca2573e402b9a27e717
-  languageName: node
-  linkType: hard
-
-"loader-utils@npm:^2.0.0":
-  version: 2.0.2
-  resolution: "loader-utils@npm:2.0.2"
-  dependencies:
-    big.js: ^5.2.2
-    emojis-list: ^3.0.0
-    json5: ^2.1.2
-  checksum: 9078d1ed47cadc57f4c6ddbdb2add324ee7da544cea41de3b7f1128e8108fcd41cd3443a85b7ee8d7d8ac439148aa221922774efe4cf87506d4fb054d5889303
   languageName: node
   linkType: hard
 
@@ -10897,13 +10811,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object-hash@npm:^2.0.3":
-  version: 2.2.0
-  resolution: "object-hash@npm:2.2.0"
-  checksum: 55ba841e3adce9c4f1b9b46b41983eda40f854e0d01af2802d3ae18a7085a17168d6b81731d43fdf1d6bcbb3c9f9c56d22c8fea992203ad90a38d7d919bc28f1
-  languageName: node
-  linkType: hard
-
 "object-inspect@npm:^1.11.0, object-inspect@npm:^1.11.1, object-inspect@npm:^1.9.0":
   version: 1.12.0
   resolution: "object-inspect@npm:1.12.0"
@@ -11576,15 +11483,6 @@ __metadata:
   version: 1.1.2
   resolution: "prelude-ls@npm:1.1.2"
   checksum: c4867c87488e4a0c233e158e4d0d5565b609b105d75e4c05dc760840475f06b731332eb93cc8c9cecb840aa8ec323ca3c9a56ad7820ad2e63f0261dadcb154e4
-  languageName: node
-  linkType: hard
-
-"prettier-linter-helpers@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "prettier-linter-helpers@npm:1.0.0"
-  dependencies:
-    fast-diff: ^1.1.2
-  checksum: 00ce8011cf6430158d27f9c92cfea0a7699405633f7f1d4a45f07e21bf78e99895911cbcdc3853db3a824201a7c745bd49bfea8abd5fb9883e765a90f74f8392
   languageName: node
   linkType: hard
 
@@ -14162,7 +14060,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"universalify@npm:^0.1.0, universalify@npm:^0.1.2":
+"universalify@npm:^0.1.2":
   version: 0.1.2
   resolution: "universalify@npm:0.1.2"
   checksum: 40cdc60f6e61070fe658ca36016a8f4ec216b29bf04a55dce14e3710cc84c7448538ef4dad3728d0bfe29975ccd7bfb5f414c45e7b78883567fb31b246f02dff
