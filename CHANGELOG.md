@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/vitorsalgado/react-web-starter/compare/v2.0.0...v2.0.1) (2022-01-22)
+
+
+### Refactor
+
+* remove babel dependencies ([0452eaa](https://github.com/vitorsalgado/react-web-starter/commit/0452eaa6fc2e808afb30a6b56c1bf03a94b271e6))
+* remove express dependency ([0bc8eea](https://github.com/vitorsalgado/react-web-starter/commit/0bc8eeaa1b5760c7466715659713f8037b8a8ad5))
+* remove unused eslint dependencies ([324f140](https://github.com/vitorsalgado/react-web-starter/commit/324f140dc4471f9fa0bb7e6033f5d5e9e6ab3478))
+
 ## [2.0.0](https://github.com/vitorsalgado/react-web-starter/compare/v1.0.0...v2.0.0) (2022-01-22)
 
 
