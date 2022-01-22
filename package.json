@@ -92,7 +92,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-tsdoc": "^0.2.14",
-    "express": "^4.17.2",
     "fs-extra": "^10.0.0",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^7.0.4",
