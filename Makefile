@@ -34,7 +34,7 @@ check:
 
 .PHONY: fmt
 fmt: # Format code
-	@yarn prettier
+	@yarn fmt
 
 .PHONY: lint
 lint: # Lint code
