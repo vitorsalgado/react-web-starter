@@ -1,5 +1,5 @@
 import { Reducer } from '@reduxjs/toolkit'
-import { Action } from '../../store'
+import { Action } from '../../infrastructure/store'
 
 export const applyReducers =
   <S, A>(...reducers: Array<Reducer<S>>): Reducer =>

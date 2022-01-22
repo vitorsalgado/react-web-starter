@@ -1,10 +1,10 @@
 import 'react-app-polyfill/stable'
-import './shared/locales/i18n'
+import './infrastructure/locales/i18n'
 import './base.scss'
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './core/Home'
-import Header from './shared/components/Header'
+import Header from './infrastructure/components/Header'
 
 export default function App(): JSX.Element {
   return (

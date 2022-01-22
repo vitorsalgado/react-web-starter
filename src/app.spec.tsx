@@ -2,7 +2,7 @@ import * as React from 'react'
 import { render, screen } from '@testing-library/react'
 import { Provider } from 'react-redux'
 import App from './app'
-import { configureAppStore } from './store'
+import { configureAppStore } from './infrastructure/store'
 
 describe('App', () => {
   it('should render correctly', () => {

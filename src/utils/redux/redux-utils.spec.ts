@@ -1,6 +1,6 @@
 import { Reducer } from '@reduxjs/toolkit'
 import { combineReducers, createStore } from 'redux'
-import { Action } from '../../store'
+import { Action } from '../../infrastructure/store'
 import { actionIs } from '.'
 import { onlyWhen } from '.'
 

@@ -1,4 +1,4 @@
-import Config from '../../config'
+import Config from '../../infrastructure/config'
 import { handleExceptionAndContinue } from '../errors'
 
 export function registerServiceWorker(): void {
