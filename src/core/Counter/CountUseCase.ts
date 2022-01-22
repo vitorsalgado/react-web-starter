@@ -1,4 +1,4 @@
-import { UseCase } from '../../shared/base/UseCase'
+import { UseCase } from '../../utils/base/UseCase'
 import { AppState } from '../../store'
 import { Counter } from './Counter'
 import { incrementAction } from './counterActions'

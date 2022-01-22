@@ -1,6 +1,6 @@
 import { ReportHandler } from 'web-vitals'
 
-const initWebVitals = (reporter?: ReportHandler): void => {
+export function initWebVitals(reporter?: ReportHandler): void {
   if (typeof reporter === 'function') {
     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
       getCLS(reporter)
@@ -11,5 +11,3 @@ const initWebVitals = (reporter?: ReportHandler): void => {
     })
   }
 }
-
-export default initWebVitals

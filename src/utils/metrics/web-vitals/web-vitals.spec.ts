@@ -1,4 +1,4 @@
-import initWebVitals from '.'
+import { initWebVitals } from '.'
 
 describe('Web Vitals', function () {
   it('should load without errors', function () {
