@@ -27,7 +27,7 @@
     <img src="https://api.codeclimate.com/v1/badges/126ad2708eb60164e6de/maintainability" />
   </a>&nbsp
   <a href="https://github.com/prettier/prettier">
-    <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square"/>
+    <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat"/>
   </a>&nbsp
   <a href="https://www.npmjs.com/package/create-react-ts-web-starter">
     <img alt="npm" src="https://img.shields.io/npm/v/create-react-ts-web-starter">
