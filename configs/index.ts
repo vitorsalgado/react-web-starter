@@ -1,12 +1,10 @@
-'use strict'
-
-const Joi = require('joi')
-const EnvSchema = require('./envvars')
-const { resolvePath } = require('./utils')
+import Joi from 'joi'
+import EnvSchema from './envvars'
+import { resolvePath } from './utils'
 
 const EnvVars = Joi.attempt(process.env, EnvSchema)
 
-module.exports = {
+export default {
   env: EnvVars.NODE_ENV,
   isProduction: EnvVars.NODE_ENV === 'production',
   isTest: EnvVars.NODE_ENV === 'test',

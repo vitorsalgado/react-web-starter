@@ -2,7 +2,7 @@
 
 import Config from '../../config'
 
-const error = (message?: any, ...optionalParams: any[]): void => {
+const error = (message?: unknown, ...optionalParams: unknown[]): void => {
   if (!Config.isLogEnabled()) return
 
   console.error(message, optionalParams)

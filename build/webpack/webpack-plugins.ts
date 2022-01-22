@@ -1,14 +1,14 @@
-'use strict'
+import * as WebPack from 'webpack'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
+import Config from '../../configs'
+import { resolvePath } from '../../configs/utils'
 
-const WebPack = require('webpack')
 const EnvironmentPlugin = WebPack.EnvironmentPlugin
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const Config = require('../../configs')
-const resolvePath = require('../../configs/utils').resolvePath
+const additionalPlugins: WebPack.WebpackPluginInstance[] = []
 
-const additionalPlugins = []
+type Arg = { start: WebPack.WebpackPluginInstance[]; end: WebPack.WebpackPluginInstance[] }
 
-module.exports = ({ start = [], end = [] }) =>
+export default ({ start = [], end = [] }: Arg): WebPack.WebpackPluginInstance[] =>
   [
     new EnvironmentPlugin({
       NODE_ENV: Config.env,
@@ -22,7 +22,7 @@ module.exports = ({ start = [], end = [] }) =>
           force: true,
           from: resolvePath('src/manifest.json'),
           to: Config.paths.buildDestination,
-          transform: function (content, path) {
+          transform: function (content) {
             return Buffer.from(
               JSON.stringify({
                 ...JSON.parse(content.toString())

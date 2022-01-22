@@ -1,8 +1,9 @@
+import { Reducer } from '@reduxjs/toolkit'
 import { Action } from '../../store'
 
 export const applyReducers =
-  <T>(...reducers: Array<(state: T, action: Action<any>) => T>) =>
-  (state: T, action: Action<any>): T => {
+  <S, A>(...reducers: Array<Reducer<S>>): Reducer =>
+  (state: S, action: Action<A>): S => {
     let st = state
 
     for (const reducer of reducers) {
@@ -13,16 +14,16 @@ export const applyReducers =
   }
 
 export const actionIs =
-  (type: string) =>
-  (action: Action<any>): boolean =>
+  <A>(type: string) =>
+  (action: Action<A>): boolean =>
     type === action?.type
 
 export const onlyWhen =
-  (predicate: (action: Action<any>) => boolean, defaultState: any = {}) =>
-  (reducer: (state: any, action: Action<any>) => any) =>
-  (state: any, action: Action<any>): any => {
+  <S, A>(predicate: (action: Action<unknown>) => boolean, defaultState = {}) =>
+  (reducer: Reducer) =>
+  (state: S, action: Action<A>): S => {
     if (state === null || typeof state === 'undefined') {
-      return defaultState
+      return defaultState as S
     }
 
     const pred = predicate(action)

@@ -2,13 +2,11 @@
   "name": "create-react-ts-web-starter",
   "version": "1.0.0",
   "main": "cmd/create-react-ts-web-starter/index.js",
-  "bin": {
-    "create-react-ts-web-starter": "cmd/create-react-ts-web-starter/index.js"
-  },
+  "bin": "cmd/create-react-ts-web-starter/index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack serve --config build/webpack/webpack.dev.js",
-    "start:headless": "cross-env NODE_ENV=production webpack serve --config build/webpack/webpack.dev.js",
-    "build": "cross-env NODE_ENV=production webpack build --config build/webpack/webpack.production.js",
+    "start": "cross-env NODE_ENV=development webpack serve --config build/webpack/webpack.dev.ts",
+    "start:headless": "cross-env NODE_ENV=production webpack serve --config build/webpack/webpack.dev.ts",
+    "build": "cross-env NODE_ENV=production webpack build --config build/webpack/webpack.production.ts",
     "test": "jest --detectOpenHandles",
     "test:e2e:prepare": "npx playwright install-deps && npx playwright install",
     "test:e2e": "playwright test",
@@ -74,7 +72,7 @@
     "@types/styled-components": "^5.1.20",
     "@types/testing-library__jest-dom": "^5.14.2",
     "@types/webpack": "^5.28.0",
-    "@types/webpack-dev-server": "^4.7.2",
+    "@types/workbox-webpack-plugin": "^5.1.8",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
     "babel-jest": "^27.4.6",

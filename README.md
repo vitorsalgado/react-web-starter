@@ -92,7 +92,7 @@ make dist
 **WebPack** is the module bundler used here.  
 Some build configurations can be changed using **environment variables**. These variable can also be set using **DotEnv**. Just place a **.env** on project and modify the values
 you want.     
-Check [this Joi schema](configs/envvars/index.js) to see all variables, and their respect default and allowed values.
+Check [this Joi schema](configs/envvars/index.ts) to see all variables, and their respect default and allowed values.
 
 ## Test
 

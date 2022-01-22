@@ -1,14 +1,12 @@
-'use strict'
+import 'dotenv/config'
 
-require('dotenv').config()
-
-const Merge = require('webpack-merge').merge
-const TerserPlugin = require('terser-webpack-plugin')
-const WorkboxPlugin = require('workbox-webpack-plugin')
-const HtmlPlugin = require('html-webpack-plugin')
-const Base = require('./webpack-base')
-const Config = require('../../configs')
-const Plugins = require('./webpack-plugins')
+import Plugins from './webpack-plugins'
+import Config from '../../configs'
+import Base from './webpack-base'
+import HtmlPlugin from 'html-webpack-plugin'
+import WorkboxPlugin from 'workbox-webpack-plugin'
+import TerserPlugin from 'terser-webpack-plugin'
+import { merge as Merge } from 'webpack-merge'
 
 const HTMLOptions = {
   inject: true,

@@ -3966,15 +3966,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/webpack-dev-server@npm:^4.7.2":
-  version: 4.7.2
-  resolution: "@types/webpack-dev-server@npm:4.7.2"
-  dependencies:
-    webpack-dev-server: "*"
-  checksum: 81b0d368b85f33759a3859c23d09c8a2af47997621c6350120ff80e20e9124568e4a30e15abead36e7992abe4e18ce2137785aa677d2041adfcd7e8fff9b2312
-  languageName: node
-  linkType: hard
-
 "@types/webpack@npm:^5.28.0":
   version: 5.28.0
   resolution: "@types/webpack@npm:5.28.0"
@@ -3983,6 +3974,13 @@ __metadata:
     tapable: ^2.2.0
     webpack: ^5
   checksum: a038d7e12dd109c6a8d2eb744fd32070ef94f1655e730fb1443b370db98864c3a0e408638b02d12ba08269b9c012b3be8b801117ced2d1102e7676203fd663ed
+  languageName: node
+  linkType: hard
+
+"@types/workbox-webpack-plugin@npm:^5.1.8":
+  version: 5.1.8
+  resolution: "@types/workbox-webpack-plugin@npm:5.1.8"
+  checksum: 3b70e77ba5d78cf81b442bffde7678de6a0703d6d8cb6de838bb5aa397005b8136868fd07dd3313cdc997bd523e6ae5f962577bb78825288a0e1420685a2bc65
   languageName: node
   linkType: hard
 
@@ -6099,7 +6097,7 @@ __metadata:
     "@types/styled-components": ^5.1.20
     "@types/testing-library__jest-dom": ^5.14.2
     "@types/webpack": ^5.28.0
-    "@types/webpack-dev-server": ^4.7.2
+    "@types/workbox-webpack-plugin": ^5.1.8
     "@typescript-eslint/eslint-plugin": ^5.10.0
     "@typescript-eslint/parser": ^5.10.0
     babel-jest: ^27.4.6
@@ -14575,7 +14573,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack-dev-server@npm:*, webpack-dev-server@npm:^4.7.3":
+"webpack-dev-server@npm:^4.7.3":
   version: 4.7.3
   resolution: "webpack-dev-server@npm:4.7.3"
   dependencies:

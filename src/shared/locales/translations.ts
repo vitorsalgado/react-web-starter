@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { TranslationJsonType } from './types'
 import { ConvertedToObjectType } from './types'
 

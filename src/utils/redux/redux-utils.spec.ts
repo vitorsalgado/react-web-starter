@@ -1,4 +1,6 @@
+import { Reducer } from '@reduxjs/toolkit'
 import { combineReducers, createStore } from 'redux'
+import { Action } from '../../store'
 import { actionIs } from '.'
 import { onlyWhen } from '.'
 
@@ -9,12 +11,12 @@ describe('Redux Utils', function () {
     Test03: 'test-03'
   }
 
-  const action1 = () => ({ type: Actions.Test01 } as any)
-  const action2 = () => ({ type: Actions.Test02 } as any)
+  const action1 = (): Action => ({ type: Actions.Test01 })
+  const action2 = (): Action => ({ type: Actions.Test02 })
 
-  const reducer1 = (state: any, _action: { type: string }) => ({ ...state, msg: '01' })
-  const reducer2 = (state: any, _action: { type: string }) => ({ ...state, msg: '02', test: 'tested' })
-  const reducer3 = (state: any, _action: { type: string }) => ({ ...state, msg: '03', something: 'somewhere' })
+  const reducer1: Reducer = (state, _action: { type: string }) => ({ ...state, msg: '01' })
+  const reducer2: Reducer = (state, _action: { type: string }) => ({ ...state, msg: '02', test: 'tested' })
+  const reducer3: Reducer = (state, _action: { type: string }) => ({ ...state, msg: '03', something: 'somewhere' })
 
   const store = createStore(
     combineReducers({
@@ -33,9 +35,9 @@ describe('Redux Utils', function () {
   })
 
   it('should not fail with undefined state', function () {
-    const dummyReducer = (state: any, action: any) => ({ ...state, msg: action.msg })
+    const dummyReducer: Reducer = (state, action) => ({ ...state, msg: action.msg })
     const root = onlyWhen(actionIs('test'))(dummyReducer)
 
-    expect(() => root(undefined, { type: 'test' } as any)).not.toThrow()
+    expect(() => root(undefined, { type: 'test' })).not.toThrow()
   })
 })

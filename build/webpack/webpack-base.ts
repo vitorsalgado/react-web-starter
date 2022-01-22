@@ -1,8 +1,7 @@
-'use strict'
+import * as WebPack from 'webpack'
+import Config from '../../configs'
 
-const Config = require('../../configs')
-
-module.exports = {
+const config: WebPack.Configuration = {
   context: Config.paths.sourcesRoot,
 
   entry: Config.paths.applicationEntrypoint,
@@ -95,3 +94,5 @@ module.exports = {
     ]
   }
 }
+
+export default config

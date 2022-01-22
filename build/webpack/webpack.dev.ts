@@ -1,17 +1,17 @@
-'use strict'
+import 'dotenv/config'
 
-require('dotenv').config()
-
-const Base = require('./webpack-base')
-const WebpackManifestPlugin = require('webpack-manifest-plugin').WebpackManifestPlugin
-const Merge = require('webpack-merge').merge
-const HtmlWebPackPlugin = require('html-webpack-plugin')
-const Config = require('../../configs')
-const Plugins = require('./webpack-plugins')
+import * as WebPack from 'webpack'
+import * as DevServer from 'webpack-dev-server'
+import Base from './webpack-base'
+import { WebpackManifestPlugin } from 'webpack-manifest-plugin'
+import { merge as Merge } from 'webpack-merge'
+import HtmlWebPackPlugin from 'html-webpack-plugin'
+import Config from '../../configs'
+import Plugins from './webpack-plugins'
 
 const { paths } = Config
 
-module.exports = Merge(Base, {
+export default Merge<WebPack.Configuration & DevServer.Configuration>(Base, {
   mode: 'development',
   devtool: 'source-map',
   bail: false,

@@ -1,19 +1,17 @@
-'use strict'
-
 /**
  * Environment variables schema and data transformation.
  * This should be used instead of direct calling process.env.
  * @module EnvVars
  */
 
-const Joi = require('joi')
+import Joi from 'joi'
 
 /**
  * Environment variables schema
  * @enum
  * @readonly
  */
-module.exports = Joi.object({
+export default Joi.object({
   // Runtime
   NODE_ENV: Joi.string().allow('', 'test', 'production').default(''),
   CI: Joi.boolean().default(false),
