@@ -7,8 +7,6 @@
 
 .github/
 
-build/docker/
-deployments/
 dist/
 coverage/
 configs/nginx
