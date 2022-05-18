@@ -97,7 +97,7 @@
     "lint-staged": "^12.2.2",
     "node-sass": "^7.0.1",
     "pinst": "^3.0.0",
-    "postcss-loader": "^6.2.1",
+    "postcss-loader": "^7.0.0",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-app-polyfill": "^3.0.0",
