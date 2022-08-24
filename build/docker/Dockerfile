@@ -1,6 +1,6 @@
 # Build Stage
 # ---
-FROM node:18.7.0 as build
+FROM node:18.8.0 as build
 WORKDIR /app
 COPY ../../package.json yarn.lock .yarnrc.yml ./
 COPY ../../.yarn ./.yarn
