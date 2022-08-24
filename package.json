@@ -131,5 +131,5 @@
     "webpack-merge": "^5.8.0",
     "workbox-webpack-plugin": "^6.4.2"
   },
-  "packageManager": "yarn@3.2.2"
+  "packageManager": "yarn@3.2.3"
 }
