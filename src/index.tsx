@@ -1,18 +1,19 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './app'
 import { configureAppStore } from './infrastructure/store'
-import { registerWindowErrorEvents } from './utils/window'
+import { registerWindowErrorEvents } from './utils/win'
 import { initWebVitals } from './utils/metrics/web-vitals'
-import { registerServiceWorker } from './utils/sw'
+import { registerServiceWorker } from './sw'
 
 const Store = configureAppStore()
 const RootContainer = document.getElementById('root') as HTMLElement
+const Root = createRoot(RootContainer)
 
-const render = (): void => {
-  ReactDOM.render(
+const render = (): void =>
+  Root.render(
     <Provider store={Store}>
       <HelmetProvider>
         <React.StrictMode>
@@ -20,9 +21,7 @@ const render = (): void => {
         </React.StrictMode>
       </HelmetProvider>
     </Provider>,
-    RootContainer,
   )
-}
 
 render()
 registerWindowErrorEvents()
@@ -31,7 +30,7 @@ initWebVitals()
 
 if (module.hot) {
   module.hot.accept(['./app', './infrastructure/locales/i18n'], () => {
-    ReactDOM.unmountComponentAtNode(RootContainer)
+    Root.unmount()
     render()
   })
 }

@@ -20,7 +20,7 @@ const Ignores = [
   '.yarn/build-state.yml',
   '.yarn/install-state.gz',
   'cmd',
-  'configs/nginx',
+  'config/nginx',
   'coverage',
   'dist',
   'docs',
@@ -29,7 +29,6 @@ const Ignores = [
   'templates',
   'tools',
   '.dockerignore',
-  '.codeclimate.yml',
   '.npmignore',
   '.env',
   'CONTRIBUTING.md',
@@ -39,14 +38,14 @@ const Ignores = [
   'Makefile',
   'package.json',
   'package-lock.json',
-  'yarn.lock'
+  'yarn.lock',
 ]
 
 const Templates = [
   { file: 'ci.yml', copyTo: '.github/workflows/ci.yml' },
   { file: 'README.md', copyTo: 'README.md' },
   { file: '.gitignore.husky', copyTo: '.husky/.gitignore' },
-  { file: '.gitignore.root', copyTo: '.gitignore' }
+  { file: '.gitignore.root', copyTo: '.gitignore' },
 ]
 
 const PkgFieldsToKeep = ['scripts', 'dependencies']
@@ -84,7 +83,7 @@ function main() {
 Summary:
 Destination: ${destination}
 App: ${app}
-`
+`,
   )
 
   console.log('Copying Project Files ...')
@@ -100,7 +99,7 @@ App: ${app}
   const pkg = FsExt.readJsonSync(makePath(source, 'package.json'))
   const newPkg = {
     name: app,
-    main: 'dist/index.js'
+    main: 'dist/index.js',
   }
 
   PkgFieldsToKeep.forEach(field => {
