@@ -3,17 +3,17 @@ import './libs/i18n'
 import './base.scss'
 
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import { Home } from './core/Home'
 import { Header } from './comp/Header'
 
 export function App(): JSX.Element {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Home />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
