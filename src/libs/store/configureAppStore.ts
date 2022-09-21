@@ -1,5 +1,5 @@
 import { configureStore, EnhancedStore, Middleware } from '@reduxjs/toolkit'
-import { Config } from '../config'
+import { Config } from '../conf'
 import { AppState } from './AppState'
 import { rootReducer } from './rootReducer'
 import { LoggerMiddleware } from './middlewares/LoggerMiddleware'

@@ -1,5 +1,5 @@
-import { i18n } from './i18n'
 import { Translations } from './translations'
+import { i18n } from '.'
 
 describe('i18n', () => {
   it('should initiate i18n', async () => {

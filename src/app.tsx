@@ -1,5 +1,5 @@
 import 'react-app-polyfill/stable'
-import './libs/locales/i18n'
+import './libs/i18n'
 import './base.scss'
 
 import React from 'react'

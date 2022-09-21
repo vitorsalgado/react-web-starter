@@ -5,7 +5,7 @@ import { HelmetProvider } from 'react-helmet-async'
 import { App } from './app'
 import { configureAppStore } from './libs/store'
 import { registerWindowErrorEvents } from './libs/win'
-import { initWebVitals } from './libs/metrics/web-vitals'
+import { initWebVitals } from './libs/mon/webvitals'
 import { registerServiceWorker } from './sw'
 
 const Store = configureAppStore()
@@ -29,7 +29,7 @@ registerServiceWorker()
 initWebVitals()
 
 if (module.hot) {
-  module.hot.accept(['./app', './libs/locales/i18n'], () => {
+  module.hot.accept(['./app', './libs/i18n'], () => {
     Root.unmount()
     render()
   })
