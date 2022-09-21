@@ -1,5 +1,5 @@
-import { UseCase } from '../../utils/base/UseCase'
-import { AppState } from '../../infrastructure/store'
+import { UseCase } from '../../libs/base/UseCase'
+import { AppState } from '../../libs/store'
 import { Counter } from './Counter'
 import { incrementAction } from './counterActions'
 import { decrementAction } from './counterActions'

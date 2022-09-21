@@ -14,7 +14,7 @@
     "test:e2e": "playwright test",
     "test:ci": "yarn test --runInBand --coverage --ci",
     "lint": "eslint '*/**/*.{ts,tsx}'",
-    "lint:fix": "yarn lint -- --fix",
+    "lint:fix": "yarn lint --fix",
     "lint:css": "stylelint \"**/*.{css}\" --allow-empty-input",
     "lint:css:fix": "yarn lint:css -- --fix",
     "lint:ci": "yarn lint && yarn lint:css && yarn fmt:ci",

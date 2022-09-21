@@ -3,9 +3,9 @@ import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './app'
-import { configureAppStore } from './infrastructure/store'
-import { registerWindowErrorEvents } from './utils/win'
-import { initWebVitals } from './utils/metrics/web-vitals'
+import { configureAppStore } from './libs/store'
+import { registerWindowErrorEvents } from './libs/win'
+import { initWebVitals } from './libs/metrics/web-vitals'
 import { registerServiceWorker } from './sw'
 
 const Store = configureAppStore()
@@ -29,7 +29,7 @@ registerServiceWorker()
 initWebVitals()
 
 if (module.hot) {
-  module.hot.accept(['./app', './infrastructure/locales/i18n'], () => {
+  module.hot.accept(['./app', './libs/locales/i18n'], () => {
     Root.unmount()
     render()
   })

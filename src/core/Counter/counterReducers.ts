@@ -1,5 +1,5 @@
-import { forAction } from '../../utils/redux'
-import { applyReducers } from '../../utils/redux'
+import { forAction } from '../../libs/redux'
+import { applyReducers } from '../../libs/redux'
 import { Counter } from './Counter'
 import { CounterActionTypes } from './CounterActionTypes'
 
