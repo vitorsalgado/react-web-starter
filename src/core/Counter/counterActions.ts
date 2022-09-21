@@ -1,4 +1,4 @@
-import { Action } from '../../infrastructure/store'
+import { Action } from '../../libs/store'
 import { CounterActionTypes } from './CounterActionTypes'
 
 export function incrementAction(): Action {

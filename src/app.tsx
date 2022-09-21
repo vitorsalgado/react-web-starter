@@ -1,5 +1,5 @@
 import 'react-app-polyfill/stable'
-import './infrastructure/locales/i18n'
+import './libs/locales/i18n'
 import './base.scss'
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
