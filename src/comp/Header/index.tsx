@@ -12,7 +12,7 @@ const Wrapper = styled.header`
   padding: 15px;
 `
 
-export default function Header(): JSX.Element {
+export function Header(): JSX.Element {
   return (
     <Wrapper>
       <span>React Web Starter</span>

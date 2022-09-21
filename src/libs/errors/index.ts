@@ -1,4 +1,4 @@
-import Logger from '../log'
+import { Logger } from '../log'
 
 export function handleErrorEvent(event: ErrorEvent): void {
   Logger.error(

@@ -1,4 +1,4 @@
-import Logger from '../log'
+import { Logger } from '../log'
 import { handleExceptionAndContinue } from '.'
 import { handleErrorEvent } from '.'
 

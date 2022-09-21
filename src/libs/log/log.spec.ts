@@ -1,4 +1,4 @@
-import Logger from '.'
+import { Logger } from '.'
 
 describe('Log', function () {
   it('should log', function () {

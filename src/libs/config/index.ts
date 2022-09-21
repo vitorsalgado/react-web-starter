@@ -8,10 +8,8 @@ const isProd = (): boolean => is(process.env.NODE_ENV, ENV_PRODUCTION)
 const isTest = (): boolean => is(process.env.NODE_ENV, ENV_TEST)
 const isLogEnabled = (): boolean => isNot(process.env.NODE_ENV, ENV_PRODUCTION)
 
-const Config = {
+export const Config = {
   isProd,
   isTest,
   isLogEnabled,
 }
-
-export default Config

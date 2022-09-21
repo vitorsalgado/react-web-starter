@@ -30,7 +30,7 @@ const Button = styled.button`
   background: var(--color-accent);
 `
 
-export default function CounterView(): JSX.Element {
+export function CounterView(): JSX.Element {
   const vm = CounterViewModel()
 
   return (
