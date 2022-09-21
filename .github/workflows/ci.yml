@@ -135,7 +135,7 @@ jobs:
 
       - name: Build
         env:
-          PUBLIC_URL: /react-web-starter
+          PUBLIC_URL: /react-web-starter/
           NODE_ENV: production
         run: |
           npm run build
