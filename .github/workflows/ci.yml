@@ -135,7 +135,8 @@ jobs:
 
       - name: Build
         env:
-          PUBLIC_URL: "/"
+          PUBLIC_URL: /
+          NODE_ENV: production
         run: |
           npm run build
 
