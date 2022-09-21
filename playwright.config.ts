@@ -1,5 +1,5 @@
 import { PlaywrightTestConfig, devices } from '@playwright/test'
-import Config from './configs'
+import Config from './config'
 
 const PlaywrightConfig: PlaywrightTestConfig = {
   forbidOnly: !!Config.isCI,

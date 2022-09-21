@@ -1,5 +1,5 @@
 import * as WebPack from 'webpack'
-import Config from '../../configs'
+import Config from '../../config'
 
 const config: WebPack.Configuration = {
   context: Config.paths.sourcesRoot,

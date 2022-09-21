@@ -31,14 +31,14 @@
 
     "outDir": "dist",
     "baseUrl": ".",
-    "rootDirs": ["src", "e2e", "configs"],
+    "rootDirs": ["src", "e2e", "config"],
     "types": [
       "react",
       "node",
       "testing-library__jest-dom"
     ]
   },
-  "include": ["src", "e2e", "configs", "src/declarations.d.ts"],
+  "include": ["src", "e2e", "config", "src/declarations.d.ts"],
 
   "ts-node": {
     "compilerOptions": {

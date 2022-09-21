@@ -1,7 +1,7 @@
 import 'dotenv/config'
 
 import Plugins from './webpack-plugins'
-import Config from '../../configs'
+import Config from '../../config'
 import Base from './webpack-base'
 import HtmlPlugin from 'html-webpack-plugin'
 import WorkboxPlugin from 'workbox-webpack-plugin'

@@ -1,5 +1,5 @@
 import Joi from 'joi'
-import EnvSchema from './envvars'
+import EnvSchema from './env'
 import { resolvePath } from './utils'
 
 const EnvVars = Joi.attempt(process.env, EnvSchema)

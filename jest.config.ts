@@ -29,9 +29,9 @@ const config: JestConfig.InitialOptions = {
       setupFilesAfterEnv: [Path.resolve('./src/_test-setup.config.ts')],
       moduleNameMapper: {
         '\\.(jpg|jpeg|png|gif|ico|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': Path.resolve(
-          './configs/jest/mocks/files/index.js'
+          './config/jest/mocks/files/index.js'
         ),
-        '\\.(css|less|scss)$': Path.resolve('./configs/jest/mocks/styles/index.js'),
+        '\\.(css|less|scss)$': Path.resolve('./config/jest/mocks/styles/index.js'),
         '^@app/(.*)$': '<rootDir>/$1'
       },
 

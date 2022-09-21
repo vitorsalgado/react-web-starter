@@ -6,7 +6,7 @@ import Base from './webpack-base'
 import { WebpackManifestPlugin } from 'webpack-manifest-plugin'
 import { merge as Merge } from 'webpack-merge'
 import HtmlWebPackPlugin from 'html-webpack-plugin'
-import Config from '../../configs'
+import Config from '../../config'
 import Plugins from './webpack-plugins'
 
 const { paths } = Config

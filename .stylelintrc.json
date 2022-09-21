@@ -1,4 +1,12 @@
 {
   "processors": ["stylelint-processor-styled-components"],
-  "extends": ["stylelint-config-standard", "stylelint-config-styled-components"]
+  "extends": ["stylelint-config-standard", "stylelint-config-styled-components"],
+  "ignoreFiles": [
+    "build",
+    "coverage",
+    "configs",
+    "deployments",
+    "docs",
+    "test"
+  ]
 }

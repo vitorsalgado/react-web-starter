@@ -1,4 +1,10 @@
-SHELL := /bin/bash
+.ONESHELL:
+.DEFAULT_GOAL := help
+
+# allow user specific optional overrides
+-include Makefile.overrides
+
+export
 
 # Global Parameters
 # ---
@@ -45,7 +51,7 @@ dist: ## Server dist/ with a nginx docker. Use -e NGINX_PORT parameter to change
 	@docker run -it --rm \
 		-p $(NGINX_PORT):80 \
 		--name web \
-		-v $(CONTEXT)/dist:/usr/share/nginx/html -v $(CONTEXT)/configs/nginx/nginx.conf:/etc/nginx/nginx.conf:ro \
+		-v $(CONTEXT)/dist:/usr/share/nginx/html -v $(CONTEXT)/config/nginx/nginx.conf:/etc/nginx/nginx.conf:ro \
 		nginx
 
 docker-build: ## Builds production Docker.
@@ -53,12 +59,3 @@ docker-build: ## Builds production Docker.
 
 docker-run: ## Run production Docker.
 	@docker run --rm -p $(NGINX_PORT):80 --name $(DOCKER_NAME) $(DOCKER_NAME)
-
-
-# Dev Environment Utilities
-# ---
-
-nvm: ## Install Node.js version described on .nvmrc.
-	[ -s "$$HOME/.nvm/nvm.sh" ] && . "$$HOME/.nvm/nvm.sh" && \
-	nvm install $$(cat .nvmrc) && \
-	nvm use

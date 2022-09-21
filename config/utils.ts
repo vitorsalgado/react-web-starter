@@ -1,10 +1,10 @@
 import Path from 'path'
 import Fs from 'fs'
 
-const AppDirectory = Fs.realpathSync(process.cwd())
+const appDir = Fs.realpathSync(process.cwd())
 
 export function resolvePath(relativePath: string) {
-  return Path.resolve(AppDirectory, relativePath)
+  return Path.resolve(appDir, relativePath)
 }
 
 export function sanitizePublicUrl(url: string) {

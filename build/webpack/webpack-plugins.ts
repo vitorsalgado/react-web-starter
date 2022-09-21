@@ -1,7 +1,7 @@
 import * as WebPack from 'webpack'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
-import Config from '../../configs'
-import { resolvePath } from '../../configs/utils'
+import Config from '../../config'
+import { resolvePath } from '../../config/utils'
 
 const EnvironmentPlugin = WebPack.EnvironmentPlugin
 const additionalPlugins: WebPack.WebpackPluginInstance[] = []

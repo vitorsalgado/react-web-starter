@@ -63,5 +63,16 @@ module.exports = {
         'no-undef': 'off'
       }
     }
+  ],
+
+  ignorePatterns: [
+    'configs/',
+    'dist/',
+    'tools/',
+    'build/',
+    'docs/',
+    'coverage/',
+    'cmd/create-react-ts-web-starter/',
+    '*.config.js'
   ]
 }
