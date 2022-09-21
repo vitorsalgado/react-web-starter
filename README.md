@@ -3,11 +3,11 @@
 <p align="center">
     <img src="docs/assets/logo.png" alt="Logo" />
     <br>
-    <i>Starter Project for <strong>React</strong> using <strong>TypeScript</strong> with all boring stuff already set. <br><strong>npm init react-ts-web-starter</strong></i>
+    <i>Starter Project for <strong>React</strong> using <strong>TypeScript</strong> that allows customization of all components. Dedicated to my projects. Maybe it works for you as well :) <br><strong>npm init react-ts-web-starter</strong></i>
 </p>
 <p align="center">
-  This project is also intended to serve as a <strong>learning</strong> experience for React and its ecosystem and to explore modern
-  frontend tools and practices.
+  This project goal is to learn and explore modern frontend technologies and serve as a base for my personal projects since I prefer to control mostly libs involved (for some reason 🙄). <br/>  
+  <b>create-react-app</b> might be a better choice for most cases, but if you like the project, check below how to use it :)
 </p>
 
 <p align="center">
@@ -34,7 +34,7 @@
   </a>
 </p>
 
-## Quick Overview
+## Overview
 
 A new React project can be bootstrapped using this repository as a template using the following command:
 
