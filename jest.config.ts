@@ -7,12 +7,16 @@ const shared: JestConfig.InitialOptions = {
   collectCoverage: false,
   restoreMocks: true,
 
-  transform: { '^.+\\.tsx?$': 'ts-jest' },
+  transform: {
+    '^.+\\.tsx?$': [
+      'ts-jest',
+      {
+        tsconfig: 'tsconfig.test.json'
+      }
+    ]
+  },
   globals: {
-    VARS: {},
-    'ts-jest': {
-      tsconfig: 'tsconfig.test.json'
-    }
+    VARS: {}
   }
 }
 
