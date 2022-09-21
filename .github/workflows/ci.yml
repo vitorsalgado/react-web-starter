@@ -134,6 +134,8 @@ jobs:
           npm run lint:ci
 
       - name: Build
+        env:
+          PUBLIC_URL: "/"
         run: |
           npm run build
 
