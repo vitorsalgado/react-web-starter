@@ -50,7 +50,7 @@ All parameters available:
 --app=<APP_NAME> Defaults to my-app
 ```
 
-The final folder will the parameter `destination` concatenated with parameter `app`.
+The final folder will be the parameter `destination` concatenated with the parameter `app`.
 
 ## Getting Started
 
@@ -90,9 +90,10 @@ make dist
 ## Configurations
 
 **WebPack** is the module bundler used here.  
-Some build configurations can be changed using **environment variables**. These variable can also be set using **DotEnv**. Just place a **.env** on project and modify the values
+Some build configurations can be changed using **environment variables**. These variables can also be set using **DotEnv**. Just place a **.env** on project root dir and modify the
+values
 you want.     
-Check [this Joi schema](config/env.ts) to see all variables, and their respect default and allowed values.
+Check [this Joi schema](config/env.ts) to see all variables and their respective default and allowed values.
 
 ## Test
 
@@ -101,7 +102,7 @@ Check the [jest.config.ts](jest.config.ts) and [playwright.config.ts](playwright
 
 ## Linters and Code Style
 
-Mix of tools used to ensure code and commit style and best practices:
+The mix of tools used to ensure code and commit style and best practices:
 
 - ESLint
 - Prettier
