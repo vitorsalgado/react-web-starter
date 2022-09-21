@@ -1,9 +1,9 @@
 {
   "name": "create-react-ts-web-starter",
   "version": "2.0.2",
-  "main": "cmd/create-react-ts-web-starter/index.js",
+  "main": "bin/create-react-ts-web-starter/index.js",
   "bin": {
-    "create-react-ts-web-starter": "cmd/create-react-ts-web-starter/index.js"
+    "create-react-ts-web-starter": "bin/create-react-ts-web-starter/index.js"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config build/webpack/webpack.dev.ts",

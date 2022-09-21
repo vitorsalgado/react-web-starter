@@ -8,14 +8,14 @@ module.exports = {
     ecmaVersion: 6,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   env: {
     jest: true,
     browser: true,
     node: true,
-    es6: true
+    es6: true,
   },
   rules: {
     'no-console': 'error',
@@ -27,8 +27,8 @@ module.exports = {
     'import/order': [
       'error',
       {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object']
-      }
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object'],
+      },
     ],
     'import/no-named-as-default': ['off'],
     'import/no-duplicates': ['off'],
@@ -36,8 +36,8 @@ module.exports = {
     'import/no-useless-path-segments': [
       'error',
       {
-        noUselessIndex: true
-      }
+        noUselessIndex: true,
+      },
     ],
     'import/no-self-import': ['error'],
     'import/export': ['error'],
@@ -46,23 +46,23 @@ module.exports = {
       'error',
       'never',
       {
-        json: 'always'
-      }
-    ]
+        json: 'always',
+      },
+    ],
   },
   settings: {
     react: {
       pragma: 'React',
-      version: 'detect'
-    }
+      version: 'detect',
+    },
   },
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
       rules: {
-        'no-undef': 'off'
-      }
-    }
+        'no-undef': 'off',
+      },
+    },
   ],
 
   ignorePatterns: [
@@ -72,7 +72,7 @@ module.exports = {
     'build/',
     'docs/',
     'coverage/',
-    'cmd/create-react-ts-web-starter/',
-    '*.config.js'
-  ]
+    'bin/create-react-ts-web-starter/',
+    '*.config.js',
+  ],
 }
