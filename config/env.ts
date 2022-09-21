@@ -26,7 +26,7 @@ export default Joi.object({
   // Testing
   TEST_DEBUG: Joi.boolean().default(false).truthy('true', 'on', 't', 1).falsy('false', 'off', 'f', 0),
   TEST_HEADLESS: Joi.boolean().default(true).truthy('true', 'on', 't', 1).falsy('false', 'off', 'f', 0),
-  TEST_INCOGNITO: Joi.boolean().default(false).truthy('true', 'on', 't', 1).falsy('false', 'off', 'f', 0)
+  TEST_INCOGNITO: Joi.boolean().default(false).truthy('true', 'on', 't', 1).falsy('false', 'off', 'f', 0),
 })
   .unknown(true)
   .options({ abortEarly: false })

@@ -12,7 +12,7 @@ export default ({ start = [], end = [] }: Arg): WebPack.WebpackPluginInstance[] 
   [
     new EnvironmentPlugin({
       NODE_ENV: Config.env,
-      PUBLIC_URL: Config.publicPath
+      PUBLIC_URL: Config.publicPath,
     }),
     ...start,
     ...additionalPlugins,
@@ -25,17 +25,17 @@ export default ({ start = [], end = [] }: Arg): WebPack.WebpackPluginInstance[] 
           transform: function (content) {
             return Buffer.from(
               JSON.stringify({
-                ...JSON.parse(content.toString())
-              })
+                ...JSON.parse(content.toString()),
+              }),
             )
-          }
+          },
         },
         {
           force: true,
           from: resolvePath('src/favicon.ico'),
-          to: Config.paths.buildDestination
-        }
-      ]
+          to: Config.paths.buildDestination,
+        },
+      ],
     }),
-    ...end
+    ...end,
   ].filter(plugin => plugin)

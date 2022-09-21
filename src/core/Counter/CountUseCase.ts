@@ -6,7 +6,7 @@ import { decrementAction } from './counterActions'
 
 export enum CountType {
   INC,
-  DEC
+  DEC,
 }
 
 export class CountUseCase extends UseCase<Counter, CountType> {

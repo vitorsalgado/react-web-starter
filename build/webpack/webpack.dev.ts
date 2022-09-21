@@ -24,15 +24,15 @@ export default Merge<WebPack.Configuration & DevServer.Configuration>(Base, {
     client: {
       overlay: {
         errors: true,
-        warnings: false
+        warnings: false,
       },
-      progress: true
+      progress: true,
     },
-    open: !Config.isProduction
+    open: !Config.isProduction,
   },
 
   watchOptions: {
-    ignored: ['.github', '.yarn', 'deployments', 'dist', 'docs', 'test', 'tools', '**/node_modules']
+    ignored: ['.github', '.yarn', 'deployments', 'dist', 'docs', 'test', 'tools', '**/node_modules'],
   },
 
   output: {
@@ -41,7 +41,7 @@ export default Merge<WebPack.Configuration & DevServer.Configuration>(Base, {
     filename: '[name].js',
     chunkFilename: '[name].chunk.js',
     publicPath: '/',
-    clean: true
+    clean: true,
   },
 
   plugins: Plugins({
@@ -49,9 +49,9 @@ export default Merge<WebPack.Configuration & DevServer.Configuration>(Base, {
       new HtmlWebPackPlugin({
         inject: true,
         template: paths.indexHTML,
-        templateParameters: () => Config.vars
-      })
+        templateParameters: () => Config.vars,
+      }),
     ],
-    end: [new WebpackManifestPlugin({ fileName: 'asset-manifest.json', publicPath: Config.publicPath })]
-  })
+    end: [new WebpackManifestPlugin({ fileName: 'asset-manifest.json', publicPath: Config.publicPath })],
+  }),
 })

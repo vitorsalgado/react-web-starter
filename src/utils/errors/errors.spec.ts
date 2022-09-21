@@ -11,7 +11,7 @@ describe('Errors', function () {
       lineno: 1,
       colno: 2,
       filename: 'fn',
-      error: new Error('Controlled Failure')
+      error: new Error('Controlled Failure'),
     } as ErrorEvent)
 
     expect(Logger.error).toHaveBeenCalled()

@@ -9,7 +9,7 @@ const error = (message?: unknown, ...optionalParams: unknown[]): void => {
 }
 
 const Logger = {
-  error
+  error,
 }
 
 export default Logger

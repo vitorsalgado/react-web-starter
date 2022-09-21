@@ -20,7 +20,7 @@ const render = (): void => {
         </React.StrictMode>
       </HelmetProvider>
     </Provider>,
-    RootContainer
+    RootContainer,
   )
 }
 

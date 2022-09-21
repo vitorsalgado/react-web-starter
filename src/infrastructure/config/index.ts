@@ -11,7 +11,7 @@ const isLogEnabled = (): boolean => isNot(process.env.NODE_ENV, ENV_PRODUCTION)
 const Config = {
   isProd,
   isTest,
-  isLogEnabled
+  isLogEnabled,
 }
 
 export default Config

@@ -12,5 +12,5 @@ export const CounterViewModel = (countUseCase: CountUseCase = new CountUseCase()
 
   total(): number {
     return countUseCase.state().total
-  }
+  },
 })

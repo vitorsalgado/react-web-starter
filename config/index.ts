@@ -14,21 +14,21 @@ export default {
 
   devServer: {
     host: EnvVars.DEV_SERVER_HOST,
-    port: EnvVars.DEV_SERVER_PORT
+    port: EnvVars.DEV_SERVER_PORT,
   },
 
   testing: {
     debug: EnvVars.TEST_DEBUG,
     headless: EnvVars.TEST_HEADLESS,
-    incognito: EnvVars.TEST_INCOGNITO
+    incognito: EnvVars.TEST_INCOGNITO,
   },
 
   paths: {
     sourcesRoot: resolvePath('src'),
     buildDestination: resolvePath('dist'),
     indexHTML: resolvePath('./src/index.html'),
-    applicationEntrypoint: resolvePath('./src/index.tsx')
+    applicationEntrypoint: resolvePath('./src/index.tsx'),
   },
 
-  vars: EnvVars
+  vars: EnvVars,
 }

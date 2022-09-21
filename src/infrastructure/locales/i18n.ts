@@ -7,8 +7,8 @@ import { convertLanguageJsonToObject } from './translations'
 
 export const TranslationsJSON = {
   en: {
-    translation: En
-  }
+    translation: En,
+  },
 }
 
 convertLanguageJsonToObject(En)
@@ -21,6 +21,6 @@ export const i18n = i18next
     fallbackLng: 'en',
     debug: !Config.isProd() && !Config.isTest(),
     interpolation: {
-      escapeValue: false
-    }
+      escapeValue: false,
+    },
   })

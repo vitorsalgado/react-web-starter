@@ -15,7 +15,7 @@ const store = configureStore({
   reducer: rootReducer,
   preloadedState: AppInitialState,
   middleware: getDefaultMiddleware => getDefaultMiddleware().concat(middlewares),
-  devTools: !Config.isProd()
+  devTools: !Config.isProd(),
 })
 
 export function configureAppStore(): EnhancedStore<AppState> {

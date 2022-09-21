@@ -8,7 +8,7 @@ const Styles = {
   Bold: 'font-weight: bolder',
   Blue: 'color: #03A9F4',
   Green: 'color: #4CAF50',
-  Red: 'color: #F20404'
+  Red: 'color: #F20404',
 }
 
 export const LoggerMiddleware: Middleware<Record<string, unknown>, AppState> = store => next => action => {
@@ -16,7 +16,7 @@ export const LoggerMiddleware: Middleware<Record<string, unknown>, AppState> = s
   const title = `Dispatched %c${action.type} %c@ ${new Date().toLocaleTimeString()}${hasError ? ' %c!' : ''}`
   console.groupCollapsed(
     `${title}`,
-    ...[[Styles.Bold, hasError ? Styles.Red : Styles.Blue].join('; '), Styles.LightGray, hasError ? Styles.Red : '']
+    ...[[Styles.Bold, hasError ? Styles.Red : Styles.Blue].join('; '), Styles.LightGray, hasError ? Styles.Red : ''],
   )
 
   console.log('%cPrevious State', ...[Styles.LightGray], store.getState())

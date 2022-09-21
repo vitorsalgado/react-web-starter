@@ -10,7 +10,7 @@ describe('App', () => {
       <Provider store={configureAppStore()}>
         {' '}
         <App />
-      </Provider>
+      </Provider>,
     )
 
     expect(screen.getByText(/React Web Starter Demo/i)).toBeTruthy()

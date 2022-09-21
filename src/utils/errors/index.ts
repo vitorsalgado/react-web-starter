@@ -16,7 +16,7 @@ export function handleErrorEvent(event: ErrorEvent): void {
       '\n' +
       'Error:' +
       '\n' +
-      event.error
+      event.error,
   )
 }
 
