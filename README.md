@@ -19,19 +19,19 @@
 <p align="center">
   <a href="https://github.com/vitorsalgado/react-web-starter/actions/workflows/ci.yml">
     <img src="https://github.com/vitorsalgado/react-web-starter/actions/workflows/ci.yml/badge.svg">
-  </a>&nbsp
+  </a>
   <a href="https://codecov.io/gh/vitorsalgado/react-web-starter">
     <img src="https://codecov.io/gh/vitorsalgado/react-web-starter/branch/master/graph/badge.svg?token=BB87R38Z87"/>
-  </a>&nbsp
+  </a>
   <a href="https://codeclimate.com/github/vitorsalgado/react-web-starter/maintainability">
     <img src="https://api.codeclimate.com/v1/badges/126ad2708eb60164e6de/maintainability" />
-  </a>&nbsp
+  </a>
   <a href="https://github.com/prettier/prettier">
     <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat"/>
-  </a>&nbsp
+  </a>
   <a href="https://www.npmjs.com/package/create-react-ts-web-starter">
     <img alt="npm" src="https://img.shields.io/npm/v/create-react-ts-web-starter">
-  </a>&nbsp
+  </a>
 </p>
 
 ## Quick Overview
