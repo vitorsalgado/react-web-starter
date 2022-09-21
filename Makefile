@@ -21,7 +21,7 @@ help:
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
 start: ## Start Dev Server with Hot Reload
-	@yarn start
+	@npm start
 
 up: ## Run a development environment with Docker Compose.
 	@docker-compose -f ./deployments/dev/docker-compose.yml up
@@ -34,17 +34,17 @@ dev-clean: ## Clean Docker Compose development environment.
 
 .PHONY: check
 check:
-	@yarn lint:ci
-	@yarn test:ci
-	@yarn test:e2e
+	@npm run lint:ci
+	@npm run test:ci
+	@npm run test:e2e
 
 .PHONY: fmt
 fmt: # Format code
-	@yarn fmt
+	@npm run fmt
 
 .PHONY: lint
 lint: # Lint code
-	@yarn lint
+	@npm run lint
 
 .PHONY: dist
 dist: ## Server dist/ with a nginx docker. Use -e NGINX_PORT parameter to change Nginx port. Defaults to 3000.

@@ -2,14 +2,13 @@
 # ---
 FROM node:18.9.0 as build
 WORKDIR /app
-COPY ../../package.json yarn.lock .yarnrc.yml ./
-COPY ../../.yarn ./.yarn
+COPY ../../package.json package-lock.json ./
 
-RUN yarn --immutable
+RUN npm ci
 
 COPY ../.. .
 
-RUN yarn build
+RUN npm run build
 
 
 # Run Stage

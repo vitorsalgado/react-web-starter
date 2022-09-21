@@ -56,17 +56,17 @@ The final folder will the parameter `destination` concatenated with parameter `a
 
 ### Dependencies
 
-**Yarn 2** is the project package manager.  
+**NPM** is the project package manager.  
 Run the following command to install dependencies and prepare the environment with Git hooks:
 
 ```
-yarn
+npm i
 ```
 
 ### Running the Dev Server
 
 ```
-yarn start
+npm start
 ```
 
 ### Running With Docker Compose
@@ -78,7 +78,7 @@ make up
 ### Building
 
 ```
-yarn build
+npm run build
 ```
 
 ### Serving Dist Content with Nginx
@@ -112,7 +112,7 @@ Mix of tools used to ensure code and commit style and best practices:
 
 ## CI
 
-- **Github Actions** for continuous integration
+- **GitHub Actions** for continuous integration
 - **Codecov** for test coverage reports
 - **Codacy** and **CodeClimate** for code analysis
 

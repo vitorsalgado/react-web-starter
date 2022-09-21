@@ -6,21 +6,21 @@ const PlaywrightConfig: PlaywrightTestConfig = {
   retries: Config.isCI ? 2 : 0,
   testDir: 'e2e/',
   webServer: {
-    command: `yarn start:headless`,
+    command: `npm run start:headless`,
     port: Config.devServer.port,
     timeout: 30000,
-    reuseExistingServer: !Config.isCI
+    reuseExistingServer: !Config.isCI,
   },
   use: {
     trace: 'on-first-retry',
-    headless: true
+    headless: true,
   },
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] }
-    }
-  ]
+      use: { ...devices['Desktop Chrome'] },
+    },
+  ],
 }
 
 export default PlaywrightConfig

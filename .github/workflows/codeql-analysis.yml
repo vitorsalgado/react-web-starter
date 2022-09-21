@@ -31,11 +31,11 @@ jobs:
 
       - name: Deps
         run: |
-          yarn --immutable
+          npm ci
 
       - name: Build
         run: |
-          yarn build
+          npm run build
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2

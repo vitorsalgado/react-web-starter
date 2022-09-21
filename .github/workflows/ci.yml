@@ -1,6 +1,7 @@
 name: CI
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -28,36 +29,25 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-
-      - name: Get Yarn Cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-
-      - name: Yarn Cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: yarn2-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            yarn2-
+          cache: 'npm'
 
       - name: Deps
         run: |
-          yarn --immutable
+          npm ci
 
       - name: Lint
         run: |
-          yarn lint:ci
+          npm run lint:ci
 
       - name: Build
         run: |
-          yarn build
+          npm run build
 
       - name: Tests
         run: |
-          yarn test:ci
-          yarn test:e2e:prepare
-          yarn test:e2e
+          npm run test:ci
+          npm run test:e2e:prepare
+          npm run test:e2e
 
       - name: Coverage
         uses: codecov/codecov-action@v3
@@ -86,24 +76,13 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
-          node-version: 14.x
+          node-version: 16.x
           registry-url: 'https://registry.npmjs.org'
-
-      - name: Get Yarn Cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-
-      - name: Yarn Cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: yarn2-${{ hashFiles('yarn.lock') }}
-          restore-keys: |
-            yarn2-
+          cache: 'npm'
 
       - name: Deps
         run: |
-          yarn --immutable
+          npm ci
 
       - name: Publish
         env:
@@ -121,3 +100,15 @@ jobs:
           body_path: CHANGELOG.md
           draft: false
           prerelease: contains(github.ref, '-')
+
+  automerge:
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+    steps:
+      - uses: fastify/github-action-merge-dependabot@v3.3.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}

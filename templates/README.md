@@ -10,13 +10,13 @@ Check the **scripts** section of your _package.json_.
 
 ### Run
 ```
-yarn start
+npm start
 ```
 Runs a development server with Hot Reload.
 
 ### Build
 ```
-yarn build
+npm run build
 ```
 Builds the application to the **dist** folder.  
 
@@ -27,7 +27,7 @@ The end-to-end test components are located on **test** folder.
 Below the available test commands:  
 
 ```
-yarn test
-yarn test:e2e
-yarn test:ci
+npm run test
+npm run test:e2e
+npm run test:ci
 ```
