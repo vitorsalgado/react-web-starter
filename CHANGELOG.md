@@ -2,6 +2,106 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/vitorsalgado/react-web-starter/compare/v2.0.2...v3.0.0) (2022-09-22)
+
+
+### Chore
+
+* **deps:** lock file maintenance ([69fce8f](https://github.com/vitorsalgado/react-web-starter/commit/69fce8f5a28ded75fcd005c6a0e1da811f34cb74))
+* **deps:** lock file maintenance ([9264f48](https://github.com/vitorsalgado/react-web-starter/commit/9264f48146ec98f188c24ac6be4e44ae0e7f7931))
+* **deps:** lock file maintenance ([5b77c26](https://github.com/vitorsalgado/react-web-starter/commit/5b77c2686600da940f0f67def4b019caa3f7d25f))
+* **deps:** lock file maintenance ([366f761](https://github.com/vitorsalgado/react-web-starter/commit/366f76191130e1dd49a07571b371b0197ec3f491))
+* **deps:** lock file maintenance ([8b1b4bf](https://github.com/vitorsalgado/react-web-starter/commit/8b1b4bf3181b7759cd93d19d6e142d9b1d61c474))
+* **deps:** lock file maintenance ([b97bc66](https://github.com/vitorsalgado/react-web-starter/commit/b97bc6667349a8d058b8ea3e09bfdac593572489))
+* **deps:** lock file maintenance ([e4bc71c](https://github.com/vitorsalgado/react-web-starter/commit/e4bc71c2fa02cf769c4953bee8902c5b315f0685))
+* **deps:** lock file maintenance ([b6343d1](https://github.com/vitorsalgado/react-web-starter/commit/b6343d18d651069c128bb218b13b7c23da08a70b))
+* **deps:** lock file maintenance ([87dfd79](https://github.com/vitorsalgado/react-web-starter/commit/87dfd79963928693369fb2111600c923e2391aac))
+* **deps:** lock file maintenance ([c5d684e](https://github.com/vitorsalgado/react-web-starter/commit/c5d684e0c0fa27fbc69743e59097acf9228be940))
+* **deps:** lock file maintenance ([81f5290](https://github.com/vitorsalgado/react-web-starter/commit/81f52900ea90b2424cadada0c0765182d15c3602))
+* **deps:** lock file maintenance ([93bc4d0](https://github.com/vitorsalgado/react-web-starter/commit/93bc4d08eb0b7944b1cd1aa4a411f6844536fa73))
+* **deps:** update actions/cache action to v3 ([cf74789](https://github.com/vitorsalgado/react-web-starter/commit/cf7478928ab8fb03d28733964c04e01c75930a56))
+* **deps:** update actions/checkout action to v3 ([a4c84e9](https://github.com/vitorsalgado/react-web-starter/commit/a4c84e96231ca7f368ae90dca8d5cd48c741d912))
+* **deps:** update actions/setup-node action to v3 ([74373cc](https://github.com/vitorsalgado/react-web-starter/commit/74373cc920f8fa12325d19dcf162347857516ea2))
+* **deps:** update codecov/codecov-action action to v3 ([7e21727](https://github.com/vitorsalgado/react-web-starter/commit/7e217274da782006b5f33fa5e710ec78174ada98))
+* **deps:** update dependency @commitlint/cli to v17 ([8b94cb9](https://github.com/vitorsalgado/react-web-starter/commit/8b94cb9748fe6e610424bc97590ae86027782c32))
+* **deps:** update dependency @commitlint/config-conventional to v17 ([803616e](https://github.com/vitorsalgado/react-web-starter/commit/803616e3c4a54e5612c53b9169ece026297b0bbb))
+* **deps:** update dependency @types/jest to v28 ([4388b68](https://github.com/vitorsalgado/react-web-starter/commit/4388b68c6ad3e3caf5a3b11a05024d5fb91f7dcc))
+* **deps:** update dependency @types/node to v18 ([91e77c8](https://github.com/vitorsalgado/react-web-starter/commit/91e77c82c26bf84c1dcd967c848db85de76858ae))
+* **deps:** update dependency babel-jest to v28 ([669bb6e](https://github.com/vitorsalgado/react-web-starter/commit/669bb6e357696af42b2b5fcc877f93dc6c4e2955))
+* **deps:** update dependency babel-jest to v29 ([32eccda](https://github.com/vitorsalgado/react-web-starter/commit/32eccdabbb8554a987fdc2148bee1d2e83aee6b4))
+* **deps:** update dependency copy-webpack-plugin to v11 ([595f7b3](https://github.com/vitorsalgado/react-web-starter/commit/595f7b331b8d1e1e96bc962689c109aa7b2bc9e7))
+* **deps:** update dependency dotenv to v15 ([b0f099a](https://github.com/vitorsalgado/react-web-starter/commit/b0f099a7c4e7c5b969f40d792ae6e5286347d34c))
+* **deps:** update dependency dotenv to v16 ([6249d53](https://github.com/vitorsalgado/react-web-starter/commit/6249d53d3008f29a097a59ad05f0e9444cbbcdde))
+* **deps:** update dependency husky to v8 ([126a8bf](https://github.com/vitorsalgado/react-web-starter/commit/126a8bf3ff0bb9ee57150c4fbe7befd813604b40))
+* **deps:** update dependency lint-staged to v13 ([be1dfc1](https://github.com/vitorsalgado/react-web-starter/commit/be1dfc1a3f4ada6bfb80af819d4aab2ccc918aae))
+* **deps:** update dependency node to v17.6.0 ([c5c72b2](https://github.com/vitorsalgado/react-web-starter/commit/c5c72b20726afddd3a313b922209c1cc1e949347))
+* **deps:** update dependency node to v17.7.1 ([3ba8d50](https://github.com/vitorsalgado/react-web-starter/commit/3ba8d50592542cb654efa78ea6648242f5deea9c))
+* **deps:** update dependency node to v17.7.2 ([581094b](https://github.com/vitorsalgado/react-web-starter/commit/581094be8dceaa480420dbe7939ddd682bd48746))
+* **deps:** update dependency node to v17.8.0 ([18fa9f7](https://github.com/vitorsalgado/react-web-starter/commit/18fa9f741146950ef37ee18e63897761c698ae72))
+* **deps:** update dependency node to v17.9.0 ([687aa87](https://github.com/vitorsalgado/react-web-starter/commit/687aa87af928ed2caa9d28e5be17e76e379c3e57))
+* **deps:** update dependency node to v18 ([1184f39](https://github.com/vitorsalgado/react-web-starter/commit/1184f39a6370e7c31f1401f82a4b2def6ae2cf4b))
+* **deps:** update dependency node to v18.1.0 ([b26bd00](https://github.com/vitorsalgado/react-web-starter/commit/b26bd002a370912835a49f51c1938032cc975771))
+* **deps:** update dependency node to v18.2.0 ([64b136f](https://github.com/vitorsalgado/react-web-starter/commit/64b136f7102b33e242959b8a659b084d13d20d99))
+* **deps:** update dependency node to v18.3.0 ([679c764](https://github.com/vitorsalgado/react-web-starter/commit/679c764b1261ce469ea0a64bea317b4a5144d2d6))
+* **deps:** update dependency node to v18.4.0 ([173aa49](https://github.com/vitorsalgado/react-web-starter/commit/173aa4968b4ce7e344862fcd6f21fbc38bc5a885))
+* **deps:** update dependency node to v18.5.0 ([7fdba47](https://github.com/vitorsalgado/react-web-starter/commit/7fdba47f997260a56cc679606988d97bf23fd41c))
+* **deps:** update dependency node to v18.6.0 ([78dbe19](https://github.com/vitorsalgado/react-web-starter/commit/78dbe1989ba229d7cb0092590957f2a291420ae5))
+* **deps:** update dependency node to v18.7.0 ([22c0b40](https://github.com/vitorsalgado/react-web-starter/commit/22c0b4072772b52f7088f310e5b347b62f455924))
+* **deps:** update dependency pinst to v3 ([9439906](https://github.com/vitorsalgado/react-web-starter/commit/9439906aee2ae4e3a2cb1d97b392ba48ebae9429))
+* **deps:** update dependency postcss-loader to v7 ([9c7da4f](https://github.com/vitorsalgado/react-web-starter/commit/9c7da4f3178b73f5c21227afbaf236becf9b28dc))
+* **deps:** update dependency react-redux to v8 ([4a801e7](https://github.com/vitorsalgado/react-web-starter/commit/4a801e76bfbfa9a6bcfeffa2ce258f4a51d5b360))
+* **deps:** update dependency sass-loader to v13 ([9ea4b62](https://github.com/vitorsalgado/react-web-starter/commit/9ea4b62c58c7676987756cf53c49bb9bda9f14dd))
+* **deps:** update dependency source-map-loader to v4 ([0af6804](https://github.com/vitorsalgado/react-web-starter/commit/0af68040810f69825db6a475aab1bcd4905e8845))
+* **deps:** update dependency stylelint-config-standard to v25 ([3c4812a](https://github.com/vitorsalgado/react-web-starter/commit/3c4812aa264e16e2a5b85b1e5c0a2741163eb1a9))
+* **deps:** update dependency stylelint-config-standard to v26 ([fdd907d](https://github.com/vitorsalgado/react-web-starter/commit/fdd907d5e83e4b8707f45249fb37084497daffe1))
+* **deps:** update dependency stylelint-config-standard to v27 ([1a3ca11](https://github.com/vitorsalgado/react-web-starter/commit/1a3ca1172f7814beeb9d275af7c1c0bdd874e953))
+* **deps:** update dependency stylelint-config-standard to v28 ([12f838e](https://github.com/vitorsalgado/react-web-starter/commit/12f838e92f887656d2501053d40129a8a7d4933c))
+* **deps:** update dependency ts-jest to v28 ([052a6f4](https://github.com/vitorsalgado/react-web-starter/commit/052a6f4e51231a2f51fec5f6c6a765b9d860a484))
+* **deps:** update dependency ts-jest to v29 ([e1d4379](https://github.com/vitorsalgado/react-web-starter/commit/e1d4379d25af4a12b848c05442b864bf129592c4))
+* **deps:** update dependency web-vitals to v3 ([65d1399](https://github.com/vitorsalgado/react-web-starter/commit/65d1399ce03aa0a73cd372b68daf6f10c91fff87))
+* **deps:** update dependency webpack-manifest-plugin to v5 ([f8f561e](https://github.com/vitorsalgado/react-web-starter/commit/f8f561edb23887687c098b41a8d29744923e0d32))
+* **deps:** update github/codeql-action action to v2 ([0cd9a44](https://github.com/vitorsalgado/react-web-starter/commit/0cd9a4489774b7c7b6c277cbc58e7331c60683f1))
+* **deps:** update node docker tag to v17.5.0 ([1a37408](https://github.com/vitorsalgado/react-web-starter/commit/1a37408bf79d9e14389e70b7152c2d9df1b42de5))
+* **deps:** update node docker tag to v18.8.0 ([f6b83bb](https://github.com/vitorsalgado/react-web-starter/commit/f6b83bbf9c7eff23ef03203b7d77711db9f2cc88))
+* **deps:** update node docker tag to v18.9.0 ([86ac22d](https://github.com/vitorsalgado/react-web-starter/commit/86ac22dfc67a7e8ddb98352d6a4ccf6575fe8e9b))
+* **deps:** update node.js to v16.14.0 ([3ce41b2](https://github.com/vitorsalgado/react-web-starter/commit/3ce41b2a0869cab14285ea0b8df9058d98cf8fbd))
+* **deps:** update node.js to v16.14.1 ([3cdb70d](https://github.com/vitorsalgado/react-web-starter/commit/3cdb70d354cdde8fd3fe1f6acd92b7c1bf8b2aeb))
+* **deps:** update node.js to v16.14.2 ([0877956](https://github.com/vitorsalgado/react-web-starter/commit/087795635ac50f3a4730ca5bf5d4b65755fb363d))
+* **deps:** update node.js to v16.15.0 ([d96b460](https://github.com/vitorsalgado/react-web-starter/commit/d96b46081228a17ff74e88ad3591a29d3f93047c))
+* **deps:** update node.js to v16.15.1 ([f1acc6a](https://github.com/vitorsalgado/react-web-starter/commit/f1acc6a5e5308feef18693f11e6bc81f7885fac3))
+* **deps:** update node.js to v16.16.0 ([c47e68d](https://github.com/vitorsalgado/react-web-starter/commit/c47e68da464713d21f2235c29d27b8a5b34029c3))
+* **deps:** update node.js to v16.17.0 ([fa7df50](https://github.com/vitorsalgado/react-web-starter/commit/fa7df50f51ca2cc60bfa9a24195b3049604e4338))
+* **deps:** update yarn to v3.2.0 ([df0415d](https://github.com/vitorsalgado/react-web-starter/commit/df0415d156aac54580baa8bfe8055d18f42ade83))
+* **deps:** update yarn to v3.2.1 ([df95b16](https://github.com/vitorsalgado/react-web-starter/commit/df95b16750ad8358583200f6d4ab7e26a0a90bd4))
+* **deps:** update yarn to v3.2.2 ([e31a254](https://github.com/vitorsalgado/react-web-starter/commit/e31a254717c1cc8b6cbd1fc2e472cf6e188f823b))
+* **deps:** update yarn to v3.2.3 ([4cae7ee](https://github.com/vitorsalgado/react-web-starter/commit/4cae7ee29cbb7c8def7fd1b374e0d772600ebd9a))
+* upgrade dependencies ([dea1a8a](https://github.com/vitorsalgado/react-web-starter/commit/dea1a8a55ab8b593ea8da95cbbd950dec963a95f))
+
+
+### Build
+
+* **deps:** bump react-router-dom from 6.4.0 to 6.4.1 ([#158](https://github.com/vitorsalgado/react-web-starter/issues/158)) ([04f026a](https://github.com/vitorsalgado/react-web-starter/commit/04f026a45db5941aa178727a060495ac01da98c8))
+
+
+### Docs
+
+* fix typos ([c74236f](https://github.com/vitorsalgado/react-web-starter/commit/c74236f3bf3ce203e75e5268d7d05a158bd3610e))
+* improve readme ([6f607e7](https://github.com/vitorsalgado/react-web-starter/commit/6f607e7b2b3f1582adacd72d8dd41807272c02c8))
+* remove spaces between badges ([117bec3](https://github.com/vitorsalgado/react-web-starter/commit/117bec3d6691f5ac5bac8cbe3669331b46b23435))
+
+
+### Refactor
+
+* change to hash router ([7394c6e](https://github.com/vitorsalgado/react-web-starter/commit/7394c6e1f4a260dc383f0228cd31827f35ea5bd1))
+* cmd -> bin ([0cd47a7](https://github.com/vitorsalgado/react-web-starter/commit/0cd47a7669e39f1ce27067775562238d78240364))
+* rename libs ([a5bdea2](https://github.com/vitorsalgado/react-web-starter/commit/a5bdea23d0cd10da363f88d1fcbb3c74819d13a5))
+* rename project folders ([83aa55a](https://github.com/vitorsalgado/react-web-starter/commit/83aa55ac15100c03f515b24c7a707cff191837f1))
+* restructure ([3712998](https://github.com/vitorsalgado/react-web-starter/commit/37129989199f90efeb503b17730be4e9d89e4655))
+* simplify configurations ([21b261d](https://github.com/vitorsalgado/react-web-starter/commit/21b261dd143eb3756a2b9485402d3d03ded39262))
+* use named exports only ([afcf3f4](https://github.com/vitorsalgado/react-web-starter/commit/afcf3f4f825b1e6fcda4d516205ab615ed22126d))
+* use npm + improve ci scripts + remove yarn2 ([29b78b0](https://github.com/vitorsalgado/react-web-starter/commit/29b78b0081f325598c5323cb832fd084b6076d52))
+* use trailing comma ([12e5332](https://github.com/vitorsalgado/react-web-starter/commit/12e53329d8b153e30ee48ab9b842f2a694185544))
+
 ### [2.0.2](https://github.com/vitorsalgado/react-web-starter/compare/v2.0.1...v2.0.2) (2022-01-22)
 
 
