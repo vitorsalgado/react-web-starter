@@ -19,7 +19,7 @@ const Ignores = [
   '.yarn/cache',
   '.yarn/build-state.yml',
   '.yarn/install-state.gz',
-  'cmd',
+  'bin',
   'config/nginx',
   'coverage',
   'dist',
