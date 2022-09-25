@@ -1,6 +1,6 @@
 {
   "name": "create-react-ts-web-starter",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "main": "bin/create-react-ts-web-starter/index.js",
   "bin": {
     "create-react-ts-web-starter": "bin/create-react-ts-web-starter/index.js"

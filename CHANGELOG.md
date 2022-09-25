@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1](https://github.com/vitorsalgado/react-web-starter/compare/v3.0.0...v3.0.1) (2022-09-25)
+
+
+### Bug Fixes
+
+* add bin folder to ignroe list ([239d3ae](https://github.com/vitorsalgado/react-web-starter/commit/239d3aee7022136e72e7957556de5bc48d5ad11c))
+
+
+### Refactor
+
+* yarn -> npx + deploy pages on release ([eedc021](https://github.com/vitorsalgado/react-web-starter/commit/eedc0214e37e54cc5141ca84e8897840e0453fc0))
+
 ## [3.0.0](https://github.com/vitorsalgado/react-web-starter/compare/v2.0.2...v3.0.0) (2022-09-22)
 
 
