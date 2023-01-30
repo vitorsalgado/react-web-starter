@@ -58,7 +58,7 @@
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
     "@playwright/test": "^1.29.2",
-    "@reduxjs/toolkit": "^1.9.1",
+    "@reduxjs/toolkit": "^1.9.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.4.0",
