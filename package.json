@@ -107,7 +107,7 @@
     "react-i18next": "^12.2.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.11.1",
-    "sass": "^1.62.0",
+    "sass": "^1.62.1",
     "sass-loader": "^13.2.2",
     "source-map-loader": "^4.0.1",
     "standard-version": "^9.5.0",
