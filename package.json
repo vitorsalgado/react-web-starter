@@ -96,7 +96,7 @@
     "jest-environment-jsdom": "^29.5.0",
     "joi": "^17.9.2",
     "lint-staged": "^13.2.2",
-    "node-sass": "^8.0.0",
+    "node-sass": "^9.0.0",
     "pinst": "^3.0.0",
     "postcss-loader": "^7.3.3",
     "prettier": "^2.8.8",
