@@ -113,7 +113,7 @@
     "standard-version": "^9.5.0",
     "style-loader": "^3.3.3",
     "styled-components": "^6.0.4",
-    "stylelint": "^15.10.1",
+    "stylelint": "^15.10.2",
     "stylelint-config-standard": "^33.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.10.0",
