@@ -51,7 +51,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/cli": "^7.22.15",
-    "@babel/core": "^7.22.11",
+    "@babel/core": "^7.22.17",
     "@babel/plugin-transform-runtime": "^7.22.15",
     "@babel/preset-env": "^7.22.14",
     "@babel/preset-react": "^7.22.5",
