@@ -57,7 +57,7 @@
     "@babel/preset-react": "^7.23.3",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^19.2.2",
-    "@playwright/test": "^1.43.0",
+    "@playwright/test": "^1.43.1",
     "@reduxjs/toolkit": "^1.9.7",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.1.2",
